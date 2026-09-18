@@ -256,6 +256,47 @@
       overflow: hidden;
     }
 
+    /* Ajustes exclusivos da Home: espaço para imagem de fundo sem empurrar o conteúdo */
+    .home-hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(11, 24, 38, 0.98) 0%,
+          rgba(11, 24, 38, 0.94) 38%,
+          rgba(11, 24, 38, 0.68) 62%,
+          rgba(11, 24, 38, 0.28) 100%
+        ),
+        url("SUA-IMAGEM-AQUI.jpg") center / cover no-repeat;
+    }
+
+    .home-hero .wrap {
+      width: 100%;
+    }
+
+    .home-hero-content {
+      width: min(58%, 680px);
+    }
+
+    @media(max-width:900px) {
+      .home-hero-content {
+        width: min(78%, 680px);
+      }
+    }
+
+    @media(max-width:640px) {
+      .home-hero {
+        min-height: auto;
+      }
+
+      .home-hero-content {
+        width: 100%;
+      }
+    }
+
     .eyebrow-line {
       display: flex;
       align-items: center;
@@ -273,7 +314,7 @@
     }
 
     .page-hero h1 {
-      font-size: clamp(50px, 5.8 vw, 50px);
+      font-size: clamp(50px, 5.8vw, 50px);
       color: var(--paper-050);
       max-width: 15ch;
     }
@@ -1226,18 +1267,20 @@
   </header>
 
   <div class="page active" id="page-home" role="tabpanel" aria-labelledby="tab-home" tabindex="-1">
-    <section class="page-hero" style="padding:56px 0 64px;">
-      <div>
-        <div class="eyebrow-line"><span class="rule"></span>Trabalho de Conclusão de Curso</div>
-        <h1 style="max-width:13ch;font-size:clamp(32px,5.2vw,54px);">Armazenamento e abastecimento seguro de petróleo e
-          derivados</h1>
-        <p class="lead">Empresa destinada a oferecer serviços de armazenamento e segurança de tanques de combustíveis.
-          Somos especializados na aréa de bicos de abastecimento e barreiras de contenção E como trabalham juntos para
-          reduzir riscos de vazamento, incêndio e contaminação, nossa empresa foi criada em tal tal tal, trabalhamos
-          irenfoviinwofn</p>
-        <div style="display:flex;gap:16px;margin-top:28px;flex-wrap:wrap;">
-          <button class="btn btn-primary" data-goto="armazenamento">Iniciar primeiro capitulo -</button>
-          <button class="btn btn-ghost" data-goto="sobre">Sobre o projeto</button>
+    <section class="page-hero home-hero">
+      <div class="wrap">
+        <div class="home-hero-content">
+          <div class="eyebrow-line"><span class="rule"></span>Trabalho de Conclusão de Curso</div>
+          <h1 style="max-width:16ch;font-size:clamp(42px,5vw,64px);">Armazenamento e abastecimento seguro de petróleo e
+            derivados</h1>
+          <p class="lead">Empresa destinada a oferecer serviços de armazenamento e segurança de tanques de combustíveis.
+            Somos especializados na aréa de bicos de abastecimento e barreiras de contenção E como trabalham juntos para
+            reduzir riscos de vazamento, incêndio e contaminação, nossa empresa foi criada em tal tal tal, trabalhamos
+            irenfoviinwofn</p>
+          <div style="display:flex;gap:16px;margin-top:28px;flex-wrap:wrap;">
+            <button class="btn btn-primary" data-goto="armazenamento">Iniciar primeiro capitulo -</button>
+            <button class="btn btn-ghost" data-goto="sobre">Sobre o projeto</button>
+          </div>
         </div>
       </div>
     </section>
