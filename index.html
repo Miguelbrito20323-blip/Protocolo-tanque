@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-da-apple {
+            background-color: rgba(22, 22, 23, 0.8);
+            width: 100%;
+            height: 48px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);            
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1024px;
+            padding: 0 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-container {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: opacity 0.2 ease;
+        }
+
+        .nav-container a:hover {
+            opacity: 1;
+        }
+
+        .nav-logo svg {
+            fill: white;
+            width: 14px;
+            height: 18px;
+        }
+
+        .conteudo-main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px 20px;
+        }
+
+        .conteudo {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-logo svg {
+            fill: whitesmoke;
+            width: 42px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 32px;
+        }
+
+        .grupo {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        input {
+            width: 100%;
+            padding: 18px 16px;
+            background-color: transparent;
+            border-radius: 12px;
+            color: whitesmoke;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: aqua;
+            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+        }
+
+        input:placeholder-shown ~ label {
+            top: 18px;
+            font-size: 16px;
+            color: gray;
+        }
+
+       input:focus ~ label, input:not(:placeholder-shown) ~ label {
+            top: 6px;
+            font-size: 11px;
+            color: #0071e3;
+        }
+
+        label {
+            position: absolute;
+            left: 16px;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            color: grey;
+        }
+
+        .submitar {
+            width: 100%;
+            padding: 16px;
+            background-color: #0071e3;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.2s ease;
+        }
+
+        .submitar:hover {
+            background-color: #0071e3;
+        }
+
+        .logado {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #86868b;
+        }
+
+        .logado input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .footer-links {
+            margin-top: 32px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            color: grey;
+                margin: 0 8px;
+        }
+
+        .apple-footer {
+            background-color: #161617;
+            border-top: 1px solid #424245;
+            padding: 24px 0;
+            font-size: 12px;
+            color: #86868b;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 1024px;
+            padding: 0 22px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-top: 1px solid #424245;
+            padding-top: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar-da-apple">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                 <svg viewBox="0 0 18 18"><path d="M15.56 10.12c-.04-2.16 1.76-3.19 1.84-3.24-1.01-1.47-2.57-1.67-3.13-1.71-1.33-.14-2.61.78-3.29.78-.67 0-1.74-.76-2.85-.74-1.46.02-2.82.85-3.57 2.16-1.51 2.63-.39 6.51 1.08 8.63.72 1.04 1.57 2.21 2.69 2.17 1.09-.04 1.5-.7 2.82-.7 1.31 0 1.69.7 2.83.68 1.16-.02 1.91-1.06 2.62-2.1 1.06-1.54 1.5-3.03 1.52-3.11-.05-.02-2.13-.82-2.15-3.27zM13.25 3.5c.6-.73.99-1.73.88-2.73-.86.03-1.9.57-2.52 1.29-.55.63-1.03 1.65-.9 2.63.96.07 1.94-.46 2.54-1.19z"/></svg>
+            </a>
+                <a href="#">Loja</a>
+                <a href="#">Mac</a>
+                <a href="#">Ipad</a>
+                <a href="#">Iphone</a>
+                <a href="#">Suporte</a>
+            </a>
+        </div>
+    </nav>
+
+    <main class="conteudo-main">
+        <div class="conteudo">
+            <div class="main-logo">
+              <svg viewBox="0 0 18 18"><path d="M15.56 10.12c-.04-2.16 1.76-3.19 1.84-3.24-1.01-1.47-2.57-1.67-3.13-1.71-1.33-.14-2.61.78-3.29.78-.67 0-1.74-.76-2.85-.74-1.46.02-2.82.85-3.57 2.16-1.51 2.63-.39 6.51 1.08 8.63.72 1.04 1.57 2.21 2.69 2.17 1.09-.04 1.5-.7 2.82-.7 1.31 0 1.69.7 2.83.68 1.16-.02 1.91-1.06 2.62-2.1 1.06-1.54 1.5-3.03 1.52-3.11-.05-.02-2.13-.82-2.15-3.27zM13.25 3.5c.6-.73.99-1.73.88-2.73-.86.03-1.9.57-2.52 1.29-.55.63-1.03 1.65-.9 2.63.96.07 1.94-.46 2.54-1.19z"/></svg>
+            </div>
+            
+            <h1>Conta Apple</h1>
+            <p class="subtitulo">Inicie a sessão para garantir as suas compras dentro da apple</p>
+
+            <form action="#" method="post">
+                <div class="grupo">
+                    <input type="email" id="emil" placeholder=" " required autocomplete="username">
+                    <label for="emial">E-mail ou número de telefone</label>
+                </div>
+
+                <div class="grupo2">
+                    <input type="password" id="senha" placeholder="" required autocomplete="current-password">
+                    <label for="passoword">Senha</label>
+                </div>
+
+                <div class="logado">
+                    <input type="checkbox" id="remember">
+                    <label style="position: static; color: #86868b; font-size: 14px; pointer-events: auto;" for="remember">Permanecer conectado</label>
+                </div>
+
+                <button type="submit" class="submitar">Continuar</button>
+            </form>
+
+             <div class="footer-links">
+                <a href="#">Esqueceu a senha?</a>
+                <span class="divider">|</span>
+                <a href="#">Criar uma hoje mesmo</a>
+            </div>
+        </div>
+    </main>
+
+     <footer class="apple-footer">
+        <div class="footer-container">
+            <p class="footer-text">Sua Conta Apple protege suas informações pessoais e permite que você escolha o que compartilha. Ao iniciar sessão, seus dados de navegação e dispositivo poderão ser usados para fins de segurança e prevenção de fraudes.</p>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 Apple Inc. Todos os direitos reservados.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Vendas e Reembolsos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
