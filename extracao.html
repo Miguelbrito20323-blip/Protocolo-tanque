@@ -1344,32 +1344,70 @@
             <div class="wrap">
                 <div class="nozzle-wrap">
                     <div class="nozzle-diagram">
-                        <svg class="nozzle-svg" fill="none" viewbox="0 0 320 260">
-                            <path d="M10 40 C 60 40, 60 80, 100 90" fill="none" stroke="#5B7C97" stroke-linecap="round"
-                                stroke-width="10"></path>
-                            <rect fill="#16283D" height="34" rx="8" stroke="#5B7C97" stroke-width="1.5" width="90"
-                                x="95" y="80"></rect>
-                            <rect fill="#245A85" height="14" id="pt-lever" rx="4" stroke="#5B7C97" width="46" x="105"
-                                y="60"></rect>
-                            <circle cx="80" cy="72" fill="#0B1826" id="pt-breakaway" r="10" stroke="#C97C2A"
-                                stroke-width="1.6"></circle>
-                            <path d="M185 92 L235 108 L230 122 L182 108 Z" fill="#245A85" id="pt-spout" stroke="#5B7C97"
-                                stroke-width="1.4"></path>
-                            <circle cx="233" cy="115" fill="#0B1826" id="pt-sensor" r="6" stroke="#C97C2A"
-                                stroke-width="1.6"></circle>
-                            <path d="M140 114 C 140 160, 90 170, 90 200" fill="none" id="pt-ground" stroke="#C97C2A"
-                                stroke-dasharray="3 3" stroke-width="1.4"></path>
-                            <circle cx="90" cy="200" fill="#0B1826" id="pt-groundpoint" r="5" stroke="#C97C2A"
-                                stroke-width="1.6"></circle>
-                            <path d="M225 100 Q 245 92 255 78" fill="none" id="pt-vapor" opacity="0.55" stroke="#5B7C97"
-                                stroke-linecap="round" stroke-width="6"></path>
-                            <text fill="#4A525C" font-family="Public Sans" font-size="12" x="10" y="245">Toque um item
-                                na lista ao
-                                lado</text>
+                        <svg class="nozzle-svg" fill="none" viewBox="0 0 320 260">
+
+                            <rect x="0" y="0" width="320" height="260" rx="4" fill="#EDEEEA"/>
+                            <path d="M0 88 Q40 84 80 88 T160 88 T240 88 T320 88" stroke="#5B7C97" stroke-width="2"/>
+
+                            <g id="etapa-1" opacity="1">
+                                <!-- Camadas-->
+                                <path d="M0 115 Q80 105 160 118 T320 112 L320 165 Q240 175 160 160 T0 165 Z" fill="#D5DAD5"/>
+                                <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z" fill="#BFC9C5"/>
+                                <!--Ondas de Análise-->
+                                <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128" stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4"/>
+
+                                <!--Reservatório-->
+                                <ellipse cx="190" cy="194" rx="65" ry="17" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
+                                <path d="M145 194 Q190 180 235 194" stroke="#DE9A4C" stroke-width="3"/>
+
+                                <text x="190" y="226" text-anchor="middle" fill="#4A525C" font-size="9" font-family="Public Sans">
+                                    RESERVATÓRIO
+                                </text>
+                            </g>
+
+                            <g id="etapa-2" opacity="0.28">
+                                <!--Torre-->
+                                <path d="M125 30 L160 10 L195 30" stroke="#16283D" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M135 30 L195 30 M135 48 L185 76" stroke="#16283D" stroke-width="3"/>
+                                <path d="M125 30 L195 30 M135 48 L185 48 M130 65 L190 65" stroke="#5B7C97" stroke-width="2"/>
+                                <!--Plataforma-->
+                                <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D"/>
+                                <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3"/>
+                                <!-- Broca e coluna de perfuração -->
+                                <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4"/>
+                                <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A"/>
+                            </g>
+
+                            <g id="etapa-3" opacity="0.28">
+
+                                <!-- Caminho do petróleo -->
+                                <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4"/>
+                                <!-- Fluxo na superfície -->
+                                <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3"/>
+                                <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- Reservatório -->
+                                <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 3"/>
+                            </g>
+
+                            
+                            <g id="etapa-4" opacity="0.28">
+
+                                <!-- Equipamentos de tratamento -->
+                                <rect x="225" y="43" width="30" height="42" rx="5" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
+                                <rect x="264" y="52" width="30" height="33" rx="5" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
+                                <path d="M240 43 V34 H279 V52" stroke="#C97C2A" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2"/>
+                                <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2"/>
+                                <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8" font-family="Public Sans">
+                                    TRATAMENTO
+                                </text>
+                            </g>
+
                         </svg>
                     </div>
+                    
                     <div class="step-list">
-                        <div class="step active" data-part="pt-lever"><span class="num">01</span>
+                        <div class="step active" data-part="etapa-1"><span class="num">01</span>
                             <div>
                                 <h4>Exploração e Identificação</h4>
                                 <p>Antes da extração, são realizados estudos geológicos e geofísicos para identificar
@@ -1378,16 +1416,15 @@
                                     reservatórios no subsolo ou no fundo do mar.</p>
                             </div>
                         </div>
-                        <div class="step" data-part="pt-sensor"><span class="num">02</span>
+                        <div class="step" data-part="etapa-2"><span class="num">02</span>
                             <div>
                                 <h4>Perfuração do poço</h4>
                                 <p>Após a identificação de uma área adequada, é realizada a perfuração
-                                    de um poço até alcançar o reservatório. Em operações offshore, esse
-                                    processo ocorre a partir de uma plataforma instalada no mar.subsolo
-                                    ou no fundo do mar.</p>
+                                de um poço até alcançar o reservatório. Em operações offshore, esse
+                                processo ocorre a partir de uma plataforma instalada no mar.</p>
                             </div>
                         </div>
-                        <div class="step" data-part="pt-breakaway"><span class="num">03</span>
+                        <div class="step" data-part="etapa-3"><span class="num">03</span>
                             <div>
                                 <h4>Extração do poço</h4>
                                 <p>Com o poço preparado, o petróleo é conduzido do reservatório
@@ -1396,7 +1433,7 @@
                                     equipamentos para auxiliar na elevação do petróleo.</p>
                             </div>
                         </div>
-                        <div class="step" data-part="pt-ground"><span class="num">04</span>
+                        <div class="step" data-part="etapa-4"><span class="num">04</span>
                             <div>
                                 <h4>Separação e tratamento</h4>
                                 <p>Ao chegar à superfície, o petróleo normalmente vem acompanhado de água,
@@ -1411,12 +1448,13 @@
         <section style="background:var(--paper-100);">
             <div class="wrap">
                 <div class="section-head reveal">
-                    <h2>Por que a ordem dos mecanismos importa</h2><span class="idx">Sequência de segurança</span>
+                    <h2>Por que cada etapa importa?</h2><span class="idx">Sequência de segurança</span>
                 </div>
-                <p class="section-sub">Nenhum desses mecanismos substitui o outro — eles cobrem momentos diferentes do
-                    abastecimento. O aterramento age antes do primeiro litro sair; o corte automático age no fim; o
-                    breakaway é a
-                    resposta para o imprevisto que nenhum dos dois cobre.</p>
+                <p class="section-sub">
+                    Cada etapa da extração possui uma função essencial para garantir
+                    que o petróleo seja localizado, retirado e preparado corretamente.
+                    Desde os estudos geológicos até a separação dos componentes,
+                    todos os processos contribuem para a eficiência e a segurança da operação.</p>
             </div>
         </section>
         <section>
@@ -1524,69 +1562,39 @@
                 document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
             }
 
-            // Etapas interativas do bico de abastecimento
-            const steps = document.querySelectorAll('.step[data-part]');
-            const partIds = ['pt-lever', 'pt-sensor', 'pt-breakaway', 'pt-ground', 'pt-groundpoint', 'pt-vapor'];
-            function highlightPart(id) {
-                partIds.forEach(partId => {
-                    const element = document.getElementById(partId);
-                    if (!element) return;
-                    element.style.opacity = (partId === id || (id === 'pt-ground' && partId === 'pt-groundpoint')) ? '1' : '0.28';
-                    element.style.filter = partId === id ? 'drop-shadow(0 0 4px rgba(201,124,42,0.9))' : 'none';
-                });
-            }
-            steps.forEach(step => step.addEventListener('click', () => {
-                steps.forEach(item => item.classList.remove('active'));
-                step.classList.add('active');
-                highlightPart(step.dataset.part);
-            }));
-            if (steps.length) highlightPart(steps[0].dataset.part);
 
-            // Hotspots da vista explodida na página inicial
-            const explodedViewer = document.getElementById('explodedViewer');
-            if (explodedViewer) {
-                const hotspots = explodedViewer.querySelectorAll('.hotspot');
-                const items = document.querySelectorAll('.exploded-item');
-                function setExplodedActive(part) {
-                    hotspots.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-                    items.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-                }
-                hotspots.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
-                items.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
+// Etapas interativas da extração do petróleo
+        const steps = document.querySelectorAll('.step[data-part]');
 
-                if ('IntersectionObserver' in window) {
-                    const observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                explodedViewer.classList.add('in-view');
-                                observer.unobserve(explodedViewer);
-                            }
-                        });
-                    }, { threshold: 0.3 });
-                    observer.observe(explodedViewer);
-                } else {
-                    explodedViewer.classList.add('in-view');
-                }
+        const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
 
-                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                const finePointer = window.matchMedia('(pointer: fine)').matches;
-                if (finePointer && !reduceMotion) {
-                    let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
-                    explodedViewer.addEventListener('mousemove', event => {
-                        const rect = explodedViewer.getBoundingClientRect();
-                        targetY = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-                        targetX = -((event.clientY - rect.top) / rect.height - 0.5) * 8;
+        function highlightPart(id) {
+            parts.forEach(part => {
+                const selected = part.id === id;
+                part.style.opacity = selected ? '1' : '0.20';
+                part.style.filter = selected
+                    ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
+                    : 'none';
+            });
+        }
+
+            steps.forEach(step => {
+                step.addEventListener('click', () => {
+                    steps.forEach(item => {
+                        item.classList.remove('active');
                     });
-                    explodedViewer.addEventListener('mouseleave', () => { targetX = 0; targetY = 0; });
-                    function tickTilt() {
-                        currentX += (targetX - currentX) * 0.08;
-                        currentY += (targetY - currentY) * 0.08;
-                        explodedViewer.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
-                        requestAnimationFrame(tickTilt);
-                    }
-                    tickTilt();
-                }
+
+                    step.classList.add('active');
+
+                    highlightPart(step.dataset.part);
+                });
+            });
+
+            // Inicia destacando a primeira etapa
+            if (steps.length) {
+                highlightPart(steps[0].dataset.part);
             }
+
         });
     </script>
 
