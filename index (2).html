@@ -396,6 +396,72 @@
       }
     }
 
+    .sobreconteudo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .sobreimg img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .sobretextos {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .sobrein {
+      color: var(--steel-300);
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 5px;
+    }
+
+    .sobreitem {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .sobreitem img {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .sobreitem h3 {
+      color: var(--paper-050);
+      font-size: 17px;
+      margin-bottom: 4px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .sobreitem p {
+      color: var(--steel-300);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 760px) {
+      .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sobre-imagem img {
+        height: 260px;
+      }
+    }
+
     .eyebrow-line {
       display: flex;
       align-items: center;
@@ -1356,102 +1422,72 @@
     <section class="page-hero">
       <div class="img-extracao">
         <img src="./imgs/plataforma.jpg" alt="plataforma_petroleo">
-
+        
         <div class="texto-img">
           <h1>SEGURANÇA E</h1>
           <h1>TECNOLOGIA</h1> <span>Centro de operações</span>
         </div>
       </div>
     </section>
+
     <section style="background:var(--navy-900);">
       <div class="wrap">
+
         <div class="section-head reveal" style="border-bottom-color:var(--line-dark);">
           <h2 style="color:var(--paper-050);">Sobre nós</h2>
         </div>
-        <p class="section-sub reveal" style="color:var(--steel-300);max-width:66ch;margin-bottom:40px;">A PetroSync
-          desenvolve soluções para
-          monitoramento e segurança de operações de
-          petróleo e gás. Nossa plataforma centraliza
-          informações de sensores, alertas e ocorrências,
-          permitindo que as equipes acompanhem a operação
-          e identifiquem possíveis riscos com mais rapidez.</p>
-        <div class="exploded-wrap">
-          <div class="exploded-outer">
-            <div class="exploded-viewer" id="explodedViewer">
-              <img
-                alt="Vista explodida do sistema de armazenamento e abastecimento de combustivel, mostrando tanque, flanges, sensores e bico separados"
-                class="exploded-img" src="https://recreio.com.br/wp-content/uploads/aleatorio/petroleo_capa.jpg"
-                class="exploded-sweep">
+
+        <div class="sobreconteudo">
+
+          <div class="sobreimg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10" alt="Extração de petróleo">
+          </div>
+          
+          <div class="sobretextos">
+
+            <p class="sobrein">
+              A PetroSync desenvolve soluções para monitoramento
+              e segurança de operações de petróleo e gás.
+              Nossa plataforma centraliza informações de sensores,
+              alertas e ocorrências, permitindo que as equipes
+              acompanhem a operação e identifiquem possíveis
+              riscos com mais rapidez.
+            </p>
+
+            <div class="sobreitem">
+              <img src="./imgs/segurança.png" alt="segurança">
+              <div>
+                <h3>Segurança operacional</h3>
+                <p>Prevenção e identificação de possíveis riscos durante as operações.</p>
+              </div>
+            </div>
+
+            <div class="sobreitem">
+              <img src="./imgs/armazenamento.png" alt="armazenamento">
+              <div>
+                <h3>Armazenamento</h3>
+                <p>Etapa responsável por armazenar o petróleo e seus derivados.</p>
+              </div>
+            </div>
+
+            <div class="sobreitem">
+              <img src="./imgs/transporte.png" alt="transporte">
+              <div>
+                <h3>Transporte</h3>
+                <p>Processo de deslocamento do petróleo até os centros de distribuição.</p>
+              </div>
             </div>
 
           </div>
         </div>
-        <div class="exploded-info" id="explodedInfo">
-          <div class="exploded-item active" data-part="ex-tanque"><span class="num">01</span>
-            <div>
-              <h4>Casco do tanque</h4>
-              <p>Corpo cilíndrico principal, onde o combustível fica armazenado sob controle de nível e pressão.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-flange"><span class="num">02</span>
-            <div>
-              <h4>Tampa e flange</h4>
-              <p>Fecha uma das extremidades do tanque; permite inspeção interna periódica sem cortar a estrutura.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-bocal"><span class="num">03</span>
-            <div>
-              <h4>Bocal de inspeção</h4>
-              <p>Acesso superior para manutenção e para o respiro que alivia a pressão interna do tanque.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-nivel"><span class="num">04</span>
-            <div>
-              <h4>Sensor de nível</h4>
-              <p>Acompanha a quantidade de combustível em tempo real e alerta antes de atingir a capacidade máxima.
-              </p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-skid"><span class="num">05</span>
-            <div>
-              <h4>Estrutura de base</h4>
-              <p>Skid metálico que sustenta e nivela o tanque, distribuindo o peso e facilitando o transporte.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-corte"><span class="num">06</span>
-            <div>
-              <h4>Sensor de corte automático</h4>
-              <p>Detecta o refluxo do combustível na boca do tanque e interrompe o fluxo, mesmo com o gatilho
-                acionado.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-bico"><span class="num">07</span>
-            <div>
-              <h4>Bico de abastecimento</h4>
-              <p>Conjunto que o operador manuseia para transferir o combustível do tanque até o veículo.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-breakaway"><span class="num">08</span>
-            <div>
-              <h4>Acoplamento breakaway</h4>
-              <p>Se a mangueira for puxada além do limite, esse ponto se separa e sela os dois lados, evitando
-                derramamento.</p>
-            </div>
-          </div>
-          <div class="exploded-item" data-part="ex-aterramento"><span class="num">09</span>
-            <div>
-              <h4>Cabo de aterramento</h4>
-              <p>Escoa a eletricidade estática gerada durante o abastecimento, eliminando o risco de faísca.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       </div>
     </section>
+
     <section>
       <div class="wrap">
         <div class="section-head reveal">
-          <h2>Quatro capítulos, uma cadeia de segurança</h2><span class="idx">Sumário</span>
+          <h2>Quatro capítulos, uma etapa</h2>
         </div>
         <div class="chapters">
           <a class="chapter-card" href="extracao.html">
