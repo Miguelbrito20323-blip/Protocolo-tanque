@@ -593,7 +593,7 @@
 
     .chapters {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
       background: var(--line);
       border: 1px solid var(--line);
@@ -610,7 +610,6 @@
       padding: 36px 32px;
       text-decoration: none;
       color: inherit;
-      display: flex;
       flex-direction: column;
       min-height: 200px;
       transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
@@ -631,26 +630,23 @@
       z-index: 1;
     }
 
-    .chapter-card:hover .cnum {
-      color: var(--teal-500);
+    .chapter-card img {
+      width: 50px;
     }
 
     .chapter-card:hover h3 {
       color: var(--teal-500);
     }
 
-    .chapter-card .cnum {
-      font-family: var(--font-display);
-      color: var(--steel-500);
-      font-size: 15px;
-      font-weight: 600;
-      transition: color .25s ease;
-    }
-
     .chapter-card h3 {
       font-size: 24px;
       margin: 14px 0 10px;
       transition: color .25s ease;
+    }
+
+    .h3chap img {
+      width: 35px;
+      height: 35px;
     }
 
     .chapter-card p {
@@ -661,10 +657,25 @@
     }
 
     .chapter-card .go {
-      margin-top: 16px;
+      margin-top: 18px;
       font-size: 13.5px;
       font-weight: 600;
       color: var(--amber-500);
+    }
+
+    .card-imagem {
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    .card-imagem img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      display: block;
+
+      object-fit: cover;
     }
 
     .tank-types {
@@ -1422,7 +1433,7 @@
     <section class="page-hero">
       <div class="img-extracao">
         <img src="./imgs/plataforma.jpg" alt="plataforma_petroleo">
-        
+
         <div class="texto-img">
           <h1>SEGURANÇA E</h1>
           <h1>TECNOLOGIA</h1> <span>Centro de operações</span>
@@ -1440,9 +1451,11 @@
         <div class="sobreconteudo">
 
           <div class="sobreimg">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10" alt="Extração de petróleo">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10"
+              alt="Extração de petróleo">
           </div>
-          
+
           <div class="sobretextos">
 
             <p class="sobrein">
@@ -1492,27 +1505,32 @@
         <div class="chapters">
           <a class="chapter-card" href="extracao.html">
             <span class="cnum">Capítulo 01</span>
-            <h3>Extração</h3>
+            <div class="h3chap">
+              <h3>Extração</h3>
+            </div>
             <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
             <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/ext.jpg" alt="Operação de extração">
+            </div>
           </a>
           <a class="chapter-card" href="abastecimento.html">
             <span class="cnum">Capítulo 02</span>
             <h3>Armazenamento</h3>
             <p>Descubra como o petróleo é armazenado com segurança e monitorado para evitar riscos.</p>
             <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/tanque.jpg" alt="Operação de extração">
+            </div>
           </a>
           <a class="chapter-card" href="seguranca.html">
             <span class="cnum">Capítulo 03</span>
             <h3>Transporte</h3>
             <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
             <span class="go">Explorar capítulo →</span>
-          </a>
-          <a class="chapter-card" href="sobre.html">
-            <span class="cnum">Capítulo 04</span>
-            <h3>Equipe</h3>
-            <p>Conheça os integrantes responsáveis pelo desenvolvimento e funcionamento do PetroSync</p>
-            <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/maritimo.jpg" alt="Operação de extração">
+            </div>
           </a>
         </div>
       </div>
