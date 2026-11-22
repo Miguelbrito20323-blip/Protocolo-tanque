@@ -501,7 +501,7 @@
 
         .chapters {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2px;
             background: var(--line);
             border: 1px solid var(--line);
@@ -559,6 +559,11 @@
             font-size: 24px;
             margin: 14px 0 10px;
             transition: color .25s ease;
+        }
+
+        .h3chap img {
+            width: 35px;
+            height: 35px;
         }
 
         .chapter-card p {
@@ -1346,21 +1351,26 @@
                     <div class="nozzle-diagram">
                         <svg class="nozzle-svg" fill="none" viewBox="0 0 320 260">
 
-                            <rect x="0" y="0" width="320" height="260" rx="4" fill="#EDEEEA"/>
-                            <path d="M0 88 Q40 84 80 88 T160 88 T240 88 T320 88" stroke="#5B7C97" stroke-width="2"/>
+                            <rect x="0" y="0" width="320" height="260" rx="4" fill="#EDEEEA" />
+                            <path d="M0 88 Q40 84 80 88 T160 88 T240 88 T320 88" stroke="#5B7C97" stroke-width="2" />
 
                             <g id="etapa-1" opacity="1">
                                 <!-- Camadas-->
-                                <path d="M0 115 Q80 105 160 118 T320 112 L320 165 Q240 175 160 160 T0 165 Z" fill="#D5DAD5"/>
-                                <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z" fill="#BFC9C5"/>
+                                <path d="M0 115 Q80 105 160 118 T320 112 L320 165 Q240 175 160 160 T0 165 Z"
+                                    fill="#D5DAD5" />
+                                <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z"
+                                    fill="#BFC9C5" />
                                 <!--Ondas de Análise-->
-                                <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128" stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4"/>
+                                <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128"
+                                    stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4" />
 
                                 <!--Reservatório-->
-                                <ellipse cx="190" cy="194" rx="65" ry="17" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
-                                <path d="M145 194 Q190 180 235 194" stroke="#DE9A4C" stroke-width="3"/>
+                                <ellipse cx="190" cy="194" rx="65" ry="17" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <path d="M145 194 Q190 180 235 194" stroke="#DE9A4C" stroke-width="3" />
 
-                                <text x="190" y="226" text-anchor="middle" fill="#4A525C" font-size="9" font-family="Public Sans">
+                                <text x="190" y="226" text-anchor="middle" fill="#4A525C" font-size="9"
+                                    font-family="Public Sans">
                                     RESERVATÓRIO
                                 </text>
                             </g>
@@ -1369,45 +1379,53 @@
 
                                 <!--Torre-->
                                 <!-- Torre de perfuração -->
-                                <path d="M160 10 L125 30 L145 75 H175 L195 30 Z" fill="#A8BECF" stroke="#16283D" stroke-width="3" stroke-linejoin="round"/>
-                                <path d="M140 43 H180 M145 58 H175 M133 30 L167 75 M187 30 L153 75" stroke="#16283D" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M160 10 L125 30 L145 75 H175 L195 30 Z" fill="#A8BECF" stroke="#16283D"
+                                    stroke-width="3" stroke-linejoin="round" />
+                                <path d="M140 43 H180 M145 58 H175 M133 30 L167 75 M187 30 L153 75" stroke="#16283D"
+                                    stroke-width="2.5" stroke-linecap="round" />
 
                                 <!--Plataforma-->
-                                <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D"/>
-                                <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3"/>
+                                <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D" />
+                                <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3" />
                                 <!-- Broca e coluna de perfuração -->
-                                <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4"/>
-                                <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A"/>
+                                <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4" />
+                                <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A" />
                             </g>
 
                             <g id="etapa-3" opacity="0.28">
 
                                 <!-- Caminho do petróleo -->
-                                <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4"/>
+                                <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4" />
                                 <!-- Fluxo na superfície -->
-                                <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3"/>
-                                <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3" />
+                                <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                                 <!-- Reservatório -->
-                                <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 3"/>
+                                <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2"
+                                    stroke-dasharray="4 3" />
                             </g>
 
-                            
+
                             <g id="etapa-4" opacity="0.28">
 
                                 <!-- Equipamentos de tratamento -->
-                                <rect x="225" y="43" width="30" height="42" rx="5" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
-                                <rect x="264" y="52" width="30" height="33" rx="5" fill="#16283D" stroke="#5B7C97" stroke-width="2"/>
-                                <path d="M240 43 V34 H279 V52" stroke="#C97C2A" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2"/>
-                                <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2"/>
-                                <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8" font-family="Public Sans">
+                                <rect x="225" y="43" width="30" height="42" rx="5" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <rect x="264" y="52" width="30" height="33" rx="5" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <path d="M240 43 V34 H279 V52" stroke="#C97C2A" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2" />
+                                <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2" />
+                                <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8"
+                                    font-family="Public Sans">
                                     TRATAMENTO
                                 </text>
                             </g>
 
                         </svg>
                     </div>
-                    
+
                     <div class="step-list">
                         <div class="step active" data-part="etapa-1"><span class="num">01</span>
                             <div>
@@ -1422,8 +1440,8 @@
                             <div>
                                 <h4>Perfuração do poço</h4>
                                 <p>Após a identificação de uma área adequada, é realizada a perfuração
-                                de um poço até alcançar o reservatório. Em operações offshore, esse
-                                processo ocorre a partir de uma plataforma instalada no mar.</p>
+                                    de um poço até alcançar o reservatório. Em operações offshore, esse
+                                    processo ocorre a partir de uma plataforma instalada no mar.</p>
                             </div>
                         </div>
                         <div class="step" data-part="etapa-3"><span class="num">03</span>
@@ -1474,32 +1492,37 @@
         <section>
             <div class="wrap">
                 <div class="section-head reveal">
-                    <h2>Quatro capítulos, uma cadeia de segurança</h2><span class="idx">Sumário</span>
+                    <h2>Quatro capítulos, uma etapa</h2>
                 </div>
                 <div class="chapters">
                     <a class="chapter-card" href="extracao.html">
                         <span class="cnum">Capítulo 01</span>
-                        <h3>Extração</h3>
+                        <div class="h3chap">
+                            <h3>Extração</h3>
+                        </div>
                         <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
                         <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/ext.jpg" alt="Operação de extração">
+                        </div>
                     </a>
-                    <a class="chapter-card" href="abastecimento.html">
+                    <a class="chapter-card" href="armazenamento.html">
                         <span class="cnum">Capítulo 02</span>
                         <h3>Armazenamento</h3>
                         <p>Descubra como o petróleo é armazenado com segurança e monitorado para evitar riscos.</p>
                         <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/tanque.jpg" alt="Operação de extração">
+                        </div>
                     </a>
-                    <a class="chapter-card" href="seguranca.html">
+                    <a class="chapter-card" href="transporte.html">
                         <span class="cnum">Capítulo 03</span>
                         <h3>Transporte</h3>
                         <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
                         <span class="go">Explorar capítulo →</span>
-                    </a>
-                    <a class="chapter-card" href="sobre.html">
-                        <span class="cnum">Capítulo 04</span>
-                        <h3>Equipe</h3>
-                        <p>Conheça os integrantes responsáveis pelo desenvolvimento e funcionamento do PetroSync</p>
-                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/maritimo.jpg" alt="Operação de extração">
+                        </div>
                     </a>
                 </div>
             </div>
@@ -1568,20 +1591,20 @@
             }
 
 
-// Etapas interativas da extração do petróleo
-        const steps = document.querySelectorAll('.step[data-part]');
+            // Etapas interativas da extração do petróleo
+            const steps = document.querySelectorAll('.step[data-part]');
 
-        const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
+            const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
 
-        function highlightPart(id) {
-            parts.forEach(part => {
-                const selected = part.id === id;
-                part.style.opacity = selected ? '1' : '0.20';
-                part.style.filter = selected
-                    ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
-                    : 'none';
-            });
-        }
+            function highlightPart(id) {
+                parts.forEach(part => {
+                    const selected = part.id === id;
+                    part.style.opacity = selected ? '1' : '0.20';
+                    part.style.filter = selected
+                        ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
+                        : 'none';
+                });
+            }
 
             steps.forEach(step => {
                 step.addEventListener('click', () => {
