@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extração | PetroSync</title>
+    <title>Transporte e Logística de Petróleo Bruto | PetroSync</title>
     <meta name="description"
-        content="Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo e derivados.">
+        content="Escoamento e logística de petróleo bruto (óleo cru): transporte dutoviário, marítimo, ferroviário e rodoviário entre plataformas de produção, terminais e refinarias com integridade da carga e conformidade ambiental.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -117,8 +117,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(5, 16, 26, 0.50);
-            opacity: 0;
+            background-color: rgba(5, 16, 26, 0.58);
+            opacity: 0.90;
             transition: opacity 0.3s;
             z-index: 1;
         }
@@ -127,29 +127,31 @@
             position: absolute;
             top: 50%;
             left: 8%;
+            transform: translateY(-50%);
             z-index: 2;
             color: white;
-            opacity: 0;
+            opacity: 1;
             transition: opacity 0.3s;
-            z-index: 2;
         }
 
         .texto-img h1 {
             margin: 0;
-            font-size: 34px;
+            font-size: 38px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
         }
 
         .texto-img span {
+            display: inline-block;
+            margin-top: 6px;
             color: #EBA152;
-            font-size: 30px;
+            font-size: 26px;
+            font-family: var(--font-display);
+            letter-spacing: 1px;
         }
 
         .img-extracao:hover::after {
-            opacity: 1;
-        }
-
-        .img-extracao:hover .texto-img {
-            opacity: 1;
+            opacity: 0.95;
         }
 
         img,
@@ -199,28 +201,6 @@
             align-items: center;
             justify-content: space-between;
             height: 72px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-family: var(--font-display);
-            font-size: 21px;
-            font-weight: 600;
-            color: var(--paper-050);
-            letter-spacing: 0.3px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-        }
-
-        .brand-mark {
-            width: 26px;
-            height: 26px;
-            flex-shrink: 0;
         }
 
         nav ul {
@@ -324,710 +304,446 @@
             }
         }
 
-        .page-hero {
-            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
-            color: var(--paper-050);
-            padding: 64px 0 56px;
-            overflow: hidden;
-        }
-
-        /* Ajustes exclusivos da Home: espaço para imagem de fundo sem empurrar o conteúdo */
-        .home-hero {
-            position: relative;
-            min-height: 620px;
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(90deg,
-                    rgba(11, 24, 38, 0.98) 0%,
-                    rgba(11, 24, 38, 0.94) 38%,
-                    rgba(11, 24, 38, 0.68) 62%,
-                    rgba(11, 24, 38, 0.28) 100%),
-                url("SUA-IMAGEM-AQUI.jpg") center / cover no-repeat;
-        }
-
-        .home-hero .wrap {
-            width: 100%;
-        }
-
-        .home-hero-content {
-            width: min(58%, 680px);
-        }
-
-        @media(max-width:900px) {
-            .home-hero-content {
-                width: min(78%, 680px);
-            }
-        }
-
-        @media(max-width:640px) {
-            .home-hero {
-                min-height: auto;
-            }
-
-            .home-hero-content {
-                width: 100%;
-            }
-        }
-
-        .eyebrow-line {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-            font-size: 13px;
-            color: var(--amber-400);
-            font-weight: 600;
-        }
-
-        .eyebrow-line .rule {
-            width: 34px;
-            height: 1px;
-            background: var(--amber-500);
-        }
-
-        .page-hero h1 {
-            font-size: clamp(50px, 5.8vw, 50px);
-            color: var(--paper-050);
-            max-width: 15ch;
-        }
-
-        .page-hero p.lead {
-            margin-top: 18px;
-            max-width: 52ch;
-            color: var(--steel-300);
-            font-size: 16.5px;
-            display: grid;
-        }
-
-        .crumb {
-            font-size: 13px;
-            color: var(--steel-500);
-            margin-bottom: 10px;
-        }
-
-        .crumb button {
-            background: none;
-            border: none;
-            padding: 0;
-            font-size: 13px;
-            color: var(--steel-500);
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        .crumb button:hover {
-            color: var(--steel-300);
-        }
-
+        /* Seções e Tipografia */
         section {
-            padding: 80px 0;
+            padding: 64px 0;
+            border-bottom: 1px solid var(--line);
+            background-color: rgb(13, 21, 33)
+        }
+
+        section.dark-section {
+            background: var(--navy-900);
+            color: var(--paper-050);
+            border-bottom-color: var(--line-dark);
         }
 
         .section-head {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            gap: 24px;
-            margin-bottom: 44px;
-            border-bottom: 1px solid var(--line);
-            padding-bottom: 22px;
-        }
-
-        .section-head h2 {
-            font-size: clamp(26px, 3.2vw, 38px);
-            max-width: 18ch;
-        }
-
-        .section-head .idx {
-            font-family: var(--font-display);
-            font-size: 14px;
-            color: var(--steel-500);
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .section-sub {
-            max-width: 62ch;
-            color: var(--ink-600);
-            font-size: 15.5px;
-            margin-top: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 26px;
-            border-radius: var(--radius-s);
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            border: 1px solid transparent;
-            transition: border-radius .35s ease, transform .2s ease, background .2s ease, box-shadow .3s ease, border-color .2s ease;
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: var(--amber-500);
-            color: var(--navy-900);
-        }
-
-        .btn-primary:hover {
-            background: var(--amber-400);
-            border-radius: 16px;
-            box-shadow: 0 8px 22px rgba(201, 124, 42, 0.28);
-            transform: translateY(-2px);
-        }
-
-        .btn-ghost {
-            border-color: var(--line-dark);
-            color: var(--paper-050);
-            background: none;
-        }
-
-        .btn-ghost:hover {
-            border-color: var(--teal-400);
-            color: var(--teal-400);
-            border-radius: 16px;
-            transform: translateY(-2px);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-            box-shadow: none;
-        }
-
-        .chapters {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
-
-        @media(max-width:760px) {
-            .chapters {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .chapter-card {
-            background: var(--paper-050);
-            padding: 36px 32px;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            min-height: 200px;
-            transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
-            cursor: pointer;
-            border: none;
-            text-align: left;
-            width: 100%;
-            font-family: inherit;
-            position: relative;
-            z-index: 0;
-        }
-
-        .chapter-card:hover {
-            background: var(--paper-050);
-            transform: translateY(-5px);
-            border-radius: 18px;
-            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.14);
-            z-index: 1;
-        }
-
-        .chapter-card:hover .cnum {
-            color: var(--teal-500);
-        }
-
-        .chapter-card:hover h3 {
-            color: var(--teal-500);
-        }
-
-        .chapter-card .cnum {
-            font-family: var(--font-display);
-            color: var(--steel-500);
-            font-size: 15px;
-            font-weight: 600;
-            transition: color .25s ease;
-        }
-
-        .chapter-card h3 {
-            font-size: 24px;
-            margin: 14px 0 10px;
-            transition: color .25s ease;
-        }
-
-        .h3chap img {
-            width: 35px;
-            height: 35px;
-        }
-
-        .chapter-card p {
-            color: var(--ink-600);
-            font-size: 14.5px;
-            margin: 0;
-            flex: 1;
-        }
-
-        .chapter-card .go {
-            margin-top: 16px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: var(--amber-500);
-        }
-
-        .tank-types {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
-
-        @media(max-width:860px) {
-            .tank-types {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .tank-card {
-            background: var(--paper-050);
-            padding: 32px 28px;
-            transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
-            position: relative;
-            z-index: 0;
-        }
-
-        .tank-card:hover {
-            transform: translateY(-5px);
-            border-radius: 18px;
-            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.12);
-            z-index: 1;
-        }
-
-        .tank-card .icn {
-            width: 42px;
-            height: 42px;
-            color: var(--navy-800);
-            margin-bottom: 18px;
-            transition: color .25s ease, transform .3s ease;
-        }
-
-        .tank-card:hover .icn {
-            color: var(--teal-500);
-            transform: scale(1.08);
-        }
-
-        .tank-card h3 {
-            font-size: 21px;
-            margin-bottom: 10px;
-        }
-
-        .tank-card p {
-            color: var(--ink-600);
-            font-size: 14.5px;
-            margin: 0;
-        }
-
-        .tank-card .tag {
-            display: inline-block;
-            margin-top: 16px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--amber-500);
-            border: 1px solid var(--amber-500);
-            border-radius: 20px;
-            padding: 4px 12px;
-        }
-
-        .nozzle-wrap {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 56px;
-            align-items: flex-start;
-        }
-
-        @media(max-width:900px) {
-            .nozzle-wrap {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .nozzle-diagram {
-            position: sticky;
-            top: 100px;
-        }
-
-        @media(max-width:900px) {
-            .nozzle-diagram {
-                position: static;
-            }
-        }
-
-        .nozzle-svg {
-            background: var(--paper-100);
-            border: 1px solid var(--line);
-            border-radius: 4px;
-            padding: 18px;
-        }
-
-        .step-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .step {
-            display: grid;
-            grid-template-columns: 40px 1fr;
+            align-items: baseline;
             gap: 16px;
-            padding: 20px 18px;
-            margin: 0 -18px;
-            border-top: 1px solid var(--line);
-            cursor: pointer;
-            border-radius: 2px;
-            transition: background .25s ease, border-radius .3s ease;
-        }
-
-        .step:hover {
-            background: var(--teal-050);
-            border-radius: 14px;
-        }
-
-        .step:last-child {
+            padding-bottom: 14px;
+            margin-bottom: 32px;
             border-bottom: 1px solid var(--line);
-        }
-
-        .step .num {
-            font-family: var(--font-display);
-            font-size: 21px;
-            font-weight: 600;
-            color: var(--steel-500);
-            transition: color .2s ease;
-        }
-
-        .step h4 {
-            font-size: 17px;
-            margin-bottom: 6px;
-            transition: color .2s ease;
-        }
-
-        .step p {
-            margin: 0;
-            color: var(--ink-600);
-            font-size: 14px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .3s ease;
-        }
-
-        .step:hover .num,
-        .step:hover h4 {
-            color: var(--teal-500);
-        }
-
-        .step.active .num {
-            color: var(--amber-500);
-        }
-
-        .step.active h4 {
-            color: var(--amber-500);
-        }
-
-        .step.active p {
-            max-height: 120px;
-            margin-top: 2px;
-        }
-
-        .step.active:hover .num,
-        .step.active:hover h4 {
-            color: var(--amber-500);
-        }
-
-        .safety-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
-
-        @media(max-width:900px) {
-            .safety-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(max-width:560px) {
-            .safety-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .safety-card {
-            background: var(--navy-900);
-            color: var(--paper-050);
-            padding: 28px 24px;
-            min-height: 185px;
-            display: flex;
-            flex-direction: column;
-            transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease, background .3s ease;
-            position: relative;
-            z-index: 0;
-        }
-
-        .safety-card:hover {
-            transform: translateY(-5px);
-            border-radius: 18px;
-            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.35);
-            background: var(--navy-800);
-            z-index: 1;
-        }
-
-        .safety-card .icn {
-            width: 28px;
-            height: 28px;
-            color: var(--amber-400);
-            margin-bottom: 16px;
-            transition: transform .3s ease;
-        }
-
-        .safety-card:hover .icn {
-            transform: scale(1.12) rotate(-4deg);
-            color: var(--teal-400);
-        }
-
-        .safety-card h3 {
-            color: var(--paper-050);
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .safety-card p {
-            color: var(--steel-300);
-            font-size: 13.5px;
-            margin: 0;
-            flex: 1;
-        }
-
-        .risk-meter {
-            display: flex;
-            gap: 10px;
-            margin-top: 28px;
-        }
-
-        .risk-seg {
-            flex: 1;
-            height: 6px;
-            background: var(--line-dark);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        .risk-seg i {
-            display: block;
-            height: 100%;
-            width: 0;
-            background: var(--amber-500);
-            transition: width 1s ease;
-        }
-
-        .norm-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 8px;
-        }
-
-        .norm-table th,
-        .norm-table td {
-            text-align: left;
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--line);
-            font-size: 14.5px;
-        }
-
-        .norm-table th {
-            font-family: var(--font-display);
-            font-size: 14px;
-            color: var(--steel-500);
-            font-weight: 600;
-        }
-
-        .norm-table td.code-cell {
-            font-family: var(--font-display);
-            font-weight: 600;
-            color: var(--navy-900);
-            white-space: nowrap;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
-
-        @media(max-width:860px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(max-width:520px) {
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .team-card {
-            background: var(--paper-050);
-            padding: 30px 22px 28px;
-            text-align: center;
-            transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
-            position: relative;
-            z-index: 0;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-            border-radius: 18px;
-            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.12);
-            z-index: 1;
-        }
-
-        .team-photo {
-            width: 88px;
-            height: 88px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 16px;
-            background: var(--navy-800);
-            border: 2px solid var(--line);
-            transition: border-color .3s ease, transform .3s ease;
-        }
-
-        .team-card:hover .team-photo {
-            border-color: var(--teal-500);
-            transform: scale(1.06);
-        }
-
-        .team-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .team-photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .team-photo-placeholder span {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 600;
-            color: var(--steel-300);
-            letter-spacing: 0.5px;
-        }
-
-        .team-card .role {
-            font-size: 12px;
-            color: var(--amber-500);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .team-card h3 {
-            font-size: 17px;
-        }
-
-        .chapter-nav {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 36px 0 0;
-            border-top: 1px solid var(--line);
             flex-wrap: wrap;
         }
 
-        .chapter-nav button {
-            text-decoration: none;
-            color: var(--ink-900);
-            font-family: var(--font-display);
-            font-size: 19px;
+        .section-head h2 {
+            font-size: 28px;
+            color: var(--navy-900);
+        }
+
+        .dark-section .section-head {
+            border-bottom-color: var(--line-dark);
+        }
+
+        .dark-section .section-head h2 {
+            color: var(--paper-050);
+        }
+
+        .section-head .idx {
+            font-size: 13px;
+            color: var(--steel-500);
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .lead-text {
+            font-size: 17.5px;
+            line-height: 1.7;
+            color: var(--ink-600);
+            max-width: 860px;
+            margin-bottom: 32px;
+        }
+
+        .dark-section .lead-text {
+            color: var(--steel-300);
+        }
+
+        /* Bloco 1: Overview Grid */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        .overview-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--amber-500);
+            padding: 24px 20px;
+            border-radius: var(--radius-s);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .dark-section .overview-card {
+            background: var(--navy-800);
+            border-color: var(--line-dark);
+            border-left-color: var(--amber-400);
+        }
+
+        .overview-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(11, 24, 38, 0.08);
+        }
+
+        .overview-card .num {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy-900);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .dark-section .overview-card .num {
+            color: var(--paper-050);
+        }
+
+        .overview-card .num span {
+            color: var(--amber-500);
+            font-size: 20px;
+        }
+
+        .overview-card .label {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--navy-900);
+            margin-bottom: 6px;
+        }
+
+        .dark-section .overview-card .label {
+            color: var(--paper-050);
+        }
+
+        .overview-card p {
+            font-size: 13.5px;
+            color: var(--ink-600);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .dark-section .overview-card p {
+            color: var(--steel-300);
+        }
+
+        /* Bloco 2: Grade dos 4 Modais com Imagens */
+        .modais-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .modal-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-s);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .dark-section .modal-card {
+            background: var(--navy-800);
+            border-color: var(--line-dark);
+        }
+
+        .modal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 28px rgba(11, 24, 38, 0.12);
+            border-color: var(--steel-300);
+        }
+
+        .modal-img-wrap {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: var(--navy-900);
+        }
+
+        .modal-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .modal-card:hover .modal-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .modal-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .modal-capacity {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(201, 124, 42, 0.12);
+            color: var(--amber-500);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 5px 10px;
+            border-radius: var(--radius-s);
+            align-self: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .dark-section .modal-capacity {
+            background: rgba(222, 154, 76, 0.15);
+            color: var(--amber-400);
+        }
+
+        .modal-body h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--navy-900);
+        }
+
+        .dark-section .modal-body h3 {
+            color: var(--paper-050);
+        }
+
+        .modal-body p {
+            font-size: 14.5px;
+            color: var(--ink-600);
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .dark-section .modal-body p {
+            color: var(--steel-300);
+        }
+
+        /* Bloco 3: Segurança e Licenças */
+        .licencas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .licenca-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-s);
+            padding: 28px 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .licenca-card:hover {
+            border-color: var(--teal-500);
+            box-shadow: 0 8px 20px rgba(46, 125, 107, 0.08);
+        }
+
+        .badge-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(46, 125, 107, 0.12);
+            border: 1px solid var(--teal-400);
+            color: var(--teal-500);
+            border-radius: var(--radius-s);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .licenca-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--navy-900);
+        }
+
+        .licenca-info p {
+            font-size: 14px;
+            color: var(--ink-600);
+            line-height: 1.55;
+            margin: 0 0 10px;
+        }
+
+        .reg-tag {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--teal-500);
+            background: var(--teal-050);
+            padding: 3px 8px;
+            border-radius: var(--radius-s);
+            display: inline-block;
+        }
+
+        /* Bloco 4: Monitoramento e Integridade */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .tech-card {
+            background: var(--navy-800);
+            border: 1px solid var(--line-dark);
+            border-radius: var(--radius-s);
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform .25s ease, border-color .25s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--amber-500);
+        }
+
+        .tech-icon {
+            width: 38px;
+            height: 38px;
+            color: var(--amber-400);
+            margin-bottom: 16px;
+        }
+
+        .tech-card h3 {
+            font-size: 19px;
+            color: var(--paper-050);
+            margin-bottom: 10px;
+        }
+
+        .tech-card p {
+            font-size: 13.5px;
+            color: var(--steel-300);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Protocolo de Custódia */
+        .custodia-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .custodia-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px dashed var(--line-dark);
+            padding: 20px 16px;
+            border-radius: var(--radius-s);
+        }
+
+        .custodia-step {
+            font-family: var(--font-display);
+            font-size: 13.5px;
+            color: var(--amber-400);
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .custodia-item h4 {
+            font-size: 16px;
+            color: var(--paper-050);
+            margin-bottom: 6px;
+        }
+
+        .custodia-item p {
+            font-size: 12.5px;
+            color: var(--steel-300);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Navegação Inferior */
+        .chapter-nav {
+            background: var(--paper-100);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .chapter-nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .chapter-nav-prev,
+        .chapter-nav-next {
+            text-decoration: none;
             display: flex;
             flex-direction: column;
             gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 14px 18px;
-            margin: -14px -18px;
-            border-radius: 2px;
-            text-align: left;
-            transition: background .25s ease, border-radius .3s ease, transform .25s ease;
+            transition: transform .2s ease;
         }
 
-        .chapter-nav button:hover {
-            background: var(--teal-050);
-            border-radius: 14px;
-            transform: translateY(-2px);
+        .chapter-nav-prev:hover,
+        .chapter-nav-next:hover {
+            transform: translateX(4px);
         }
 
-        .chapter-nav button:hover span {
-            color: var(--teal-500);
-        }
-
-        .chapter-nav button span {
-            font-family: var(--font-body);
-            font-size: 12.5px;
+        .chapter-nav-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: var(--steel-500);
-            font-weight: 500;
-            transition: color .2s ease;
+            font-weight: 600;
         }
 
-        .chapter-nav button.next {
-            text-align: right;
-            align-items: flex-end;
+        .chapter-nav-title {
+            font-family: var(--font-display);
+            font-size: 21px;
+            font-weight: 600;
+            color: var(--navy-900);
         }
 
+        /* Footer */
         footer {
             background: var(--navy-900);
-            border-top: 1px solid var(--line-dark);
-            padding: 32px 0;
             color: var(--steel-300);
-            font-size: 13.5px;
+            padding: 28px 0;
+            font-size: 14px;
         }
 
         .foot-row {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }
 
-        .foot-row button {
-            background: none;
-            border: none;
-            color: inherit;
+        .foot-row a {
+            color: var(--amber-400);
             text-decoration: none;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: inherit;
-            padding: 0;
+            font-weight: 500;
         }
 
+        .foot-row a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animação reveal */
         .reveal {
             opacity: 0;
-            transform: translateY(14px);
-            transition: opacity .6s ease, transform .6s ease;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
         .reveal.in {
@@ -1035,387 +751,498 @@
             transform: translateY(0);
         }
 
-        .liquid-wave {
-            animation: waveShift 6s linear infinite;
-        }
-
-        @keyframes waveShift {
-            from {
-                transform: translateX(0);
+        /* Responsividade */
+        @media(max-width:960px) {
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            to {
-                transform: translateX(-60px);
-            }
-        }
-
-        .gauge-needle {
-            transform-origin: 170px 20px;
-            animation: needleSettle 2.2s cubic-bezier(.2, .9, .25, 1) 1;
-        }
-
-        @keyframes needleSettle {
-            0% {
-                transform: rotate(-70deg);
-            }
-
-            60% {
-                transform: rotate(18deg);
-            }
-
-            100% {
-                transform: rotate(2deg);
-            }
-        }
-
-        .draw-in {
-            stroke-dasharray: 400;
-            stroke-dashoffset: 400;
-            animation: drawLine 1.6s ease forwards;
-        }
-
-        @keyframes drawLine {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-
-        .pulse-dot {
-            animation: pulseDot 2s ease-in-out infinite;
-        }
-
-        @keyframes pulseDot {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.35;
-            }
-        }
-
-        .exploded-wrap {
-            display: grid;
-            grid-template-columns: 1.55fr 1fr;
-            gap: 44px;
-            align-items: start;
-        }
-
-        @media(max-width:900px) {
-            .exploded-wrap {
+            .modais-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        .exploded-outer {
-            animation: explodedFloat 7s ease-in-out infinite;
-        }
-
-        @keyframes explodedFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .exploded-viewer {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #04070c;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
-        }
-
-        .exploded-viewer img.exploded-img {
-            display: block;
-            width: 100%;
-            height: auto;
-            animation: explodedReveal 1.1s ease both;
-        }
-
-        @keyframes explodedReveal {
-            from {
-                opacity: 0;
-                transform: scale(1.05);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .exploded-sweep {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.16) 50%, transparent 58%);
-            transform: translateX(-130%);
-            pointer-events: none;
-        }
-
-        .exploded-viewer.in-view .exploded-sweep {
-            animation: sweepAcross 1.5s ease .35s 1;
-        }
-
-        @keyframes sweepAcross {
-            to {
-                transform: translateX(130%);
-            }
-        }
-
-        .hotspot {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: rgba(11, 24, 38, 0.85);
-            border: 2px solid var(--amber-400);
-            color: var(--amber-400);
-            font-family: var(--font-display);
-            font-size: 12px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transform: translate(-50%, -50%);
-            transition: background .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
-            padding: 0;
-        }
-
-        .hotspot::before {
-            content: "";
-            position: absolute;
-            inset: -8px;
-            border-radius: 50%;
-            border: 1.5px solid var(--amber-400);
-            opacity: .55;
-            animation: hotspotPulse 2.4s ease-out infinite;
-        }
-
-        .hotspot:hover,
-        .hotspot:focus-visible,
-        .hotspot.active {
-            background: var(--amber-500);
-            color: var(--navy-900);
-            border-color: var(--amber-500);
-            transform: translate(-50%, -50%) scale(1.18);
-        }
-
-        @keyframes hotspotPulse {
-            0% {
-                transform: scale(.6);
-                opacity: .6;
-            }
-
-            100% {
-                transform: scale(2);
-                opacity: 0;
-            }
-        }
-
-        .hotspot .tip {
-            position: absolute;
-            bottom: 135%;
-            left: 50%;
-            transform: translateX(-50%) translateY(4px);
-            background: var(--navy-900);
-            color: var(--paper-050);
-            font-family: var(--font-body);
-            font-size: 12px;
-            font-weight: 500;
-            white-space: nowrap;
-            padding: 5px 10px;
-            border-radius: 4px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .2s ease, transform .2s ease;
-            border: 1px solid var(--line-dark);
-        }
-
-        .hotspot:hover .tip,
-        .hotspot:focus-visible .tip {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .exploded-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .exploded-item {
-            display: grid;
-            grid-template-columns: 34px 1fr;
-            gap: 14px;
-            padding: 16px 14px;
-            margin: 0 -14px;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: background .25s ease, border-radius .3s ease;
-        }
-
-        .exploded-item:hover {
-            background: var(--teal-050);
-            border-radius: 12px;
-        }
-
-        .exploded-item .num {
-            font-family: var(--font-display);
-            font-size: 17px;
-            color: var(--steel-300);
-            font-weight: 600;
-            transition: color .2s ease;
-        }
-
-        .exploded-item h4 {
-            color: var(--paper-050);
-            font-size: 15px;
-            margin-bottom: 4px;
-            transition: color .2s ease;
-        }
-
-        .exploded-item p {
-            margin: 0;
-            color: var(--steel-300);
-            font-size: 13px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .3s ease;
-        }
-
-        .exploded-item.active {
-            background: rgba(201, 124, 42, 0.14);
-        }
-
-        .exploded-item.active .num,
-        .exploded-item.active h4 {
-            color: var(--amber-400);
-        }
-
-        .exploded-item.active p {
-            max-height: 100px;
-            margin-top: 2px;
-        }
-
-        .page[hidden] {
-            display: none;
-        }
-
-        .plataformas {
-            padding: 80px 0;
-            background: #EDEEEA
-        }
-
-        .opcoes-plataforma {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 35px;
-        }
-
-        .card-plataforma {
-            padding: 0;
-            border: 2px solid rgba(27, 33, 41, 0.12);
-            border-radius: 10px;
-            overflow: hidden;
-            background: #F6F6F3;
-            cursor: pointer;
-            text-align: left;
-            transition: .25s ease;
-            color: #1B2129;
-        }
-
-        .card-plataforma:hover,
-        .card-plataforma.active {
-            border-color: #C97C2A;
-            transform: translateY(-5px);
-        }
-
-        .card-plataforma img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .card-plataforma h3 {
-            margin: 16px 18px 6px;
-            font-size: 22px;
-        }
-
-        .card-plataforma span {
-            display: block;
-            margin: 0 18px 18px;
-            color: #4A525C;
-            font-size: 14px;
-        }
-
-        .descricao-plataforma {
-            margin-top: 25px;
-            padding: 30px;
-            border-left: 4px solid #C97C2A;
-            background: #f6f6f3;
-            border-radius: 6px;
-        }
-
-        .descricao-plataforma h3 {
-            margin-bottom: 10px;
-            color: #102132;
-        }
-
-        .descricao-plataforma p {
-            color: #4a525c;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        @media(max-width: 600px) {
-            .opcoes-plataforma {
+            .licencas-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .custodia-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .texto-img h1 {
+                font-size: 28px;
+            }
+
+            .texto-img span {
+                font-size: 20px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .custodia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chapter-nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Cabeçalho idêntico ao padrão PetroSync com menu mobile responsivo -->
     <header>
         <div class="wrap nav-row">
             <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROSYNC"></a>
                 <a href="./index (2).html">
-                    <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+                    <h3 class="petrosync">PETRO<span>SYNC</span></h3>
                 </a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"
-                aria-expanded="false"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav id="mainNav" aria-label="Navegação principal">
                 <ul>
                     <li><a href="index (2).html">Início</a></li>
                     <li><a href="extracao.html">Extração</a></li>
                     <li><a href="armazenamento.html">Armazenamento</a></li>
-                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="transporte.html" class="active">Transporte</a></li>
                     <li><a href="sobre.html">Equipe</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
 
+    <main>
+        <!-- Banner Hero no padrão visual do projeto com imagem representativa -->
         <section class="page-hero">
             <div class="img-extracao">
-                <img src="./imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
-
+                <img src="./imgs/maritimo.jpg" alt="Escoamento e Transporte de Petróleo Bruto">
                 <div class="texto-img">
-                    <h1>TRANSPORTE</h1>
-                    <span>Todos os meios</span>
+                    <h1>ESCOAMENTO E</h1>
+                    <h1>TRANSPORTE DE</h1> <span>PETRÓLEO BRUTO (ÓLEO CRU)</span>
                 </div>
             </div>
         </section>
+
+        <!-- BLOCO 1: O Que Fazemos -->
+        <section>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>O Que Fazemos</h2>
+                    <span class="idx">Capítulo 03 · Logística Midstream</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    Atuamos de forma direta e especializada no <strong>escoamento e na logística integrada de petróleo
+                        bruto (óleo cru)</strong>, operando o elo estratégico do segmento <em>midstream</em> que conecta
+                    poços e plataformas de produção <em>offshore</em> e <em>onshore</em> diretamente aos terminais
+                    marítimos, parques de tancagem e refinarias de processamento.
+                </p>
+
+                <p class="lead-text reveal" style="font-size:15.5px; margin-top:-16px;">
+                    Nossa operação prioriza a <strong>agilidade no fluxo de escoamento</strong>, a <strong>preservação
+                        da integridade física e química da carga</strong> (controle de viscosidade, temperatura de
+                    fluidez e teor de sedimentos BSW) e a <strong>máxima segurança operacional</strong>, eliminando
+                    riscos de perda primária de contenção em todas as etapas da cadeia logística.
+                </p>
+
+                <!-- Indicadores Operacionais de Petróleo Bruto -->
+                <div class="overview-grid reveal">
+                    <div class="overview-card">
+                        <div class="num">24<span>/7</span></div>
+                        <div class="label">Escoamento Contínuo</div>
+                        <p>Operação ininterrupta entre campos de produção, estações de bombeamento e terminais.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="num">100<span>%</span></div>
+                        <div class="label">Integridade do Óleo Cru</div>
+                        <p>Monitoramento permanente de grau API, BSW (água e sedimentos) e vazão volumétrica.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="num">0<span>%</span></div>
+                        <div class="label">Perda de Contenção</div>
+                        <p>Protocolos preventivos rigorosos contra vazamentos e preservação de ecossistemas.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="num">100<span>%</span></div>
+                        <div class="label">Rastreabilidade Total</div>
+                        <p>Sistemas SCADA e telemetria satelital dedicados ao controle de pressão e rotas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 2: Modais e Frota (Com Imagens e Capacidades) -->
+        <section class="dark-section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Modais e Frota para Escoamento de Petróleo Bruto</h2>
+                    <span class="idx">Matriz Logística Especializada</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    O petróleo bruto requer métodos de transporte dimensionados para sua densidade, viscosidade e volume
+                    de extração. Nossa matriz combina quatro modais de alto rendimento para assegurar escoamento
+                    ininterrupto dos campos até os terminais de entrega.
+                </p>
+
+                <!-- Grade Visual com 4 Cards e Imagens Reais Padronizadas -->
+                <div class="modais-grid reveal">
+
+                    <!-- Modal 1: Oleodutos -->
+                    <div class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=800&q=80"
+                                alt="Oleodutos e Malha Dutoviária de Petróleo Bruto">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Capacidade: Fluxo contínuo de até 600.000 bpd</div>
+                            <h3>Oleodutos (Malha Dutoviária)</h3>
+                            <p>
+                                Tubulações de aço de alta resistência e alta pressão projetadas para o escoamento
+                                contínuo 24/7 de grandes volumes de óleo cru entre campos de produção e terminais
+                                marítimos ou refinarias, apresentando o menor custo operacional por barril e
+                                elevadíssimo índice de segurança mecânica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modal 2: Transporte Marítimo -->
+                    <div class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80"
+                                alt="Navio Petroleiro de Casco Duplo">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Capacidade: Até 150.000 a 300.000 DWT</div>
+                            <h3>Transporte Marítimo (Cabotagem & Longo Curso)</h3>
+                            <p>
+                                Navios petroleiros com tecnologia obrigatória de Casco Duplo (Double Hull) e navios
+                                aliviadores (shuttle tankers com posicionamento dinâmico DP2) desenvolvidos para
+                                operações offshore de alívio em plataformas e FPSOs, cabotagem e exportação de óleo cru
+                                em longas distâncias marítimas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modal 3: Transporte Ferroviário -->
+                    <div class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80"
+                                alt="Composição Ferroviária com Vagões-Tanque">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Capacidade: Até 6.000.000 de litros por composição</div>
+                            <h3>Transporte Ferroviário</h3>
+                            <p>
+                                Composições ferroviárias tracionadas com dezenas de vagões-tanque especializados para
+                                movimentação em massa de petróleo bruto por longos trechos terrestres onde não há
+                                cobertura de oleodutos, conectando polos de extração no interior diretamente aos
+                                terminais litorâneos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modal 4: Transporte Rodoviário -->
+                    <div class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80"
+                                alt="Caminhão-Tanque para Transporte de Petróleo Bruto">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Capacidade: 35.000 a 45.000 litros por veículo</div>
+                            <h3>Transporte Rodoviário</h3>
+                            <p>
+                                Caminhões-tanque articulados de alta resistência utilizados para transporte em trechos
+                                curtos, coleta de óleo cru em campos terrestres de difícil acesso ou isolados da rede de
+                                dutos, fornecendo máxima flexibilidade de roteamento e suporte operacional pontual.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 3: Segurança e Licenças -->
+        <section>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Segurança Operacional, Licenças e Regulamentação</h2>
+                    <span class="idx">Conformidade Regulatória</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    A movimentação de petróleo bruto é estritamente regulamentada pelos órgãos federais e ambientais do
+                    setor de energia. Nossa governança atende de forma integral aos registros e auditorias técnicas
+                    exigidos por lei.
+                </p>
+
+                <!-- Grid com os 4 Selos e Registros Obrigatórios -->
+                <div class="licencas-grid reveal">
+
+                    <!-- ANP -->
+                    <div class="licenca-card">
+                        <div class="badge-icon">ANP</div>
+                        <div class="licenca-info">
+                            <h3>Agência Nacional do Petróleo (ANP)</h3>
+                            <p>
+                                Autorização formal para a atividade de movimentação e transferência a granel de petróleo
+                                bruto (óleo cru), atendendo à Resolução ANP nº 784/2019 e às exigências de conformidade
+                                metrológica e integridade dos sistemas de transporte.
+                            </p>
+                            <span class="reg-tag">Resolução ANP nº 784/2019 · Autorização Ativa</span>
+                        </div>
+                    </div>
+
+                    <!-- ANTT & RNTRC -->
+                    <div class="licenca-card">
+                        <div class="badge-icon">ANTT</div>
+                        <div class="licenca-info">
+                            <h3>ANTT & Registro RNTRC (Produtos Perigosos)</h3>
+                            <p>
+                                Registro obrigatório junto à ANTT para transporte rodoviário e ferroviário de cargas
+                                perigosas da Classe 3 (Petróleo Bruto - ONU 1267), com condutores certificados no curso
+                                MOPP, envelopes de emergência e fichas de segurança conforme a Resolução ANTT nº
+                                5.998/2022.
+                            </p>
+                            <span class="reg-tag">Resolução ANTT 5.998 · ONU 1267 (Petróleo Bruto)</span>
+                        </div>
+                    </div>
+
+                    <!-- IBAMA & Licenciamento Ambiental -->
+                    <div class="licenca-card">
+                        <div class="badge-icon">IBAMA</div>
+                        <div class="licenca-info">
+                            <h3>IBAMA & Licenciamento Ambiental (LO & PEI)</h3>
+                            <p>
+                                Licença de Operação (LO) válida expedida pelo órgão ambiental federal para transporte de
+                                óleo cru. Implantação e homologação do Plano de Emergência Individual (PEI), em total
+                                conformidade com a Resolução CONAMA nº 398/2008 para resposta rápida contra vazamentos.
+                            </p>
+                            <span class="reg-tag">Licença de Operação (LO) · CONAMA nº 398/2008 (PEI)</span>
+                        </div>
+                    </div>
+
+                    <!-- Certificações ISO -->
+                    <div class="licenca-card">
+                        <div class="badge-icon">ISO</div>
+                        <div class="licenca-info">
+                            <h3>Certificações Integradas (ISO 9001, 14001 e 45001)</h3>
+                            <p>
+                                Sistema de Gestão Integrado auditado: <strong>ISO 9001</strong> (Qualidade e
+                                conformidade de entrega), <strong>ISO 14001</strong> (Gestão Ambiental e prevenção de
+                                poluição por óleo cru) e <strong>ISO 45001</strong> (Saúde e Segurança Ocupacional, com
+                                atendimento estrito à <strong>NR-20</strong>).
+                            </p>
+                            <span class="reg-tag">ISO 9001 · ISO 14001 · ISO 45001 · NR-20</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 4: Monitoramento e Integridade da Carga -->
+        <section class="dark-section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Monitoramento Contínuo e Integridade da Carga</h2>
+                    <span class="idx">Tecnologia e Controle Operacional</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    Garantimos a salvaguarda da carga de petróleo bruto através de sistemas automatizados de controle de
+                    pressão, rastreamento contínuo e infraestrutura técnica de proteção ambiental em tempo real.
+                </p>
+
+                <!-- 4 Pilares de Monitoramento e Integridade -->
+                <div class="tech-grid reveal">
+
+                    <!-- Telemetria e Pressão 24h -->
+                    <div class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
+                            <circle cx="19" cy="19" r="14" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M19 11 V19 L24 24" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                            <circle cx="19" cy="19" r="2.5" fill="currentColor" />
+                        </svg>
+                        <h3>Telemetria e Pressão 24h</h3>
+                        <p>
+                            Sistemas SCADA e LDS (Leak Detection System) integrados nos oleodutos e estações, realizando
+                            a leitura contínua de pressão hidráulica, vazão e temperatura para identificar
+                            microvariações instantaneamente.
+                        </p>
+                    </div>
+
+                    <!-- Rastreamento Satelital -->
+                    <div class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
+                            <circle cx="19" cy="19" r="14" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M7 19 H31 M19 7 C14 11 14 27 19 31 M19 7 C24 11 24 27 19 31" stroke="currentColor"
+                                stroke-width="1.6" />
+                        </svg>
+                        <h3>Rastreamento via Satélite</h3>
+                        <p>
+                            Comunicação bidirecional via satélite para navios petroleiros, composições ferroviárias e
+                            frotas de transporte terrestre, com cercas virtuais georreferenciadas e bloqueio preventivo
+                            contra alterações de percurso.
+                        </p>
+                    </div>
+
+                    <!-- Lacres Eletrônicos -->
+                    <div class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
+                            <rect x="9" y="15" width="20" height="15" rx="2" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M14 15 V10 C14 7.2 16.2 5 19 5 C21.8 5 24 7.2 24 10 V15" stroke="currentColor"
+                                stroke-width="1.8" />
+                            <circle cx="19" cy="22" r="2" fill="currentColor" />
+                        </svg>
+                        <h3>Lacres Eletrônicos Antifraude</h3>
+                        <p>
+                            Dispositivos digitais criptografados instalados em todas as válvulas de alívio e bocas de
+                            inspeção dos tanques. O registro de abertura requer chave física e validação de coordenadas
+                            geográficas no destino homologado.
+                        </p>
+                    </div>
+
+                    <!-- Pronta Resposta Ambiental -->
+                    <div class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
+                            <path d="M19 4 L33 28 H5 L19 4 Z" stroke="currentColor" stroke-width="1.8" />
+                            <line x1="19" y1="13" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="19" cy="24" r="1.5" fill="currentColor" />
+                        </svg>
+                        <h3>Pronta Resposta Ambiental</h3>
+                        <p>
+                            Equipes de emergência ambiental estrategicamente distribuídas nos corredores de transporte,
+                            aparelhadas com barreiras flutuantes de contenção, recolhedores de óleo cru (skimmers) e
+                            caminhões a vácuo para contenção imediata.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Protocolo de Custódia do Óleo Cru -->
+                <div class="section-head reveal" style="margin-top: 48px; margin-bottom: 20px;">
+                    <h2 style="font-size:22px;">Protocolo de Custódia e Integridade do Petróleo Bruto</h2>
+                    <span class="idx">Fluxo Operacional</span>
+                </div>
+
+                <div class="custodia-grid reveal">
+                    <div class="custodia-item">
+                        <div class="custodia-step">Etapa 01</div>
+                        <h4>Homologação na Origem</h4>
+                        <p>Aferição volumétrica e análise laboratorial das propriedades físico-químicas do óleo cru
+                            (grau API e BSW) no campo de extração.</p>
+                    </div>
+                    <div class="custodia-item">
+                        <div class="custodia-step">Etapa 02</div>
+                        <h4>Transferência Hermética</h4>
+                        <p>Carregamento em circuito fechado com equalização de pressão e ativação dos lacres eletrônicos
+                            nas conexões de saída.</p>
+                    </div>
+                    <div class="custodia-item">
+                        <div class="custodia-step">Etapa 03</div>
+                        <h4>Monitoramento Ativo</h4>
+                        <p>Acompanhamento contínuo dos gradientes de pressão, temperaturas de bombeamento e localização
+                            satelital em tempo real.</p>
+                    </div>
+                    <div class="custodia-item">
+                        <div class="custodia-step">Etapa 04</div>
+                        <h4>Entrega e Descarregamento</h4>
+                        <p>Recepção no terminal marítimo ou refinaria com checagem dos lacres, conferência volumétrica e
+                            laudo de entrega.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Navegação entre Capítulos -->
+        <div class="chapter-nav">
+            <div class="wrap chapter-nav-inner">
+                <a href="armazenamento.html" class="chapter-nav-prev">
+                    <span class="chapter-nav-label">← Capítulo Anterior</span>
+                    <span class="chapter-nav-title">Capítulo 02 · Armazenamento</span>
+                </a>
+                <a href="sobre.html" class="chapter-nav-next" style="text-align: right;">
+                    <span class="chapter-nav-label">Próxima Seção →</span>
+                    <span class="chapter-nav-title">Equipe e Projeto</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé idêntico ao padrão das outras páginas -->
+    <footer>
+        <div class="wrap foot-row">
+            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo
+                bruto.</span>
+            <a href="sobre.html">Sobre o projeto e a equipe →</a>
+        </div>
+    </footer>
+
+    <!-- Scripts: Menu Mobile, Marcação Ativa e Revelação Suave -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Menu Mobile Toggle
+            const navToggle = document.getElementById('navToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            if (navToggle && mainNav) {
+                navToggle.addEventListener('click', () => {
+                    const open = mainNav.classList.toggle('open');
+                    navToggle.setAttribute('aria-expanded', String(open));
+                });
+                mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                    mainNav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }));
+            }
+
+            // 2. Destaque de Link Ativo no Menu
+            const current = location.pathname.split('/').pop() || 'transporte.html';
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === current || (current.includes('transporte') && href.includes('transporte')) || (current.includes('projetos') && href.includes('transporte'))) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 3. Efeito Reveal ao Rolar a Página
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in');
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+            } else {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+            }
+        });
+    </script>
+</body>
+
+</html>
