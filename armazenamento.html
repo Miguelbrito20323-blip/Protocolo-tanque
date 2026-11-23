@@ -575,6 +575,21 @@
       color: var(--amber-500);
     }
 
+    .card-imagem {
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    .card-imagem img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      display: block;
+
+      object-fit: cover;
+    }
+
     .tank-types {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1355,6 +1370,9 @@
               110% do volume nominal em caso de ruptura, com sensores de nível e temperatura monitorados remotamente.
             </p>
             <span class="tag">Alta capacidade</span>
+            <div class="card-imagem">
+              <img src="./imgs/tanqueaereo.jpg" alt="Operação de extração">
+            </div>
           </div>
           <div class="tank-card">
             <svg class="icn" fill="none" viewbox="0 0 44 44">
@@ -1365,6 +1383,9 @@
             <p>Comuns em postos de abastecimento. Construídos com parede dupla e espaço intersticial monitorado,
               permitindo detectar um vazamento antes que ele alcance o solo ou o lençol freático.</p>
             <span class="tag">Detecção intersticial</span>
+            <div class="card-imagem">
+              <img src="./imgs/tanquesub.jpg" alt="Operação de extração">
+            </div>
           </div>
           <div class="tank-card">
             <svg class="icn" fill="none" viewbox="0 0 44 44">
@@ -1375,16 +1396,12 @@
             <p>Compartimentados internamente para reduzir o efeito de deslocamento de carga durante o transporte, com
               válvulas de fundo que fecham automaticamente em caso de impacto ou queda de pressão.</p>
             <span class="tag">Transporte</span>
+            <div class="card-imagem">
+              <img src="./imgs/tanquemovel.webp" alt="Operação de extração">
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="wrap">
-      <div class="chapter-nav">
-        <a class="" href="armazenamento.html"><span>← Capítulo anterior</span>Armazenamento</a>
-        <a class="next" href="seguranca.html"><span>Próximo capítulo →</span>Medidas de segurança</a>
-      </div>
-    </div>
     </section>
 
   </main>
