@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abastecimento | Safe Tank</title>
-<meta name="description" content="Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo e derivados.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abastecimento | Safe Tank</title>
+  <meta name="description"
+    content="Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo e derivados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
     :root {
       --navy-900: #0B1826;
       --navy-800: #102132;
@@ -115,6 +118,32 @@
       align-items: center;
       justify-content: space-between;
       height: 72px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .container a {
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 70px;
+      width: auto;
+    }
+
+    .petrosync {
+      margin-left: 10px;
+      margin-right: 0;
+      color: #ffffff;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .petrosync span {
+      color: #EBA152;
     }
 
     .brand {
@@ -1219,234 +1248,252 @@
     .page[hidden] {
       display: none;
     }
-  
-</style>
+  </style>
 </head>
-<body>
-<header><div class="wrap nav-row">
-<a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 26 26" fill="none"><path d="M13 2 L23 8 V18 L13 24 L3 18 V8 Z" stroke="#C97C2A" stroke-width="1.6"/><path d="M13 8 V16 M9.5 12 H16.5" stroke="#F6F6F3" stroke-width="1.6" stroke-linecap="round"/></svg>Safe&nbsp;Tank</a>
-<button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav id="mainNav" aria-label="Navegação principal"><ul>
-<li><a href="index (2).html">Início</a></li>
-<li><a href="extracao.html">Extração</a></li>
-<li><a href="armazenamento.html">Armazenamento</a></li>
-<li><a href="abastecimento.html">Abastecimento</a></li>
-<li><a href="seguranca.html">Segurança</a></li>
-<li><a href="normas.html">Normas</a></li>
-<li><a href="sobre.html">Sobre o TCC</a></li>
-</ul></nav></div></header>
-<main>
 
-<section class="page-hero">
-<div class="wrap">
-<div class="crumb"><a class="" href="index.html">Início</a> / Capítulo 02</div>
-<div class="eyebrow-line"><span class="rule"></span>Capítulo 02</div>
-<h1>O que acontece dentro do bico de abastecimento</h1>
-<p class="lead">Seis mecanismos trabalham ao mesmo tempo, em segundos, para transferir combustível com
+<body>
+  <header>
+    <div class="wrap nav-row">
+      <div class="container">
+        <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+        <a href="./index (2).html">
+          <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+        </a>
+      </div>
+      <nav id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index (2).html">Início</a></li>
+          <li><a href="extracao.html">Extração</a></li>
+          <li><a href="armazenamento.html">Armazenamento</a></li>
+          <li><a href="transporte.html">Transporte</a></li>
+          <li><a href="sobre.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb"><a class="" href="index.html">Início</a> / Capítulo 02</div>
+        <div class="eyebrow-line"><span class="rule"></span>Capítulo 02</div>
+        <h1>O que acontece dentro do bico de abastecimento</h1>
+        <p class="lead">Seis mecanismos trabalham ao mesmo tempo, em segundos, para transferir combustível com
           segurança. Toque em cada etapa para localizar a peça correspondente no diagrama.</p>
-</div>
-</section>
-<section>
-<div class="wrap">
-<div class="nozzle-wrap">
-<div class="nozzle-diagram">
-<svg class="nozzle-svg" fill="none" viewbox="0 0 320 260">
-<path d="M10 40 C 60 40, 60 80, 100 90" fill="none" stroke="#5B7C97" stroke-linecap="round" stroke-width="10"></path>
-<rect fill="#16283D" height="34" rx="8" stroke="#5B7C97" stroke-width="1.5" width="90" x="95" y="80"></rect>
-<rect fill="#245A85" height="14" id="pt-lever" rx="4" stroke="#5B7C97" width="46" x="105" y="60"></rect>
-<circle cx="80" cy="72" fill="#0B1826" id="pt-breakaway" r="10" stroke="#C97C2A" stroke-width="1.6"></circle>
-<path d="M185 92 L235 108 L230 122 L182 108 Z" fill="#245A85" id="pt-spout" stroke="#5B7C97" stroke-width="1.4"></path>
-<circle cx="233" cy="115" fill="#0B1826" id="pt-sensor" r="6" stroke="#C97C2A" stroke-width="1.6"></circle>
-<path d="M140 114 C 140 160, 90 170, 90 200" fill="none" id="pt-ground" stroke="#C97C2A" stroke-dasharray="3 3" stroke-width="1.4"></path>
-<circle cx="90" cy="200" fill="#0B1826" id="pt-groundpoint" r="5" stroke="#C97C2A" stroke-width="1.6"></circle>
-<path d="M225 100 Q 245 92 255 78" fill="none" id="pt-vapor" opacity="0.55" stroke="#5B7C97" stroke-linecap="round" stroke-width="6"></path>
-<text fill="#4A525C" font-family="Public Sans" font-size="12" x="10" y="245">Toque um item na lista ao
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="nozzle-wrap">
+          <div class="nozzle-diagram">
+            <svg class="nozzle-svg" fill="none" viewbox="0 0 320 260">
+              <path d="M10 40 C 60 40, 60 80, 100 90" fill="none" stroke="#5B7C97" stroke-linecap="round"
+                stroke-width="10"></path>
+              <rect fill="#16283D" height="34" rx="8" stroke="#5B7C97" stroke-width="1.5" width="90" x="95" y="80">
+              </rect>
+              <rect fill="#245A85" height="14" id="pt-lever" rx="4" stroke="#5B7C97" width="46" x="105" y="60"></rect>
+              <circle cx="80" cy="72" fill="#0B1826" id="pt-breakaway" r="10" stroke="#C97C2A" stroke-width="1.6">
+              </circle>
+              <path d="M185 92 L235 108 L230 122 L182 108 Z" fill="#245A85" id="pt-spout" stroke="#5B7C97"
+                stroke-width="1.4"></path>
+              <circle cx="233" cy="115" fill="#0B1826" id="pt-sensor" r="6" stroke="#C97C2A" stroke-width="1.6">
+              </circle>
+              <path d="M140 114 C 140 160, 90 170, 90 200" fill="none" id="pt-ground" stroke="#C97C2A"
+                stroke-dasharray="3 3" stroke-width="1.4"></path>
+              <circle cx="90" cy="200" fill="#0B1826" id="pt-groundpoint" r="5" stroke="#C97C2A" stroke-width="1.6">
+              </circle>
+              <path d="M225 100 Q 245 92 255 78" fill="none" id="pt-vapor" opacity="0.55" stroke="#5B7C97"
+                stroke-linecap="round" stroke-width="6"></path>
+              <text fill="#4A525C" font-family="Public Sans" font-size="12" x="10" y="245">Toque um item na lista ao
                 lado</text>
-</svg>
-</div>
-<div class="step-list">
-<div class="step active" data-part="pt-lever"><span class="num">01</span>
-<div>
-<h4>Gatilho e trava de vazão</h4>
-<p>O operador mantém o gatilho pressionado; ao soltar, o fluxo é interrompido de imediato. Um pino de
+            </svg>
+          </div>
+          <div class="step-list">
+            <div class="step active" data-part="pt-lever"><span class="num">01</span>
+              <div>
+                <h4>Gatilho e trava de vazão</h4>
+                <p>O operador mantém o gatilho pressionado; ao soltar, o fluxo é interrompido de imediato. Um pino de
                   trava evita o acionamento contínuo sem supervisão.</p>
-</div>
-</div>
-<div class="step" data-part="pt-sensor"><span class="num">02</span>
-<div>
-<h4>Sensor de corte automático</h4>
-<p>Quando o combustível atinge a boca do tanque e reflui, uma válvula Venturi na ponta do bico detecta a
+              </div>
+            </div>
+            <div class="step" data-part="pt-sensor"><span class="num">02</span>
+              <div>
+                <h4>Sensor de corte automático</h4>
+                <p>Quando o combustível atinge a boca do tanque e reflui, uma válvula Venturi na ponta do bico detecta a
                   mudança de pressão e interrompe o fluxo — mesmo se o gatilho continuar acionado.</p>
-</div>
-</div>
-<div class="step" data-part="pt-breakaway"><span class="num">03</span>
-<div>
-<h4>Acoplamento de ruptura (breakaway)</h4>
-<p>Se o veículo se afastar antes de desconectar o bico, esse ponto se separa em segundos e sela ambos os
+              </div>
+            </div>
+            <div class="step" data-part="pt-breakaway"><span class="num">03</span>
+              <div>
+                <h4>Acoplamento de ruptura (breakaway)</h4>
+                <p>Se o veículo se afastar antes de desconectar o bico, esse ponto se separa em segundos e sela ambos os
                   lados, evitando derramamento e dano à mangueira.</p>
-</div>
-</div>
-<div class="step" data-part="pt-ground"><span class="num">04</span>
-<div>
-<h4>Aterramento e dissipação estática</h4>
-<p>Um condutor liga o bico ao chassi ou à estrutura do tanque, escoando cargas eletrostáticas geradas
+              </div>
+            </div>
+            <div class="step" data-part="pt-ground"><span class="num">04</span>
+              <div>
+                <h4>Aterramento e dissipação estática</h4>
+                <p>Um condutor liga o bico ao chassi ou à estrutura do tanque, escoando cargas eletrostáticas geradas
                   pelo atrito do combustível antes que possam gerar faísca.</p>
-</div>
-</div>
-<div class="step" data-part="pt-vapor"><span class="num">05</span>
-<div>
-<h4>Recuperação de vapores</h4>
-<p>Uma bota de borracha ao redor do bico capta os vapores deslocados durante o abastecimento e os
+              </div>
+            </div>
+            <div class="step" data-part="pt-vapor"><span class="num">05</span>
+              <div>
+                <h4>Recuperação de vapores</h4>
+                <p>Uma bota de borracha ao redor do bico capta os vapores deslocados durante o abastecimento e os
                   retorna ao tanque de armazenamento, reduzindo emissões e risco de ignição.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section style="background:var(--paper-100);">
-<div class="wrap">
-<div class="section-head reveal">
-<h2>Por que a ordem dos mecanismos importa</h2><span class="idx">Sequência de segurança</span>
-</div>
-<p class="section-sub">Nenhum desses mecanismos substitui o outro — eles cobrem momentos diferentes do
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:var(--paper-100);">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Por que a ordem dos mecanismos importa</h2><span class="idx">Sequência de segurança</span>
+        </div>
+        <p class="section-sub">Nenhum desses mecanismos substitui o outro — eles cobrem momentos diferentes do
           abastecimento. O aterramento age antes do primeiro litro sair; o corte automático age no fim; o breakaway é a
           resposta para o imprevisto que nenhum dos dois cobre.</p>
-</div>
-</section>
-<section>
-<div class="wrap">
-<div class="chapter-nav">
-<a class="" href="armazenamento.html"><span>← Capítulo anterior</span>Armazenamento</a>
-<a class="next" href="seguranca.html"><span>Próximo capítulo →</span>Medidas de segurança</a>
-</div>
-</div>
-</section>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="chapter-nav">
+          <a class="" href="armazenamento.html"><span>← Capítulo anterior</span>Armazenamento</a>
+          <a class="next" href="seguranca.html"><span>Próximo capítulo →</span>Medidas de segurança</a>
+        </div>
+      </div>
+    </section>
 
-</main>
+  </main>
 
-<footer><div class="wrap foot-row">
-<span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-<a href="sobre.html">Sobre o projeto e a equipe →</a>
-</div></footer>
+  <footer>
+    <div class="wrap foot-row">
+      <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
+      <a href="sobre.html">Sobre o projeto e a equipe →</a>
+    </div>
+  </footer>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('navToggle');
+      const mainNav = document.getElementById('mainNav');
 
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', () => {
-      const open = mainNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
-    });
-    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
-  }
-
-  const current = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('#mainNav a').forEach(link => {
-    if (link.getAttribute('href') === current) link.classList.add('active');
-  });
-
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    document.querySelectorAll('.risk-meter').forEach(meter => {
-      const segments = meter.querySelectorAll('i');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            segments.forEach((segment, index) => {
-              setTimeout(() => segment.style.width = '100%', index * 120);
-            });
-            observer.disconnect();
-          }
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+          const open = mainNav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', String(open));
         });
-      }, { threshold: 0.5 });
-      observer.observe(meter);
-    });
-  } else {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-    document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
-  }
-
-  // Etapas interativas do bico de abastecimento
-  const steps = document.querySelectorAll('.step[data-part]');
-  const partIds = ['pt-lever', 'pt-sensor', 'pt-breakaway', 'pt-ground', 'pt-groundpoint', 'pt-vapor'];
-  function highlightPart(id) {
-    partIds.forEach(partId => {
-      const element = document.getElementById(partId);
-      if (!element) return;
-      element.style.opacity = (partId === id || (id === 'pt-ground' && partId === 'pt-groundpoint')) ? '1' : '0.28';
-      element.style.filter = partId === id ? 'drop-shadow(0 0 4px rgba(201,124,42,0.9))' : 'none';
-    });
-  }
-  steps.forEach(step => step.addEventListener('click', () => {
-    steps.forEach(item => item.classList.remove('active'));
-    step.classList.add('active');
-    highlightPart(step.dataset.part);
-  }));
-  if (steps.length) highlightPart(steps[0].dataset.part);
-
-  // Hotspots da vista explodida na página inicial
-  const explodedViewer = document.getElementById('explodedViewer');
-  if (explodedViewer) {
-    const hotspots = explodedViewer.querySelectorAll('.hotspot');
-    const items = document.querySelectorAll('.exploded-item');
-    function setExplodedActive(part) {
-      hotspots.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-      items.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-    }
-    hotspots.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
-    items.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            explodedViewer.classList.add('in-view');
-            observer.unobserve(explodedViewer);
-          }
-        });
-      }, { threshold: 0.3 });
-      observer.observe(explodedViewer);
-    } else {
-      explodedViewer.classList.add('in-view');
-    }
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const finePointer = window.matchMedia('(pointer: fine)').matches;
-    if (finePointer && !reduceMotion) {
-      let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
-      explodedViewer.addEventListener('mousemove', event => {
-        const rect = explodedViewer.getBoundingClientRect();
-        targetY = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-        targetX = -((event.clientY - rect.top) / rect.height - 0.5) * 8;
-      });
-      explodedViewer.addEventListener('mouseleave', () => { targetX = 0; targetY = 0; });
-      function tickTilt() {
-        currentX += (targetX - currentX) * 0.08;
-        currentY += (targetY - currentY) * 0.08;
-        explodedViewer.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
-        requestAnimationFrame(tickTilt);
+        mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+          mainNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }));
       }
-      tickTilt();
-    }
-  }
-});
-</script>
+
+      const current = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('#mainNav a').forEach(link => {
+        if (link.getAttribute('href') === current) link.classList.add('active');
+      });
+
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        document.querySelectorAll('.risk-meter').forEach(meter => {
+          const segments = meter.querySelectorAll('i');
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                segments.forEach((segment, index) => {
+                  setTimeout(() => segment.style.width = '100%', index * 120);
+                });
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.5 });
+          observer.observe(meter);
+        });
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+        document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
+      }
+
+      // Etapas interativas do bico de abastecimento
+      const steps = document.querySelectorAll('.step[data-part]');
+      const partIds = ['pt-lever', 'pt-sensor', 'pt-breakaway', 'pt-ground', 'pt-groundpoint', 'pt-vapor'];
+      function highlightPart(id) {
+        partIds.forEach(partId => {
+          const element = document.getElementById(partId);
+          if (!element) return;
+          element.style.opacity = (partId === id || (id === 'pt-ground' && partId === 'pt-groundpoint')) ? '1' : '0.28';
+          element.style.filter = partId === id ? 'drop-shadow(0 0 4px rgba(201,124,42,0.9))' : 'none';
+        });
+      }
+      steps.forEach(step => step.addEventListener('click', () => {
+        steps.forEach(item => item.classList.remove('active'));
+        step.classList.add('active');
+        highlightPart(step.dataset.part);
+      }));
+      if (steps.length) highlightPart(steps[0].dataset.part);
+
+      // Hotspots da vista explodida na página inicial
+      const explodedViewer = document.getElementById('explodedViewer');
+      if (explodedViewer) {
+        const hotspots = explodedViewer.querySelectorAll('.hotspot');
+        const items = document.querySelectorAll('.exploded-item');
+        function setExplodedActive(part) {
+          hotspots.forEach(item => item.classList.toggle('active', item.dataset.part === part));
+          items.forEach(item => item.classList.toggle('active', item.dataset.part === part));
+        }
+        hotspots.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
+        items.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                explodedViewer.classList.add('in-view');
+                observer.unobserve(explodedViewer);
+              }
+            });
+          }, { threshold: 0.3 });
+          observer.observe(explodedViewer);
+        } else {
+          explodedViewer.classList.add('in-view');
+        }
+
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const finePointer = window.matchMedia('(pointer: fine)').matches;
+        if (finePointer && !reduceMotion) {
+          let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+          explodedViewer.addEventListener('mousemove', event => {
+            const rect = explodedViewer.getBoundingClientRect();
+            targetY = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
+            targetX = -((event.clientY - rect.top) / rect.height - 0.5) * 8;
+          });
+          explodedViewer.addEventListener('mouseleave', () => { targetX = 0; targetY = 0; });
+          function tickTilt() {
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
+            explodedViewer.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
+            requestAnimationFrame(tickTilt);
+          }
+          tickTilt();
+        }
+      }
+    });
+  </script>
 
 </body>
+
 </html>
