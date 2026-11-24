@@ -331,11 +331,10 @@
     .page-hero {
       background: var(--navy-900);
       color: var(--paper-050);
-      
+
       overflow: hidden;
     }
 
-    /* Ajustes exclusivos da Home: espaço para imagem de fundo sem empurrar o conteúdo */
     .home-hero {
       position: relative;
       min-height: 620px;
@@ -601,6 +600,49 @@
       object-fit: cover;
     }
 
+    .equipeindex {
+      background-color: var(--navy-900);
+      align-items: center;
+      color: var(--steel-300);
+    }
+
+    .equipeinfos {
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    .equipeinfos h2{
+      color: white;
+      font-size: clamp(26px, 3.2vw, 38px);
+      max-width: 18ch;
+    }
+
+    .equipeinfos p{
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .botaoequipe {
+      display: inline-block;
+      color: #EBA152;
+      border: 2px solid #EBA152;
+      padding: 10px 22px;
+      border-radius: 25px;
+      transition: .3s;
+      text-decoration: none;
+    }
+
+    .botaoequipe:hover {
+      background: #EBA152;
+      color: #0B1826;
+    }
+
+    .sobreimg {
+      border-radius: 10px;
+      height: 210px;
+      overflow: hidden;
+    }
+
     .f {
       background: var(--navy-900);
       align-items: center;
@@ -610,36 +652,36 @@
       border-top: 1px solid #38536B;
     }
 
-    .logof{
+    .logof {
       display: flex;
       align-items: center;
     }
 
-    .logof img{
+    .logof img {
       width: 70px;
     }
 
-    .logof h3{
+    .logof h3 {
       color: white;
       font-size: 17px;
     }
 
-    .logof span{
+    .logof span {
       color: #EBA152;
     }
 
-    .navef{
+    .navef {
       display: flex;
       gap: 25px;
     }
 
-    .navef a{
+    .navef a {
       color: var(--steel-300);
       font-size: 15px;
-      text-decoration: none ;
+      text-decoration: none;
     }
 
-    .ultimof{
+    .ultimof {
       color: var(--steel-300);
       font-size: 12px;
     }
@@ -783,36 +825,24 @@
         </div>
       </div>
     </section>
-    <section style="background:var(--navy-900);">
+    <section class="equipeindex">
       <div class="wrap">
+        <div class="equipeinfos">
+          <h2>Equipe</h2>
+          <p>
+            Por trás de cada operação, existe uma equipe preparada. Na PetroSync, profissionais de tecnologia,
+            monitoramento e segurança trabalham juntos para acompanhar as operações, identificar riscos e garantir
+            respostas rápidas a possíveis ocorrências.
+          </p>
+          <a href="./sobre.html" class="botaoequipe">Conheça nossa equipe→</a>
 
-        <div class="section-head reveal" style="border-bottom-color:var(--line-dark);">
-          <h2 style="color:var(--paper-050);">Equipe</h2>
         </div>
 
-        <div class="sobreconteudo">
-
-          <div class="sobreimg">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10"
-              alt="Extração de petróleo">
-          </div>
-
-          <div class="sobretextos">
-
-            <p class="sobrein">
-              Por trás de cada operação, existe uma equipe preparada. Na PetroSync, profissionais de tecnologia,
-              monitoramento e segurança trabalham juntos para acompanhar as operações, identificar riscos e garantir
-              respostas rápidas a possíveis ocorrências.
-            </p>
-
-            <div class="sobreitem">
-              <button class="saibaequipe"><a href="./sobre.html">Conheça nossa equipe<span>→</span></a></button>
-            </div>
-
-          </div>
+        <div class="sobreimg">
+          <img
+            src="./imgs/ext.jpg"
+            alt="Extração de petróleo">
         </div>
-
       </div>
     </section>
 
