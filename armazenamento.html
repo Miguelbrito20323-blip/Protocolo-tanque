@@ -501,10 +501,8 @@
 
     .chapters {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      background: var(--line);
-      border: 1px solid var(--line);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
     }
 
     @media(max-width:760px) {
@@ -518,12 +516,11 @@
       padding: 36px 32px;
       text-decoration: none;
       color: inherit;
-      display: flex;
       flex-direction: column;
-      min-height: 200px;
+      min-height: 150px;
       transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
       cursor: pointer;
-      border: none;
+      border: 1px solid #b2b9c1;
       text-align: left;
       width: 100%;
       font-family: inherit;
@@ -1481,60 +1478,98 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Quatro capítulos, uma etapa</h2>
+        </div>
+        <div class="chapters">
+          <a class="chapter-card" href="transporte.html">
+            <span class="cnum">Capítulo 03</span>
+            <h3>Transporte</h3>
+            <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
+            <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/maritimo.jpg" alt="Operação de extração">
+            </div>
+          </a>
+          <a class="chapter-card" href="sobre.html">
+            <span class="cnum">Capítulo 04</span>
+            <div class="h3chap">
+              <h3>Equipe</h3>
+            </div>
+            <p>Conheça a equipe por trás de cada procedimento.</p>
+            <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/ext.jpg" alt="Operação de extração">
+            </div>
+          </a>
+          <a class="chapter-card" href="extracao.html">
+            <span class="cnum">Capítulo 01</span>
+            <h3>Extração</h3>
+            <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo.</p>
+            <span class="go">Explorar capítulo →</span>
+            <div class="card-imagem">
+              <img src="./imgs/ext.jpg" alt="Operação de extração">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <footer>
-    
+
     <div class="conteudo-footer">
-            <div class="emcima-footer">
+      <div class="emcima-footer">
 
-                <div class="logo-footer">
-                    <a href="./index (2).html">
-                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
-                    </a>
-                    <a href="./index (2).html">
-                        <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-                    </a>
-                </div>
-
-                <div class="colunas-footer">
-
-                    <div class="coluna-footer">
-                        <h2>Contatos:</h2>
-                        <ul>
-                            <li>
-                                <a href="#">petrosync@gmail.com</a>
-                            </li>
-                            <li>(11) 00000-0000</li>
-                            <li>São Paulo - SP</li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="index (2).html">Início</a></li>
-                            <li><a href="extracao.html">Extração</a></li>
-                            <li><a href="armazenamento.html">Armazenamento</a></li>
-                            <li><a href="transporte.html">Transporte</a></li>
-                            <li><a href="sobre.html">Equipe</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="sobre.html">Nossa Equipe</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="logo-footer">
+          <a href="./index (2).html">
+            <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
+          </a>
+          <a href="./index (2).html">
+            <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+          </a>
         </div>
-        
-        <div class="embaixo-footer">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
+
+        <div class="colunas-footer">
+
+          <div class="coluna-footer">
+            <h2>Contatos:</h2>
+            <ul>
+              <li>
+                <a href="#">petrosync@gmail.com</a>
+              </li>
+              <li>(11) 00000-0000</li>
+              <li>São Paulo - SP</li>
+            </ul>
+          </div>
+
+          <div class="coluna-footer">
+            <h2>Petrosync:</h2>
+            <ul>
+              <li><a href="index (2).html">Início</a></li>
+              <li><a href="extracao.html">Extração</a></li>
+              <li><a href="armazenamento.html">Armazenamento</a></li>
+              <li><a href="transporte.html">Transporte</a></li>
+              <li><a href="sobre.html">Equipe</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-footer">
+            <h2>Petrosync:</h2>
+            <ul>
+              <li><a href="sobre.html">Nossa Equipe</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="embaixo-footer">
+      <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
+    </div>
   </footer>
 
 

@@ -360,9 +360,7 @@
         .chapters {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            background: var(--line);
-            border: 1px solid var(--line);
+            gap: 15px;
         }
 
         @media(max-width:760px) {
@@ -376,12 +374,11 @@
             padding: 36px 32px;
             text-decoration: none;
             color: inherit;
-            display: flex;
             flex-direction: column;
-            min-height: 200px;
+            min-height: 150px;
             transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
             cursor: pointer;
-            border: none;
+            border: 1px solid #b2b9c1;
             text-align: left;
             width: 100%;
             font-family: inherit;
@@ -680,12 +677,13 @@
             color: #1B2129;
         }
 
-        .card-plataforma:hover, .card-plataforma.active {
+        .card-plataforma:hover,
+        .card-plataforma.active {
             border-color: #C97C2A;
             transform: translateY(-5px);
         }
 
-        .card-plataforma img{
+        .card-plataforma img {
             width: 100%;
             height: 240px;
             object-fit: cover;
@@ -723,7 +721,7 @@
             margin: 0;
         }
 
-        
+
 
 
         @media(max-width: 600px) {
@@ -939,21 +937,10 @@
                     <h2>Quatro capítulos, uma etapa</h2>
                 </div>
                 <div class="chapters">
-                    <a class="chapter-card" href="extracao.html">
-                        <span class="cnum">Capítulo 01</span>
-                        <div class="h3chap">
-                            <h3>Extração</h3>
-                        </div>
-                        <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
-                        <span class="go">Explorar capítulo →</span>
-                        <div class="card-imagem">
-                            <img src="./imgs/ext.jpg" alt="Operação de extração">
-                        </div>
-                    </a>
                     <a class="chapter-card" href="armazenamento.html">
                         <span class="cnum">Capítulo 02</span>
                         <h3>Armazenamento</h3>
-                        <p>Descubra como o petróleo é armazenado com segurança e monitorado para evitar riscos.</p>
+                        <p>Descubra como o petróleo é armazenado com segurança para evitar riscos.</p>
                         <span class="go">Explorar capítulo →</span>
                         <div class="card-imagem">
                             <img src="./imgs/tanque.jpg" alt="Operação de extração">
@@ -966,6 +953,17 @@
                         <span class="go">Explorar capítulo →</span>
                         <div class="card-imagem">
                             <img src="./imgs/maritimo.jpg" alt="Operação de extração">
+                        </div>
+                    </a>
+                    <a class="chapter-card" href="sobre.html">
+                        <span class="cnum">Capítulo 04</span>
+                        <div class="h3chap">
+                            <h3>Equipe</h3>
+                        </div>
+                        <p>Conheça a equipe por trás de cada procedimento.</p>
+                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/ext.jpg" alt="Operação de extração">
                         </div>
                     </a>
                 </div>
@@ -1022,7 +1020,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="embaixo-footer">
             <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
         </div>
@@ -1116,7 +1114,7 @@
                 }
             };
 
-            platformCards.forEach(card=> {
+            platformCards.forEach(card => {
                 card.addEventListener('click', () => {
                     const type = card.dataset.platform;
                     const info = platformInfo[type];
