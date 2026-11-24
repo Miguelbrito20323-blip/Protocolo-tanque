@@ -291,42 +291,43 @@
       transition: .25s;
     }
 
-    @media(max-width:860px) {
-      nav {
-        position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: var(--navy-900);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .3s ease;
-        border-bottom: 1px solid var(--line-dark);
-      }
+    @media (max-width: 860px) {
+  #mainNav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--navy-900);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    border-bottom: 1px solid var(--line-dark);
+  }
 
-      nav.open {
-        max-height: 380px;
-      }
+  #mainNav.open {
+    max-height: 380px;
+  }
 
-      nav ul {
-        flex-direction: column;
-        gap: 0;
-        padding: 8px 32px 20px;
-      }
+  #mainNav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 32px 20px;
+  }
 
-      nav ul li {
-        border-bottom: 1px solid var(--line-dark);
-      }
+  #mainNav ul li {
+    border-bottom: 1px solid var(--line-dark);
+  }
 
-      nav a {
-        display: block;
-        padding: 14px 0;
-      }
+  #mainNav a {
+    display: block;
+    padding: 14px 0;
+  }
 
-      .nav-toggle {
-        display: block;
-      }
-    }
+  .nav-toggle {
+    display: block;
+  }
+}
 
     .page-hero {
       background: var(--navy-900);
@@ -458,15 +459,15 @@
     /* RESPONSIVIDADE */
 
     @media (max-width: 760px) {
-      .sobre-conteudo {
+    .sobreconteudo {
         grid-template-columns: 1fr;
         gap: 25px;
-      }
-
-      .sobre-imagem img {
-        height: 260px;
-      }
     }
+
+    .sobreimg img {
+        height: 260px;
+    }
+}
 
     .page-hero h1 {
       font-size: clamp(50px, 5.8vw, 50px);
@@ -712,6 +713,179 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* RESPONSIVIDADE DA PÁGINA INICIAL */
+
+/* Celulares */
+@media (max-width: 640px) {
+
+.wrap {
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+.nav-row {
+  height: 65px;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+/* Banner */
+.img-extracao {
+  height: 350px;
+}
+
+.img-extracao::after {
+  opacity: 1;
+}
+
+.texto-img {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.texto-img h1 {
+  font-size: clamp(30px, 8vw, 38px);
+}
+
+.texto-img span {
+  font-size: clamp(20px, 5vw, 25px);
+}
+
+/* Seções */
+section {
+  padding: 45px 0;
+}
+
+.section-head {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.section-head h2 {
+  font-size: 30px;
+}
+
+/* Sobre nós */
+.sobreimg img {
+  height: 230px;
+}
+
+.sobretextos {
+  gap: 18px;
+}
+
+.sobrein {
+  font-size: 13px;
+}
+
+.sobreitem {
+  align-items: flex-start;
+}
+
+/* Cards */
+.chapters {
+  grid-template-columns: 1fr;
+}
+
+.chapter-card {
+  padding: 25px 20px;
+}
+
+.card-imagem {
+  height: 180px;
+}
+
+.card-imagem img {
+  height: 100%;
+}
+
+/* Equipe */
+.equipeindex {
+  padding: 45px 0;
+}
+
+.equipeindex .wrap {
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.equipeinfos {
+  max-width: 100%;
+}
+
+.equipeindex .sobreimg {
+  height: 230px;
+}
+
+/* Rodapé */
+.f {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 20px;
+}
+
+.navef {
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.ultimof {
+  line-height: 1.5;
+}
+}
+
+/* Tablets */
+@media (min-width: 641px) and (max-width: 860px) {
+
+.sobreconteudo {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.equipeindex .wrap {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.chapter-card {
+  padding: 25px 20px;
+}
+}
+
+/* Desktop */
+@media (min-width: 861px) {
+
+#mainNav {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  border: none;
+}
+
+#mainNav ul {
+  flex-direction: row;
+  gap: 28px;
+  padding: 0;
+}
+
+#mainNav a {
+  display: inline-block;
+  padding: 6px 10px;
+}
+
+.nav-toggle {
+  display: none;
+}
+}
+
   </style>
 </head>
 
@@ -724,6 +898,14 @@
           <H3 class="petrosync">PETRO<span>SYNC</span></H3>
         </a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" type="button"
+        aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav id="mainNav" aria-label="Navegação principal">
         <ul>
           <li><a href="index (2).html">Início</a></li>
@@ -874,8 +1056,8 @@
       <a href="extracao.html">Extração</a>
       <a href="armazenamento.html">Armazenamento</a>
       <a href="transporte.html">Transporte</a>
-      <a href="equipe">Equipe</a>
-    </nav>
+      <a href="sobre.html">Equipe</a>
+        </nav>
     <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
   </footer>
 
