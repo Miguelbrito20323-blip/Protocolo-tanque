@@ -558,13 +558,15 @@
         .logo-footer {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 3px;
+            flex-shrink: 0;
+            margin: 0;
         }
 
+
         .logo-footer img {
-            width: 45px;
-            height: 47px;
-            object-fit: contain;
+            width: auto;
+            height: 65px;
         }
 
         .logo-footer a {
@@ -584,16 +586,15 @@
 
         .colunas-footer {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 36px;
-            max-width: 800px;
-            margin:60px auto 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            margin: 0;
         }
 
         .coluna-footer h2 {
             color: #EBA152;
             font-family: var(--font-body);
-            font-size: 13px;
+            font-size: 20px;
             font-weight: 400;
             margin-bottom: 13px;
         }
@@ -607,6 +608,7 @@
         .coluna-footer li {
             margin-bottom: 7px;
             color: #ffffff;
+            font-size: 17px;
         }
 
         .coluna-footer a {
@@ -619,11 +621,18 @@
             color: #EBA152
         }
 
+        .emcima-footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
         .embaixo-footer {
             display: flex;
             gap: 560px;
             border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding-top: 12px 35px 0;
+            padding-top: 14px;
             color: #d1d5d8;
             font-size: 12px;
         }
@@ -968,52 +977,54 @@
 
     <footer>
 
-        <div class="conteudo-footer"></div>
+        <div class="conteudo-footer">
+            <div class="emcima-footer">
 
-            <div class="logo-footer">
-                <a href="./index (2).html">
-                    <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
-                </a>
-                <a href="./index (2).html">
-                    <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-                </a>
-            </div>
-
-            <div class="colunas-footer">
-                <div class="coluna-footer">
-                    <h2>Contatos:</h2>
-                    <ul>
-                        <li>
-                            <a href="#">petrosync@gmail.com</a>
-                        </li>
-                        <li>(11) 00000-0000</li>
-                        <li>São Paulo - SP</li>
-                    </ul>
+                <div class="logo-footer">
+                    <a href="./index (2).html">
+                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
+                    </a>
+                    <a href="./index (2).html">
+                        <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+                    </a>
                 </div>
 
-                <div class="coluna-footer">
-                    <h2>Petrosync:</h2>
-                    <ul>
-                        <li><a href="index (2).html">Início</a></li>
-                        <li><a href="extracao.html">Extração</a></li>
-                        <li><a href="armazenamento.html">Armazenamento</a></li>
-                        <li><a href="transporte.html">Transporte</a></li>
-                        <li><a href="sobre.html">Equipe</a></li>
-                    </ul>
-                </div>
+                <div class="colunas-footer">
 
-                <div class="coluna-footer">
-                    <h2>Petrosync:</h2>
-                    <ul>
-                        <li><a href="sobre.html">Nossa Equipe</a></li>
-                    </ul>
+                    <div class="coluna-footer">
+                        <h2>Contatos:</h2>
+                        <ul>
+                            <li>
+                                <a href="#">petrosync@gmail.com</a>
+                            </li>
+                            <li>(11) 00000-0000</li>
+                            <li>São Paulo - SP</li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="index (2).html">Início</a></li>
+                            <li><a href="extracao.html">Extração</a></li>
+                            <li><a href="armazenamento.html">Armazenamento</a></li>
+                            <li><a href="transporte.html">Transporte</a></li>
+                            <li><a href="sobre.html">Equipe</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="sobre.html">Nossa Equipe</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         
         <div class="embaixo-footer">
             <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-            <a href="sobre.html">Sobre o projeto e a equipe →</a>
         </div>
     </footer>
 
