@@ -117,8 +117,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(5, 16, 26, 0.58);
-            opacity: 0.90;
+            background-color: rgba(5, 16, 26, 0.50);
+            opacity: 0;
             transition: opacity 0.3s;
             z-index: 1;
         }
@@ -127,11 +127,11 @@
             position: absolute;
             top: 50%;
             left: 8%;
-            transform: translateY(-50%);
             z-index: 2;
             color: white;
-            opacity: 1;
+            opacity: 0;
             transition: opacity 0.3s;
+            z-index: 2;
         }
 
         .texto-img h1 {
@@ -151,7 +151,11 @@
         }
 
         .img-extracao:hover::after {
-            opacity: 0.95;
+            opacity: 1;
+        }
+
+        .img-extracao:hover .texto-img {
+            opacity: 1;
         }
 
         img,
@@ -804,7 +808,6 @@
 </head>
 
 <body>
-    <!-- Cabeçalho idêntico ao padrão PetroSync com menu mobile responsivo -->
     <header>
         <div class="wrap nav-row">
             <div class="container">
@@ -829,13 +832,13 @@
     </header>
 
     <main>
-        <!-- Banner Hero no padrão visual do projeto com imagem representativa -->
         <section class="page-hero">
             <div class="img-extracao">
-                <img src="./imgs/maritimo.jpg" alt="Escoamento e Transporte de Petróleo Bruto">
+                <img src="./imgs/maritimo.jpg" alt="plataforma_petroleo">
+
                 <div class="texto-img">
-                    <h1>ESCOAMENTO E</h1>
-                    <h1>TRANSPORTE DE</h1> <span>PETRÓLEO BRUTO (ÓLEO CRU)</span>
+                    <h1>ARMAZENAMENTO</h1>
+                    <span>Como funciona?</span>
                 </div>
             </div>
         </section>
@@ -980,86 +983,6 @@
             </div>
         </section>
 
-        <!-- BLOCO 3: Segurança e Licenças -->
-        <section>
-            <div class="wrap">
-                <div class="section-head reveal">
-                    <h2>Segurança Operacional, Licenças e Regulamentação</h2>
-                    <span class="idx">Conformidade Regulatória</span>
-                </div>
-
-                <p class="lead-text reveal">
-                    A movimentação de petróleo bruto é estritamente regulamentada pelos órgãos federais e ambientais do
-                    setor de energia. Nossa governança atende de forma integral aos registros e auditorias técnicas
-                    exigidos por lei.
-                </p>
-
-                <!-- Grid com os 4 Selos e Registros Obrigatórios -->
-                <div class="licencas-grid reveal">
-
-                    <!-- ANP -->
-                    <div class="licenca-card">
-                        <div class="badge-icon">ANP</div>
-                        <div class="licenca-info">
-                            <h3>Agência Nacional do Petróleo (ANP)</h3>
-                            <p>
-                                Autorização formal para a atividade de movimentação e transferência a granel de petróleo
-                                bruto (óleo cru), atendendo à Resolução ANP nº 784/2019 e às exigências de conformidade
-                                metrológica e integridade dos sistemas de transporte.
-                            </p>
-                            <span class="reg-tag">Resolução ANP nº 784/2019 · Autorização Ativa</span>
-                        </div>
-                    </div>
-
-                    <!-- ANTT & RNTRC -->
-                    <div class="licenca-card">
-                        <div class="badge-icon">ANTT</div>
-                        <div class="licenca-info">
-                            <h3>ANTT & Registro RNTRC (Produtos Perigosos)</h3>
-                            <p>
-                                Registro obrigatório junto à ANTT para transporte rodoviário e ferroviário de cargas
-                                perigosas da Classe 3 (Petróleo Bruto - ONU 1267), com condutores certificados no curso
-                                MOPP, envelopes de emergência e fichas de segurança conforme a Resolução ANTT nº
-                                5.998/2022.
-                            </p>
-                            <span class="reg-tag">Resolução ANTT 5.998 · ONU 1267 (Petróleo Bruto)</span>
-                        </div>
-                    </div>
-
-                    <!-- IBAMA & Licenciamento Ambiental -->
-                    <div class="licenca-card">
-                        <div class="badge-icon">IBAMA</div>
-                        <div class="licenca-info">
-                            <h3>IBAMA & Licenciamento Ambiental (LO & PEI)</h3>
-                            <p>
-                                Licença de Operação (LO) válida expedida pelo órgão ambiental federal para transporte de
-                                óleo cru. Implantação e homologação do Plano de Emergência Individual (PEI), em total
-                                conformidade com a Resolução CONAMA nº 398/2008 para resposta rápida contra vazamentos.
-                            </p>
-                            <span class="reg-tag">Licença de Operação (LO) · CONAMA nº 398/2008 (PEI)</span>
-                        </div>
-                    </div>
-
-                    <!-- Certificações ISO -->
-                    <div class="licenca-card">
-                        <div class="badge-icon">ISO</div>
-                        <div class="licenca-info">
-                            <h3>Certificações Integradas (ISO 9001, 14001 e 45001)</h3>
-                            <p>
-                                Sistema de Gestão Integrado auditado: <strong>ISO 9001</strong> (Qualidade e
-                                conformidade de entrega), <strong>ISO 14001</strong> (Gestão Ambiental e prevenção de
-                                poluição por óleo cru) e <strong>ISO 45001</strong> (Saúde e Segurança Ocupacional, com
-                                atendimento estrito à <strong>NR-20</strong>).
-                            </p>
-                            <span class="reg-tag">ISO 9001 · ISO 14001 · ISO 45001 · NR-20</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- BLOCO 4: Monitoramento e Integridade da Carga -->
         <section class="dark-section">
             <div class="wrap">
                 <div class="section-head reveal">
