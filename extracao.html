@@ -542,29 +542,98 @@
         }
 
         footer {
-            background: var(--navy-900);
+            background: #05101A;
             border-top: 1px solid var(--line-dark);
-            padding: 32px 0;
-            color: var(--steel-300);
+            padding: 25px 0 12px;
+            color: #ffffff;
             font-size: 13.5px;
         }
 
-        .foot-row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+        .conteudo-footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
         }
 
-        .foot-row button {
-            background: none;
-            border: none;
-            color: inherit;
+        .logo-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-footer img {
+            width: 45px;
+            height: 47px;
+            object-fit: contain;
+        }
+
+        .logo-footer a {
             text-decoration: none;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: inherit;
+        }
+
+        .logo-footer h3 {
+            color: #ffffff;
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .logo-footer h3 span {
+            color: #EBA152;
+        }
+
+        .colunas-footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+            max-width: 800px;
+            margin:60px auto 40px;
+        }
+
+        .coluna-footer h2 {
+            color: #EBA152;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 13px;
+        }
+
+        .coluna-footer ul {
+            list-style: none;
+            margin: 0;
             padding: 0;
+        }
+
+        .coluna-footer li {
+            margin-bottom: 7px;
+            color: #ffffff;
+        }
+
+        .coluna-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .coluna-footer a:hover {
+            color: #EBA152
+        }
+
+        .embaixo-footer {
+            display: flex;
+            gap: 560px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 12px 35px 0;
+            color: #d1d5d8;
+            font-size: 12px;
+        }
+
+        .embaixo-footer span {
+            margin-left: 30px;
+        }
+
+        .embaixo-footer a {
+            text-decoration: none;
         }
 
         .reveal {
@@ -644,6 +713,9 @@
             line-height: 1.7;
             margin: 0;
         }
+
+        
+
 
         @media(max-width: 600px) {
             .opcoes-plataforma {
@@ -895,29 +967,51 @@
     </main>
 
     <footer>
-        <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+
+        <div class="conteudo-footer"></div>
+
+            <div class="logo-footer">
+                <a href="./index (2).html">
+                    <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
+                </a>
                 <a href="./index (2).html">
                     <H3 class="petrosync">PETRO<span>SYNC</span></H3>
                 </a>
             </div>
 
-            <section class="contatos-footer">
-                
-                <h1>Contatos:</h1>
+            <div class="colunas-footer">
+                <div class="coluna-footer">
+                    <h2>Contatos:</h2>
+                    <ul>
+                        <li>
+                            <a href="#">petrosync@gmail.com</a>
+                        </li>
+                        <li>(11) 00000-0000</li>
+                        <li>São Paulo - SP</li>
+                    </ul>
+                </div>
 
-                <ul>
-                    <li><a href="#">petrosync@gmail.com</a></li>
-                    <li>São Paulo - SP</li>
-                    <li>(11) 00000-0000</li>
-                </ul>
-                
-            </section>
-            <div class="palavras-footer">
+                <div class="coluna-footer">
+                    <h2>Petrosync:</h2>
+                    <ul>
+                        <li><a href="index (2).html">Início</a></li>
+                        <li><a href="extracao.html">Extração</a></li>
+                        <li><a href="armazenamento.html">Armazenamento</a></li>
+                        <li><a href="transporte.html">Transporte</a></li>
+                        <li><a href="sobre.html">Equipe</a></li>
+                    </ul>
+                </div>
 
+                <div class="coluna-footer">
+                    <h2>Petrosync:</h2>
+                    <ul>
+                        <li><a href="sobre.html">Nossa Equipe</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
         
-        <div class="wrap foot-row">
+        <div class="embaixo-footer">
             <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
             <a href="sobre.html">Sobre o projeto e a equipe →</a>
         </div>
