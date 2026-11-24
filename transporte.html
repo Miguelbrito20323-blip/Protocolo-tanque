@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transporte e Logística de Petróleo Bruto | PetroSync</title>
+    <title>Transporte | PetroSync</title>
     <meta name="description"
-        content="Escoamento e logística de petróleo bruto (óleo cru): transporte dutoviário, marítimo, ferroviário e rodoviário entre plataformas de produção, terminais e refinarias com integridade da carga e conformidade ambiental.">
+        content="Logística midstream e transporte seguro de petróleo bruto (óleo cru): modais dutoviário, marítimo, ferroviário e rodoviário, desafios físicos, infraestrutura de transferência e tecnologias de proteção.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -131,7 +131,6 @@
             color: white;
             opacity: 0;
             transition: opacity 0.3s;
-            z-index: 2;
         }
 
         .texto-img h1 {
@@ -308,33 +307,54 @@
             }
         }
 
+        .page-hero {
+            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: var(--paper-050);
+            padding: 64px 0 56px;
+            overflow: hidden;
+        }
+
+        .eyebrow-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: var(--amber-500);
+            font-weight: 600;
+        }
+
+        .eyebrow-line .rule {
+            width: 34px;
+            height: 1px;
+            background: var(--amber-500);
+        }
+
         /* Seções e Tipografia */
         section {
-            padding: 64px 0;
-            border-bottom: 1px solid var(--line);
-            background-color: rgb(13, 21, 33)
+            padding: 80px 0;
         }
 
         section.dark-section {
             background: var(--navy-900);
             color: var(--paper-050);
-            border-bottom-color: var(--line-dark);
+            border-bottom: 1px solid var(--line-dark);
         }
 
         .section-head {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            gap: 16px;
-            padding-bottom: 14px;
-            margin-bottom: 32px;
+            align-items: flex-end;
+            gap: 24px;
+            margin-bottom: 44px;
             border-bottom: 1px solid var(--line);
+            padding-bottom: 22px;
             flex-wrap: wrap;
         }
 
         .section-head h2 {
-            font-size: 28px;
-            color: white;
+            font-size: clamp(26px, 3.2vw, 38px);
+            color: var(--navy-900);
         }
 
         .dark-section .section-head {
@@ -346,19 +366,28 @@
         }
 
         .section-head .idx {
-            font-size: 13px;
+            font-family: var(--font-display);
+            font-size: 14px;
             color: var(--steel-500);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.8px;
+            white-space: nowrap;
+        }
+
+        .section-sub {
+            max-width: 72ch;
+            color: var(--ink-600);
+            font-size: 15.5px;
+            margin-top: 12px;
         }
 
         .lead-text {
-            font-size: 17.5px;
+            font-size: 17px;
             line-height: 1.7;
-            color: var(--steel-300);
+            color: var(--ink-600);
             max-width: 860px;
-            margin-bottom: 32px;
+            margin: 0 0 28px;
         }
 
         .dark-section .lead-text {
@@ -378,7 +407,7 @@
             border: 1px solid var(--line);
             border-left: 3px solid var(--amber-500);
             padding: 24px 20px;
-            border-radius: 15px;
+            border-radius: var(--radius-s);
             transition: transform .25s ease, box-shadow .25s ease;
         }
 
@@ -463,7 +492,7 @@
 
         .modal-img-wrap {
             width: 100%;
-            height: 220px;
+            height: 240px;
             overflow: hidden;
             position: relative;
             background: var(--navy-900);
@@ -530,70 +559,7 @@
             color: var(--steel-300);
         }
 
-        /* Bloco 3: Segurança e Licenças */
-        .licencas-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .licenca-card {
-            background: #ffffff;
-            border: 1px solid var(--line);
-            border-radius: var(--radius-s);
-            padding: 28px 24px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            transition: border-color .25s ease, box-shadow .25s ease;
-        }
-
-        .licenca-card:hover {
-            border-color: var(--teal-500);
-            box-shadow: 0 8px 20px rgba(46, 125, 107, 0.08);
-        }
-
-        .badge-icon {
-            width: 54px;
-            height: 54px;
-            background: rgba(46, 125, 107, 0.12);
-            border: 1px solid var(--teal-400);
-            color: var(--teal-500);
-            border-radius: var(--radius-s);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-        }
-
-        .licenca-info h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: var(--navy-900);
-        }
-
-        .licenca-info p {
-            font-size: 14px;
-            color: var(--ink-600);
-            line-height: 1.55;
-            margin: 0 0 10px;
-        }
-
-        .reg-tag {
-            font-size: 11.5px;
-            font-weight: 600;
-            color: var(--teal-500);
-            background: var(--teal-050);
-            padding: 3px 8px;
-            border-radius: var(--radius-s);
-            display: inline-block;
-        }
-
-        /* Bloco 4: Monitoramento e Integridade */
+        /* Bloco 3: Desafios Físicos (Tech Grid) */
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -635,119 +601,338 @@
             margin: 0;
         }
 
-        /* Protocolo de Custódia */
-        .custodia-grid {
+        /* Bloco 4: Infraestrutura de Transferência (Tank Types / Tank Card padrão do site) */
+        .tank-types {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 36px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
         }
 
-        .custodia-item {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px dashed var(--line-dark);
-            padding: 20px 16px;
-            border-radius: var(--radius-s);
+        @media(max-width:860px) {
+            .tank-types {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .custodia-step {
-            font-family: var(--font-display);
-            font-size: 13.5px;
-            color: var(--amber-400);
-            font-weight: 700;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .custodia-item h4 {
-            font-size: 16px;
-            color: var(--paper-050);
-            margin-bottom: 6px;
-        }
-
-        .custodia-item p {
-            font-size: 12.5px;
-            color: var(--steel-300);
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        /* Navegação Inferior */
-        .chapter-nav {
-            background: var(--paper-100);
-            padding: 40px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .chapter-nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .chapter-nav-prev,
-        .chapter-nav-next {
-            text-decoration: none;
+        .tank-card {
+            background: var(--paper-050);
+            padding: 32px 28px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            transition: transform .2s ease;
+            transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
+            position: relative;
+            z-index: 0;
         }
 
-        .chapter-nav-prev:hover,
-        .chapter-nav-next:hover {
-            transform: translateX(4px);
+        .tank-card:hover {
+            transform: translateY(-5px);
+            border-radius: 18px;
+            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.12);
+            z-index: 1;
         }
 
-        .chapter-nav-label {
+        .tank-card .icn {
+            width: 42px;
+            height: 42px;
+            color: var(--navy-800);
+            margin-bottom: 18px;
+            transition: color .25s ease, transform .3s ease;
+        }
+
+        .tank-card:hover .icn {
+            color: var(--teal-500);
+            transform: scale(1.08);
+        }
+
+        .tank-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .tank-card p {
+            color: var(--ink-600);
+            font-size: 14.5px;
+            margin: 0;
+            flex: 1;
+        }
+
+        .tank-card .tag {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 16px;
             font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--amber-500);
+            border: 1px solid var(--amber-500);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+
+        /* Bloco 5: Tabela Comparativa (padrão .norm-table) */
+        .norm-table {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+            margin-top: 8px;
+            background: var(--paper-050);
+            border: 1px solid var(--line);
+        }
+
+        .norm-table th,
+        .norm-table td {
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--line);
+            font-size: 14.5px;
+            vertical-align: top;
+        }
+
+        .norm-table th {
+            font-family: var(--font-display);
+            font-size: 14.5px;
             color: var(--steel-500);
             font-weight: 600;
+            background: var(--paper-100);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
         }
 
-        .chapter-nav-title {
+        .norm-table td {
+            color: var(--ink-600);
+        }
+
+        .norm-table td.code-cell {
             font-family: var(--font-display);
-            font-size: 21px;
             font-weight: 600;
+            font-size: 17px;
+            color: var(--navy-900);
+            white-space: nowrap;
+        }
+
+        /* Bloco 6: Segurança e Tecnologia */
+        .licencas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .licenca-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-s);
+            padding: 28px 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .licenca-card:hover {
+            border-color: var(--teal-500);
+            box-shadow: 0 8px 20px rgba(46, 125, 107, 0.08);
+        }
+
+        .badge-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(46, 125, 107, 0.12);
+            border: 1px solid var(--teal-400);
+            color: var(--teal-500);
+            border-radius: var(--radius-s);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .licenca-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
             color: var(--navy-900);
         }
 
-        /* Footer */
-        footer {
-            background: var(--navy-900);
-            color: var(--steel-300);
-            padding: 28px 0;
-            font-size: 14px;
+        .licenca-info p {
+            font-size: 14.5px;
+            color: var(--ink-600);
+            line-height: 1.6;
+            margin: 0 0 12px;
         }
 
-        .foot-row {
+        .reg-tag {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--teal-500);
+            background: var(--teal-050);
+            padding: 3px 8px;
+            border-radius: var(--radius-s);
+            display: inline-block;
+        }
+
+        /* Navegação entre capítulos */
+        .chapter-nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            gap: 20px;
+            padding: 36px 0 0;
+            margin-top: 56px;
+            border-top: 1px solid var(--line);
             flex-wrap: wrap;
-            gap: 16px;
         }
 
-        .foot-row a {
-            color: var(--amber-400);
+        .chapter-nav a {
             text-decoration: none;
-            font-weight: 500;
+            color: var(--ink-900);
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 14px 18px;
+            margin: -14px -18px;
+            border-radius: 2px;
+            text-align: left;
+            transition: background .25s ease, border-radius .3s ease, transform .25s ease;
         }
 
-        .foot-row a:hover {
-            text-decoration: underline;
+        .chapter-nav a:hover {
+            background: var(--teal-050);
+            border-radius: 14px;
+            transform: translateY(-2px);
+        }
+
+        .chapter-nav a:hover span {
+            color: var(--teal-500);
+        }
+
+        .chapter-nav a span {
+            font-family: var(--font-body);
+            font-size: 12.5px;
+            color: var(--steel-500);
+            font-weight: 500;
+            transition: color .2s ease;
+        }
+
+        .chapter-nav a.next {
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        /* Footer padronizado do projeto */
+        footer {
+            background: #05101A;
+            border-top: 1px solid var(--line-dark);
+            padding: 25px 0 12px;
+            color: #ffffff;
+            font-size: 13.5px;
+        }
+
+        .conteudo-footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .logo-footer {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            flex-shrink: 0;
+            margin: 0;
+        }
+
+        .logo-footer img {
+            width: auto;
+            height: 65px;
+        }
+
+        .logo-footer a {
+            text-decoration: none;
+        }
+
+        .logo-footer h3 {
+            color: #ffffff;
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .logo-footer h3 span {
+            color: #EBA152;
+        }
+
+        .colunas-footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            margin: 0;
+        }
+
+        .coluna-footer h2 {
+            color: #EBA152;
+            font-family: var(--font-body);
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 13px;
+        }
+
+        .coluna-footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .coluna-footer li {
+            margin-bottom: 7px;
+            color: #ffffff;
+            font-size: 17px;
+        }
+
+        .coluna-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .coluna-footer a:hover {
+            color: #EBA152;
+        }
+
+        .emcima-footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .embaixo-footer {
+            display: flex;
+            gap: 560px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 14px;
+            color: #d1d5d8;
+            font-size: 12px;
+        }
+
+        .embaixo-footer span {
+            margin-left: 30px;
+        }
+
+        .embaixo-footer a {
+            text-decoration: none;
         }
 
         /* Animação reveal */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(14px);
+            transition: opacity .6s ease, transform .6s ease;
         }
 
         .reveal.in {
@@ -773,8 +958,13 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .custodia-grid {
+            .emcima-footer {
+                flex-direction: column;
+            }
+
+            .colunas-footer {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
             }
         }
 
@@ -795,13 +985,17 @@
                 grid-template-columns: 1fr;
             }
 
-            .custodia-grid {
+            .colunas-footer {
                 grid-template-columns: 1fr;
+                gap: 24px;
             }
 
-            .chapter-nav-inner {
-                flex-direction: column;
-                align-items: flex-start;
+            .embaixo-footer {
+                gap: 16px;
+            }
+
+            .embaixo-footer span {
+                margin-left: 20px;
             }
         }
     </style>
@@ -832,287 +1026,465 @@
     </header>
 
     <main>
+        <!-- Hero com Imagem Principal Obrigatória -->
         <section class="page-hero">
             <div class="img-extracao">
-                <img src="./imgs/maritimo.jpg" alt="plataforma_petroleo">
-
+                <img src="https://images.pexels.com/photos/14389332/pexels-photo-14389332.jpeg"
+                    alt="Infraestrutura industrial de transporte e escoamento de petróleo bruto">
                 <div class="texto-img">
-                    <h1>ARMAZENAMENTO</h1>
-                    <span>Como funciona?</span>
+                    <h1>TRANSPORTE</h1>
+                    <span>Escoamento de Petróleo Bruto</span>
                 </div>
             </div>
         </section>
 
-        <!-- BLOCO 1: O Que Fazemos -->
+        <!-- 1. Introdução -->
+        <section>
+            <div class="wrap">
+                <div class="eyebrow-line"><span class="rule"></span>Capítulo 03 · Etapa Midstream</div>
+                <div class="section-head reveal">
+                    <h2>O papel estratégico do transporte no setor petrolífero</h2>
+                    <span class="idx">01 · Introdução</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    Na cadeia produtiva do petróleo, a etapa <strong>midstream</strong> cumpre a função estratégica de
+                    viabilizar o escoamento contínuo e seguro do <strong>petróleo bruto (óleo cru)</strong> desde a zona
+                    de extração (<em>upstream</em>) até as unidades de processamento nas refinarias (<em>downstream</em>).
+                    Sem essa malha logística dedicada, a produção obtida em poços terrestres (<em>onshore</em>) e em
+                    plataformas marítimas (<em>offshore</em>) não alcançaria os centros industriais responsáveis por
+                    receber a matéria-prima bruta.
+                </p>
+
+                <p class="lead-text reveal">
+                    Por se tratar de uma carga <em>in natura</em> de alta complexidade físico-química e grande volume
+                    diário, o transporte do óleo cru exige sistemas herméticos, planejamento multimodal integrado,
+                    controle rigoroso de pressão e temperatura e barreiras preventivas contra vazamentos, garantindo a
+                    integridade operacional e a proteção ambiental em todo o trajeto até o refino.
+                </p>
+
+                <div class="overview-grid reveal">
+                    <article class="overview-card">
+                        <div class="num">01</div>
+                        <div class="label">Extração (Upstream)</div>
+                        <p>Captação inicial do óleo cru em poços terrestres e plataformas marítimas de produção.</p>
+                    </article>
+                    <article class="overview-card">
+                        <div class="num">02</div>
+                        <div class="label">Escoamento (Midstream)</div>
+                        <p>Movimentação contínua por oleodutos, navios petroleiros, trens e caminhões-tanque.</p>
+                    </article>
+                    <article class="overview-card">
+                        <div class="num">03</div>
+                        <div class="label">Transferência</div>
+                        <p>Interligação entre modais por meio de monoboias, terminais portuários e parques de tancagem.</p>
+                    </article>
+                    <article class="overview-card">
+                        <div class="num">04</div>
+                        <div class="label">Entrega (Downstream)</div>
+                        <p>Recepção controlada e segura do petróleo bruto nas refinarias de processamento.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Os 4 Modais no Transporte de Óleo Cru -->
+        <section style="background:var(--paper-100);">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Os quatro modais no transporte de óleo cru</h2>
+                    <span class="idx">02 · Modais logísticos</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    A logística do petróleo bruto combina quatro modais complementares, selecionados de acordo com o
+                    volume extraído, a distância até as refinarias, as condições geográficas e a infraestrutura
+                    disponível na região produtora.
+                </p>
+
+                <div class="modais-grid reveal">
+                    <article class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.pexels.com/photos/7721338/pexels-photo-7721338.jpeg"
+                                alt="Oleodutos para escoamento contínuo de petróleo bruto" loading="lazy">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Fluxo contínuo em terra e mar</div>
+                            <h3>Oleodutos (Dutoviário)</h3>
+                            <p>
+                                Tubulações projetadas para o escoamento contínuo de grandes volumes de petróleo bruto
+                                entre campos produtores, terminais e refinarias. Podem ser instalados em faixas
+                                terrestres (enterrados ou aéreos) ou no fundo do mar como oleodutos submarinos,
+                                operando sob pressão controlada por válvulas e estações de bombeamento.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.pexels.com/photos/34127257/pexels-photo-34127257.jpeg"
+                                alt="Navio petroleiro utilizado no transporte marítimo de óleo cru" loading="lazy">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Longo curso e cabotagem</div>
+                            <h3>Navios Petroleiros (Marítimo)</h3>
+                            <p>
+                                Embarcações especializadas no transporte transoceânico e de cabotagem de gigantescas
+                                cargas de óleo cru, incluindo classes de grande porte como os navios VLCC (<em>Very
+                                    Large Crude Carrier</em>) e <em>Suezmax</em>. Conectam plataformas <em>offshore</em>,
+                                monoboias e terminais litorâneos a refinarias situadas a milhares de quilômetros.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.pexels.com/photos/30858911/pexels-photo-30858911.jpeg"
+                                alt="Composição ferroviária com vagões-tanque para transporte de óleo cru" loading="lazy">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Alta capacidade terrestre</div>
+                            <h3>Trens (Ferroviário)</h3>
+                            <p>
+                                Composições formadas por dezenas de vagões-tanque selados que realizam o transporte
+                                terrestre de alta capacidade de petróleo bruto. É a alternativa estratégica em
+                                corredores continentais onde ainda não existe malha dutoviária instalada ou quando é
+                                necessário integrar bacias interiores a terminais portuários.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="modal-card">
+                        <div class="modal-img-wrap">
+                            <img src="https://images.pexels.com/photos/18468412/pexels-photo-18468412.jpeg"
+                                alt="Caminhão-tanque dedicado à coleta de petróleo bruto" loading="lazy">
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-capacity">Coleta inicial e flexibilidade</div>
+                            <h3>Caminhões-Tanque (Rodoviário)</h3>
+                            <p>
+                                Modal empregado de forma pontual, flexível e em curtas distâncias, voltado
+                                principalmente à coleta inicial do óleo cru em poços terrestres isolados sem conexão
+                                direta com dutos ou ferrovias. Transporta a produção até estações coletoras e pontos de
+                                transferência centralizados.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Desafios Físicos do Óleo Cru -->
+        <section class="dark-section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Desafios físicos do óleo cru</h2>
+                    <span class="idx">03 · Escoamento in natura</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    Diferentemente de fluidos homogêneos e de baixa viscosidade, o petróleo bruto <em>in natura</em>
+                    varia amplamente em densidade, composição química e comportamento térmico. Movimentá-lo por longas
+                    distâncias impõe obstáculos severos à engenharia de escoamento.
+                </p>
+
+                <div class="tech-grid reveal">
+                    <article class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38" aria-hidden="true">
+                            <path d="M19 5 C12 14, 9 19, 9 24 A10 10 0 0 0 29 24 C29 19, 26 14, 19 5 Z"
+                                stroke="currentColor" stroke-width="1.8" />
+                            <path d="M14 25 C15 28, 18 29, 21 28" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                        </svg>
+                        <h3>Alta viscosidade</h3>
+                        <p>
+                            Óleos crus pesados apresentam elevada resistência interna ao escoamento. Quanto maior a
+                            viscosidade, maior é a energia necessária para manter a vazão nominal sem sobrecarregar
+                            tubulações, mangotes e bombas.
+                        </p>
+                    </article>
+
+                    <article class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38" aria-hidden="true">
+                            <path d="M19 4 V34 M6 11 L32 27 M32 11 L6 27" stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" />
+                            <circle cx="19" cy="19" r="5" stroke="currentColor" stroke-width="1.7" />
+                        </svg>
+                        <h3>Parafinas e hidratos</h3>
+                        <p>
+                            Em baixas temperaturas — especialmente em oleodutos submarinos — ocorre risco de
+                            solidificação por precipitação de parafinas e formação de hidratos, que aderem às paredes
+                            internas e podem bloquear o fluxo.
+                        </p>
+                    </article>
+
+                    <article class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38" aria-hidden="true">
+                            <rect x="15" y="5" width="8" height="20" rx="4" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="19" cy="28" r="5" stroke="currentColor" stroke-width="1.8" />
+                            <line x1="19" y1="12" x2="19" y2="26" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <h3>Aquecimento contínuo</h3>
+                        <p>
+                            Para impedir a perda de fluidez, dutos, tanques de navios e parques de armazenamento utilizam
+                            sistemas de aquecimento contínuo e isolamento térmico, mantendo o óleo cru acima de sua
+                            temperatura crítica de escoamento.
+                        </p>
+                    </article>
+
+                    <article class="tech-card">
+                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38" aria-hidden="true">
+                            <circle cx="19" cy="19" r="13" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M19 19 L26 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M11 24 H27" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                        </svg>
+                        <h3>Bombeamento de alta pressão</h3>
+                        <p>
+                            Estações de bombeamento de alta pressão distribuídas ao longo dos oleodutos compensam as
+                            perdas de carga provocadas pelo atrito do fluido viscoso e pelos desníveis do relevo até o
+                            terminal ou refinaria.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Infraestrutura de Transferência -->
         <section>
             <div class="wrap">
                 <div class="section-head reveal">
-                    <h2>O Que Fazemos</h2>
-                    <span class="idx">Capítulo 03 · Logística Midstream</span>
-                </div>
-
-                <p class="lead-text reveal" style="font-size: 14px";>
-                    Atuamos de forma direta e especializada no <strong>escoamento e na logística integrada de petróleo
-                        bruto (óleo cru)</strong>, operando o elo estratégico do segmento <em>midstream</em> que conecta
-                    poços e plataformas de produção <em>offshore</em> e <em>onshore</em> diretamente aos terminais
-                    marítimos, parques de tancagem e refinarias de processamento.
-                </p>
-
-                <p class="lead-text reveal" style="font-size:14px; margin-top:-16px;">
-                    Nossa operação prioriza a <strong>agilidade no fluxo de escoamento</strong>, a <strong>preservação
-                        da integridade física e química da carga</strong> (controle de viscosidade, temperatura de
-                    fluidez e teor de sedimentos BSW) e a <strong>máxima segurança operacional</strong>, eliminando
-                    riscos de perda primária de contenção em todas as etapas da cadeia logística.
-                </p>
-
-                <!-- Indicadores Operacionais de Petróleo Bruto -->
-                <div class="overview-grid reveal">
-                    <div class="overview-card">
-                        <div class="num">24<span>/7</span></div>
-                        <div class="label">Escoamento Contínuo</div>
-                        <p>Operação ininterrupta entre campos de produção, estações de bombeamento e terminais.</p>
-                    </div>
-                    <div class="overview-card">
-                        <div class="num">100<span>%</span></div>
-                        <div class="label">Integridade do Óleo Cru</div>
-                        <p>Monitoramento permanente de grau API, BSW (água e sedimentos) e vazão volumétrica.</p>
-                    </div>
-                    <div class="overview-card">
-                        <div class="num">0<span>%</span></div>
-                        <div class="label">Perda de Contenção</div>
-                        <p>Protocolos preventivos rigorosos contra vazamentos e preservação de ecossistemas.</p>
-                    </div>
-                    <div class="overview-card">
-                        <div class="num">100<span>%</span></div>
-                        <div class="label">Rastreabilidade Total</div>
-                        <p>Sistemas SCADA e telemetria satelital dedicados ao controle de pressão e rotas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BLOCO 2: Modais e Frota (Com Imagens e Capacidades) -->
-        <section class="dark-section">
-            <div class="wrap">
-                <div class="section-head reveal">
-                    <h2>Modais e Frota para Escoamento de Petróleo Bruto</h2>
-                    <span class="idx">Matriz Logística Especializada</span>
+                    <h2>Infraestrutura de transferência</h2>
+                    <span class="idx">04 · Conexão entre modais</span>
                 </div>
 
                 <p class="lead-text reveal">
-                    O petróleo bruto requer métodos de transporte dimensionados para sua densidade, viscosidade e volume
-                    de extração. Nossa matriz combina quatro modais de alto rendimento para assegurar escoamento
-                    ininterrupto dos campos até os terminais de entrega.
+                    A transição do petróleo bruto entre o ambiente marítimo, a malha dutoviária e os corredores
+                    terrestres depende de instalações de engenharia projetadas para operar com vedação estanque,
+                    medição precisa e contenção preventiva.
                 </p>
 
-                <!-- Grade Visual com 4 Cards e Imagens Reais Padronizadas -->
-                <div class="modais-grid reveal">
-
-                    <!-- Modal 1: Oleodutos -->
-                    <div class="modal-card">
-                        <div class="modal-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=800&q=80"
-                                alt="Oleodutos e Malha Dutoviária de Petróleo Bruto">
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-capacity">Capacidade: Fluxo contínuo de até 600.000 bpd</div>
-                            <h3>Oleodutos (Malha Dutoviária)</h3>
-                            <p>
-                                Tubulações de aço de alta resistência e alta pressão projetadas para o escoamento
-                                contínuo 24/7 de grandes volumes de óleo cru entre campos de produção e terminais
-                                marítimos ou refinarias, apresentando o menor custo operacional por barril e
-                                elevadíssimo índice de segurança mecânica.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Modal 2: Transporte Marítimo -->
-                    <div class="modal-card">
-                        <div class="modal-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80"
-                                alt="Navio Petroleiro de Casco Duplo">
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-capacity">Capacidade: Até 150.000 a 300.000 DWT</div>
-                            <h3>Transporte Marítimo (Cabotagem & Longo Curso)</h3>
-                            <p>
-                                Navios petroleiros com tecnologia obrigatória de Casco Duplo (Double Hull) e navios
-                                aliviadores (shuttle tankers com posicionamento dinâmico DP2) desenvolvidos para
-                                operações offshore de alívio em plataformas e FPSOs, cabotagem e exportação de óleo cru
-                                em longas distâncias marítimas.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Modal 3: Transporte Ferroviário -->
-                    <div class="modal-card">
-                        <div class="modal-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=800&q=80"
-                                alt="Composição Ferroviária com Vagões-Tanque">
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-capacity">Capacidade: Até 6.000.000 de litros por composição</div>
-                            <h3>Transporte Ferroviário</h3>
-                            <p>
-                                Composições ferroviárias tracionadas com dezenas de vagões-tanque especializados para
-                                movimentação em massa de petróleo bruto por longos trechos terrestres onde não há
-                                cobertura de oleodutos, conectando polos de extração no interior diretamente aos
-                                terminais litorâneos.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Modal 4: Transporte Rodoviário -->
-                    <div class="modal-card">
-                        <div class="modal-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80"
-                                alt="Caminhão-Tanque para Transporte de Petróleo Bruto">
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-capacity">Capacidade: 35.000 a 45.000 litros por veículo</div>
-                            <h3>Transporte Rodoviário</h3>
-                            <p>
-                                Caminhões-tanque articulados de alta resistência utilizados para transporte em trechos
-                                curtos, coleta de óleo cru em campos terrestres de difícil acesso ou isolados da rede de
-                                dutos, fornecendo máxima flexibilidade de roteamento e suporte operacional pontual.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="dark-section">
-            <div class="wrap">
-                <div class="section-head reveal">
-                    <h2>Monitoramento Contínuo e Integridade da Carga</h2>
-                    <span class="idx">Tecnologia e Controle Operacional</span>
-                </div>
-
-                <p class="lead-text reveal">
-                    Garantimos a salvaguarda da carga de petróleo bruto através de sistemas automatizados de controle de
-                    pressão, rastreamento contínuo e infraestrutura técnica de proteção ambiental em tempo real.
-                </p>
-
-                <!-- 4 Pilares de Monitoramento e Integridade -->
-                <div class="tech-grid reveal">
-
-                    <!-- Telemetria e Pressão 24h -->
-                    <div class="tech-card">
-                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
-                            <circle cx="19" cy="19" r="14" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M19 11 V19 L24 24" stroke="currentColor" stroke-width="1.8"
+                <div class="tank-types reveal">
+                    <article class="tank-card">
+                        <svg class="icn" fill="none" viewBox="0 0 44 44" aria-hidden="true">
+                            <circle cx="22" cy="16" r="8" stroke="currentColor" stroke-width="1.6" />
+                            <path d="M6 28 Q14 24 22 28 T38 28" stroke="currentColor" stroke-width="1.6"
                                 stroke-linecap="round" />
-                            <circle cx="19" cy="19" r="2.5" fill="currentColor" />
+                            <path d="M22 24 V38 M15 38 H29" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
                         </svg>
-                        <h3>Telemetria e Pressão 24h</h3>
+                        <h3>Monoboias (SPM — Single Point Mooring)</h3>
                         <p>
-                            Sistemas SCADA e LDS (Leak Detection System) integrados nos oleodutos e estações, realizando
-                            a leitura contínua de pressão hidráulica, vazão e temperatura para identificar
-                            microvariações instantaneamente.
+                            Boias oceânicas ancoradas em águas profundas que permitem amarrar, carregar e descarregar
+                            grandes navios petroleiros longe da costa, sem necessidade de atracação em águas rasas.
+                            Mangotes flutuantes e dutos submarinos ligam a embarcação diretamente aos terminais em
+                            terra.
                         </p>
-                    </div>
+                        <span class="tag">Operação offshore</span>
+                    </article>
 
-                    <!-- Rastreamento Satelital -->
-                    <div class="tech-card">
-                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
-                            <circle cx="19" cy="19" r="14" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M7 19 H31 M19 7 C14 11 14 27 19 31 M19 7 C24 11 24 27 19 31" stroke="currentColor"
-                                stroke-width="1.6" />
+                    <article class="tank-card">
+                        <svg class="icn" fill="none" viewBox="0 0 44 44" aria-hidden="true">
+                            <path d="M6 32 H38" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            <rect x="10" y="16" width="10" height="16" stroke="currentColor" stroke-width="1.6" />
+                            <path d="M20 22 H32 V32" stroke="currentColor" stroke-width="1.6" />
+                            <path d="M15 16 V10 H28" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
                         </svg>
-                        <h3>Rastreamento via Satélite</h3>
+                        <h3>Terminais Portuários</h3>
                         <p>
-                            Comunicação bidirecional via satélite para navios petroleiros, composições ferroviárias e
-                            frotas de transporte terrestre, com cercas virtuais georreferenciadas e bloqueio preventivo
-                            contra alterações de percurso.
+                            Estruturas costeiras de recepção, medição volumétrica, controle de pressão e bombeamento do
+                            óleo cru. Contam com braços de carregamento articulados, válvulas de bloqueio rápido e
+                            sistemas de resposta a emergências para integrar navios à rede terrestre de oleodutos.
                         </p>
-                    </div>
+                        <span class="tag">Interface mar-terra</span>
+                    </article>
 
-                    <!-- Lacres Eletrônicos -->
-                    <div class="tech-card">
-                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
-                            <rect x="9" y="15" width="20" height="15" rx="2" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M14 15 V10 C14 7.2 16.2 5 19 5 C21.8 5 24 7.2 24 10 V15" stroke="currentColor"
-                                stroke-width="1.8" />
-                            <circle cx="19" cy="22" r="2" fill="currentColor" />
+                    <article class="tank-card">
+                        <svg class="icn" fill="none" viewBox="0 0 44 44" aria-hidden="true">
+                            <rect x="8" y="8" width="28" height="28" rx="2" stroke="currentColor" stroke-width="1.6" />
+                            <line x1="8" y1="16" x2="36" y2="16" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="8" y1="26" x2="36" y2="26" stroke="currentColor" stroke-width="1.5" />
                         </svg>
-                        <h3>Lacres Eletrônicos Antifraude</h3>
+                        <h3>Tanques de Armazenamento (Parques de Tancagem)</h3>
                         <p>
-                            Dispositivos digitais criptografados instalados em todas as válvulas de alívio e bocas de
-                            inspeção dos tanques. O registro de abertura requer chave física e validação de coordenadas
-                            geográficas no destino homologado.
+                            Conjuntos de tanques industriais — frequentemente dotados de teto flutuante para minimizar a
+                            formação de vapores e perdas por evaporação — destinados a estocar grandes volumes de óleo
+                            bruto e regular o fluxo contínuo antes do envio às refinarias.
                         </p>
-                    </div>
-
-                    <!-- Pronta Resposta Ambiental -->
-                    <div class="tech-card">
-                        <svg class="tech-icon" fill="none" viewBox="0 0 38 38">
-                            <path d="M19 4 L33 28 H5 L19 4 Z" stroke="currentColor" stroke-width="1.8" />
-                            <line x1="19" y1="13" x2="19" y2="20" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="19" cy="24" r="1.5" fill="currentColor" />
-                        </svg>
-                        <h3>Pronta Resposta Ambiental</h3>
-                        <p>
-                            Equipes de emergência ambiental estrategicamente distribuídas nos corredores de transporte,
-                            aparelhadas com barreiras flutuantes de contenção, recolhedores de óleo cru (skimmers) e
-                            caminhões a vácuo para contenção imediata.
-                        </p>
-                    </div>
-
+                        <span class="tag">Estocagem reguladora</span>
+                    </article>
                 </div>
-
-                <!-- Protocolo de Custódia do Óleo Cru -->
-                <div class="section-head reveal" style="margin-top: 48px; margin-bottom: 20px;">
-                    <h2 style="font-size:22px;">Protocolo de Custódia e Integridade do Petróleo Bruto</h2>
-                    <span class="idx">Fluxo Operacional</span>
-                </div>
-
-                <div class="custodia-grid reveal">
-                    <div class="custodia-item">
-                        <div class="custodia-step">Etapa 01</div>
-                        <h4>Homologação na Origem</h4>
-                        <p>Aferição volumétrica e análise laboratorial das propriedades físico-químicas do óleo cru
-                            (grau API e BSW) no campo de extração.</p>
-                    </div>
-                    <div class="custodia-item">
-                        <div class="custodia-step">Etapa 02</div>
-                        <h4>Transferência Hermética</h4>
-                        <p>Carregamento em circuito fechado com equalização de pressão e ativação dos lacres eletrônicos
-                            nas conexões de saída.</p>
-                    </div>
-                    <div class="custodia-item">
-                        <div class="custodia-step">Etapa 03</div>
-                        <h4>Monitoramento Ativo</h4>
-                        <p>Acompanhamento contínuo dos gradientes de pressão, temperaturas de bombeamento e localização
-                            satelital em tempo real.</p>
-                    </div>
-                    <div class="custodia-item">
-                        <div class="custodia-step">Etapa 04</div>
-                        <h4>Entrega e Descarregamento</h4>
-                        <p>Recepção no terminal marítimo ou refinaria com checagem dos lacres, conferência volumétrica e
-                            laudo de entrega.</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
+        <!-- 5. Tabela Comparativa -->
+        <section style="background:var(--paper-100);">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Comparativo dos modais no transporte de óleo bruto</h2>
+                    <span class="idx">05 · Matriz comparativa</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    Cada modal desempenha uma função específica na logística do petróleo bruto, equilibrando custo por
+                    barril movimentado, volume transportado e requisitos de segurança operacional e ambiental.
+                </p>
+
+                <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;" class="reveal">
+                    <table class="norm-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Modal</th>
+                                <th scope="col">Custo por barril transportado</th>
+                                <th scope="col">Volume / Capacidade de carga</th>
+                                <th scope="col">Segurança operacional e ambiental</th>
+                                <th scope="col">Papel principal na logística do óleo bruto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="code-cell">Dutoviário (Oleodutos)</td>
+                                <td>Muito baixo em operação contínua, após alto investimento inicial de implantação.</td>
+                                <td>Muito alta; fluxo contínuo ininterrupto de centenas de milhares de barris por dia.</td>
+                                <td>Elevada em circuito fechado, exigindo monitoramento de pressão, válvulas de bloqueio e inspeção de integridade.</td>
+                                <td>Eixo estrutural de escoamento regular entre campos produtores, terminais e refinarias.</td>
+                            </tr>
+                            <tr>
+                                <td class="code-cell">Marítimo (Navios Petroleiros)</td>
+                                <td>Baixo por barril em médias e longas distâncias devido à grande economia de escala.</td>
+                                <td>Gigantesca por embarcação (como classes Suezmax e VLCC com milhões de barris por viagem).</td>
+                                <td>Exige casco duplo, sistemas de inertização, controle de navegação e planos de contenção marinha.</td>
+                                <td>Transporte transoceânico, cabotagem e alívio de plataformas offshore até terminais e refinarias distantes.</td>
+                            </tr>
+                            <tr>
+                                <td class="code-cell">Ferroviário (Trens)</td>
+                                <td>Intermediário; superior ao dutoviário, mas competitivo em longas rotas terrestres.</td>
+                                <td>Alta por composição, reunindo dezenas de vagões-tanque acoplados em uma única viagem.</td>
+                                <td>Depende de integridade estrutural dos vagões, manutenção da via férrea e controle rigoroso em pátios de transbordo.</td>
+                                <td>Suprir corredores terrestres de grande volume onde não há malha dutoviária instalada.</td>
+                            </tr>
+                            <tr>
+                                <td class="code-cell">Rodoviário (Caminhões-Tanque)</td>
+                                <td>Alto por barril quando aplicado a grandes volumes ou médias e longas distâncias.</td>
+                                <td>Baixa por unidade de transporte, exigindo múltiplas viagens para volumes expressivos.</td>
+                                <td>Exposto ao tráfego viário; requer manutenção preventiva, válvulas de segurança e condutores habilitados.</td>
+                                <td>Coleta inicial flexível e de curta distância em poços terrestres isolados até estações coletoras.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Segurança e Tecnologia -->
+        <section>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Segurança e tecnologia</h2>
+                    <span class="idx">06 · Proteção e integridade</span>
+                </div>
+
+                <p class="lead-text reveal">
+                    O transporte moderno de petróleo bruto combina exigências construtivas internacionais e robótica de
+                    inspeção interna para prevenir derramamentos e garantir a confiabilidade estrutural de navios e
+                    oleodutos.
+                </p>
+
+                <div class="licencas-grid reveal">
+                    <article class="licenca-card">
+                        <div class="badge-icon">DH</div>
+                        <div class="licenca-info">
+                            <h3>Casco Duplo (Double Hull)</h3>
+                            <p>
+                                Exigência internacional estabelecida pela Organização Marítima Internacional (convenção
+                                MARPOL) para navios petroleiros que movimentam óleo cru. Nesse projeto construtivo, duas
+                                camadas separadas de aço — o casco externo e o casco interno que envolve os tanques de
+                                carga — formam uma zona intermediária de proteção (tanques de lastro segregado ou
+                                espaços vazios). Em caso de colisão ou encalhe que rompa a chapa externa, essa barreira
+                                estrutural absorve o impacto e impede ou reduz drasticamente o vazamento de petróleo
+                                bruto no oceano.
+                            </p>
+                            <span class="reg-tag">Transporte Marítimo · Barreira Estrutural</span>
+                        </div>
+                    </article>
+
+                    <article class="licenca-card">
+                        <div class="badge-icon">PIG</div>
+                        <div class="licenca-info">
+                            <h3>PIGs (Pipeline Inspection Gauges)</h3>
+                            <p>
+                                Dispositivos robóticos e instrumentados inseridos em estações lançadoras no interior dos
+                                oleodutos e impulsionados pela própria pressão do fluxo de petróleo bruto. Os modelos de
+                                limpeza raspam mecanicamente acúmulos de parafina e resíduos sólidos das paredes do tubo,
+                                preservando o diâmetro útil de escoamento; já os PIGs instrumentados ("inteligentes")
+                                utilizam sensores magnéticos ou ultrassônicos para mapear corrosão, amassamentos e
+                                falhas estruturais ao longo de toda a extensão da linha, orientando manutenções
+                                preventivas antes que ocorram rupturas.
+                            </p>
+                            <span class="reg-tag">Malha Dutoviária · Inspeção Robótica</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="chapter-nav">
+                    <a href="armazenamento.html"><span>← Capítulo anterior</span>Armazenamento</a>
+                    <a class="next" href="sobre.html"><span>Próxima página →</span>Equipe e sobre o TCC</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Rodapé idêntico ao padrão das outras páginas -->
     <footer>
-        <div class="wrap foot-row">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo
-                bruto.</span>
-            <a href="sobre.html">Sobre o projeto e a equipe →</a>
+        <div class="conteudo-footer">
+            <div class="emcima-footer">
+                <div class="logo-footer">
+                    <a href="./index (2).html">
+                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROSYNC">
+                    </a>
+                    <a href="./index (2).html">
+                        <h3 class="petrosync">PETRO<span>SYNC</span></h3>
+                    </a>
+                </div>
+
+                <div class="colunas-footer">
+                    <div class="coluna-footer">
+                        <h2>Contatos:</h2>
+                        <ul>
+                            <li><a href="#">petrosync@gmail.com</a></li>
+                            <li>(11) 00000-0000</li>
+                            <li>São Paulo - SP</li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="index (2).html">Início</a></li>
+                            <li><a href="extracao.html">Extração</a></li>
+                            <li><a href="armazenamento.html">Armazenamento</a></li>
+                            <li><a href="transporte.html">Transporte</a></li>
+                            <li><a href="sobre.html">Equipe</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="sobre.html">Nossa Equipe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="embaixo-footer">
+            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo bruto.</span>
         </div>
     </footer>
 
-    <!-- Scripts: Menu Mobile, Marcação Ativa e Revelação Suave -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Menu Mobile Toggle
             const navToggle = document.getElementById('navToggle');
             const mainNav = document.getElementById('mainNav');
 
@@ -1127,16 +1499,14 @@
                 }));
             }
 
-            // 2. Destaque de Link Ativo no Menu
             const current = location.pathname.split('/').pop() || 'transporte.html';
             document.querySelectorAll('#mainNav a').forEach(link => {
                 const href = link.getAttribute('href');
-                if (href === current || (current.includes('transporte') && href.includes('transporte')) || (current.includes('projetos') && href.includes('transporte'))) {
+                if (href === current || (current.includes('transporte') && href.includes('transporte'))) {
                     link.classList.add('active');
                 }
             });
 
-            // 3. Efeito Reveal ao Rolar a Página
             if ('IntersectionObserver' in window) {
                 const revealObserver = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
