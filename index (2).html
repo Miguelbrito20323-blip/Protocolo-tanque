@@ -637,35 +637,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    .exploded-wrap {
-      display: grid;
-      grid-template-columns: 1.55fr 1fr;
-      gap: 44px;
-      align-items: start;
-    }
-
-    @media(max-width:900px) {
-      .exploded-wrap {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .exploded-outer {
-      animation: explodedFloat 7s ease-in-out infinite;
-    }
-
-    @keyframes explodedFloat {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
   </style>
 </head>
 
