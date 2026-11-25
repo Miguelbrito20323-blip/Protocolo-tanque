@@ -2,1188 +2,1177 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início | PetroSync</title>
-  <meta name="description"
-    content="Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo e derivados.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <style>
-    :root {
-      --navy-900: #0B1826;
-      --navy-800: #102132;
-      --navy-700: #16283D;
-      --steel-500: #5B7C97;
-      --steel-300: #A8BECF;
-      --amber-500: #C97C2A;
-      --amber-400: #DE9A4C;
-      --teal-500: #2E7D6B;
-      --teal-400: #3C9A85;
-      --teal-050: rgba(46, 125, 107, 0.08);
-      --paper-100: #EDEEEA;
-      --paper-050: #F6F6F3;
-      --ink-900: #1B2129;
-      --ink-600: #4A525C;
-      --danger-600: #AE3B2C;
-      --line: rgba(27, 33, 41, 0.12);
-      --line-dark: rgba(237, 238, 234, 0.14);
-      --radius-s: 2px;
-      --maxw: 1180px;
-      --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      --font-display: 'Barlow Condensed', 'Oswald', 'Arial Narrow', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper-050);
-      color: var(--ink-900);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: var(--font-display);
-      font-weight: 600;
-      line-height: 1.08;
-      margin: 0;
-      color: var(--navy-900);
-      letter-spacing: 0.2px;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-    }
-
-    .container a {
-      text-decoration: none;
-    }
-
-    .nav-logo {
-      height: 70px;
-      width: auto;
-    }
-
-    .petrosync {
-      margin-left: 10px;
-      margin-right: 0;
-      color: #ffffff;
-      font-size: 17px;
-      text-decoration: none;
-    }
-
-    .petrosync span {
-      color: #EBA152;
-    }
-
-    .img-extracao {
-      position: relative;
-      width: 100%;
-      height: 480px;
-      overflow: hidden;
-    }
-
-    .img-extracao img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .img-extracao::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(5, 16, 26, 0.50);
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 1;
-    }
-
-    .texto-img {
-      position: absolute;
-      top: 50%;
-      left: 8%;
-      z-index: 2;
-      color: white;
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 2;
-    }
-
-    .texto-img h1 {
-      margin: 0;
-      font-size: 34px;
-    }
-
-    .texto-img span {
-      color: #EBA152;
-      font-size: 30px;
-    }
-
-    .img-extracao:hover::after {
-      opacity: 1;
-    }
-
-    .img-extracao:hover .texto-img {
-      opacity: 1;
-    }
-
-    img,
-    svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    @media(max-width:640px) {
-      .wrap {
-        padding: 0 20px;
-      }
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--amber-500);
-      outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 24, 38, 0.96);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--line-dark);
-    }
-
-    .nav-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-    }
-
-    .container a {
-      text-decoration: none;
-    }
-
-    .nav-logo {
-      height: 70px;
-      width: auto;
-    }
-
-    .petrosync {
-      margin-left: 10px;
-      margin-right: 0;
-      color: #ffffff;
-      font-size: 17px;
-      text-decoration: none;
-    }
-
-    .petrosync span {
-      color: #EBA152;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--steel-300);
-      font-size: 14.5px;
-      font-weight: 500;
-      position: relative;
-      padding: 6px 10px;
-      margin: 0 -10px;
-      border-radius: 2px;
-      transition: color .2s ease, background .25s ease, border-radius .3s ease;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      color: var(--paper-050);
-      background: rgba(60, 154, 133, 0.16);
-      border-radius: 14px;
-    }
-
-    nav a.active {
-      color: var(--paper-050);
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 0;
-      height: 2px;
-      width: 0;
-      background: var(--amber-500);
-      transition: width .25s ease;
-    }
-
-    nav a.active::after {
-      width: calc(100% - 20px);
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--paper-050);
-      margin: 5px 0;
-      transition: .25s;
-    }
-
-    @media (max-width: 860px) {
-  #mainNav {
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: var(--navy-900);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s ease;
-    border-bottom: 1px solid var(--line-dark);
-  }
-
-  #mainNav.open {
-    max-height: 380px;
-  }
-
-  #mainNav ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 8px 32px 20px;
-  }
-
-  #mainNav ul li {
-    border-bottom: 1px solid var(--line-dark);
-  }
-
-  #mainNav a {
-    display: block;
-    padding: 14px 0;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-}
-
-    .page-hero {
-      background: var(--navy-900);
-      color: var(--paper-050);
-
-      overflow: hidden;
-    }
-
-    .home-hero {
-      position: relative;
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg,
-          rgba(11, 24, 38, 0.98) 0%,
-          rgba(11, 24, 38, 0.94) 38%,
-          rgba(11, 24, 38, 0.68) 62%,
-          rgba(11, 24, 38, 0.28) 100%),
-        url("SUA-IMAGEM-AQUI.jpg") center / cover no-repeat;
-    }
-
-    .home-hero .wrap {
-      width: 100%;
-    }
-
-    .home-hero-content {
-      width: min(58%, 680px);
-    }
-
-    @media(max-width:900px) {
-      .home-hero-content {
-        width: min(78%, 680px);
-      }
-    }
-
-    @media(max-width:640px) {
-      .home-hero {
-        min-height: auto;
-      }
-
-      .home-hero-content {
-        width: 100%;
-      }
-    }
-
-    .sobreconteudo {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .sobreimg img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    .sobretextos {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    .sobrein {
-      color: var(--steel-300);
-      font-size: 14px;
-      line-height: 1.7;
-      margin: 0 0 5px;
-    }
-
-    .sobreitem {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .sobreitem img {
-      width: 35px;
-      height: 35px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .sobreitem h3 {
-      color: var(--paper-050);
-      font-size: 17px;
-      margin-bottom: 4px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .sobreitem p {
-      color: var(--steel-300);
-      font-size: 13px;
-      margin: 0;
-    }
-
-    .saibaequipe {
-      align-items: center;
-      display: block;
-      margin-top: 29px;
-      width: 50%;
-      color: white;
-      background-color: #0B1826;
-      border-radius: 13px;
-      border: 2px solid #EBA152;
-      padding: 19px;
-      font-size: 0.9rem;
-      transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    .saibaequipe a {
-      margin-top: 10px;
-      text-decoration: none;
-      color: white;
-    }
-
-    .saibaequipe span {
-      color: #EBA152;
-    }
-
-    .saibaequipe:hover {
-      background-color: #05101A;
-      transform: scale(1.02);
-    }
-
-    /* RESPONSIVIDADE */
-
-    @media (max-width: 760px) {
-    .sobreconteudo {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .sobreimg img {
-        height: 260px;
-    }
-}
-
-    .page-hero h1 {
-      font-size: clamp(50px, 5.8vw, 50px);
-      color: var(--paper-050);
-      max-width: 15ch;
-    }
-
-    .page-hero p.lead {
-      margin-top: 18px;
-      max-width: 52ch;
-      color: var(--steel-300);
-      font-size: 16.5px;
-      display: grid;
-    }
-
-    .crumb button:hover {
-      color: var(--steel-300);
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 24px;
-      margin-bottom: 44px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 22px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(26px, 3.2vw, 38px);
-      max-width: 18ch;
-    }
-
-    .section-head .idx {
-      font-family: var(--font-display);
-      font-size: 14px;
-      color: var(--steel-500);
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .chapters {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    @media(max-width:760px) {
-      .chapters {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .chapter-card {
-      background: var(--paper-050);
-      padding: 36px 32px;
-      text-decoration: none;
-      color: inherit;
-      flex-direction: column;
-      min-height: 150px;
-      transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
-      cursor: pointer;
-      border: 1px solid #b2b9c1;
-      text-align: left;
-      width: 100%;
-      font-family: inherit;
-      position: relative;
-      z-index: 0;
-    }
-
-    .chapter-card:hover {
-      background: var(--paper-050);
-      transform: translateY(-5px);
-      border-radius: 18px;
-      box-shadow: 0 14px 34px rgba(11, 24, 38, 0.14);
-      z-index: 1;
-    }
-
-    .chapter-card img {
-      width: 50px;
-    }
-
-    .chapter-card:hover h3 {
-      color: var(--teal-500);
-    }
-
-    .chapter-card h3 {
-      font-size: 24px;
-      margin: 14px 0 10px;
-      transition: color .25s ease;
-    }
-
-    .chapter-card .cnum {
-      font-family: var(--font-display);
-      color: var(--steel-500);
-      font-size: 15px;
-      font-weight: 600;
-      transition: color .25s ease;
-    }
-
-    .h3chap img {
-      width: 35px;
-      height: 35px;
-    }
-
-    .chapter-card p {
-      color: var(--ink-600);
-      font-size: 14.5px;
-      margin: 0;
-      flex: 1;
-    }
-
-    .chapter-card .go {
-      margin-top: 18px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--amber-500);
-    }
-
-    .card-imagem {
-      width: 100%;
-      margin-top: 20px;
-      overflow: hidden;
-    }
-
-    .card-imagem img {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      display: block;
-
-      object-fit: cover;
-    }
-
-    .equipeindex {
-      background-color: var(--navy-900);
-      color: var(--steel-300);
-      padding: 80px 0;
-    }
-
-    .equipeindex .wrap {
-      background-color: var(--navy-900);
-      align-items: center;
-      color: var(--steel-300);
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 50px;
-    }
-
-    .equipeinfos {
-      margin-bottom: 0px;
-      max-width: 400px;
-    }
-
-    .equipeinfos h2 {
-      color: white;
-      font-size: clamp(26px, 3.2vw, 38px);
-      max-width: 18ch;
-    }
-
-    .equipeinfos p {
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .botaoequipe {
-      display: inline-block;
-      color: #EBA152;
-      border: 2px solid #EBA152;
-      padding: 10px 22px;
-      border-radius: 25px;
-      transition: .3s;
-      text-decoration: none;
-    }
-
-    .botaoequipe:hover {
-      background: #EBA152;
-      color: #0B1826;
-    }
-
-    .equipeindex .sobreimg {
-      width: 100%;
-      height: 210px;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .equipeindex .sobreimg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .f {
-      background: var(--navy-900);
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      padding: 25px 35px;
-      border-top: 1px solid #38536B;
-    }
-
-    .logof {
-      display: flex;
-      align-items: center;
-    }
-
-    .logof img {
-      width: 70px;
-    }
-
-    .logof h3 {
-      color: white;
-      font-size: 17px;
-    }
-
-    .logof span {
-      color: #EBA152;
-    }
-
-    .navef {
-      display: flex;
-      gap: 25px;
-    }
-
-    .navef a {
-      color: var(--steel-300);
-      font-size: 15px;
-      text-decoration: none;
-    }
-
-    .ultimof {
-      color: var(--steel-300);
-      font-size: 12px;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .reveal.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVIDADE DA PÁGINA INICIAL */
-
-/* Celulares */
-@media (max-width: 640px) {
-
-.wrap {
-  padding: 0 20px;
-}
-
-/* Cabeçalho */
-.nav-row {
-  height: 65px;
-}
-
-.nav-logo {
-  height: 50px;
-}
-
-/* Banner */
-.img-extracao {
-  height: 350px;
-}
-
-.img-extracao::after {
-  opacity: 1;
-}
-
-.texto-img {
-  top: 50%;
-  left: 20px;
-  right: 20px;
-  transform: translateY(-50%);
-  opacity: 1;
-}
-
-.texto-img h1 {
-  font-size: clamp(30px, 8vw, 38px);
-}
-
-.texto-img span {
-  font-size: clamp(20px, 5vw, 25px);
-}
-
-/* Seções */
-section {
-  padding: 45px 0;
-}
-
-.section-head {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-}
-
-.section-head h2 {
-  font-size: 30px;
-}
-
-/* Sobre nós */
-.sobreimg img {
-  height: 230px;
-}
-
-.sobretextos {
-  gap: 18px;
-}
-
-.sobrein {
-  font-size: 13px;
-}
-
-.sobreitem {
-  align-items: flex-start;
-}
-
-/* Cards */
-.chapters {
-  grid-template-columns: 1fr;
-}
-
-.chapter-card {
-  padding: 25px 20px;
-}
-
-.card-imagem {
-  height: 180px;
-}
-
-.card-imagem img {
-  height: 100%;
-}
-
-/* Equipe */
-.equipeindex {
-  padding: 45px 0;
-}
-
-.equipeindex .wrap {
-  grid-template-columns: 1fr;
-  gap: 25px;
-}
-
-.equipeinfos {
-  max-width: 100%;
-}
-
-.equipeindex .sobreimg {
-  height: 230px;
-}
-
-/* Rodapé */
-.f {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 25px 20px;
-}
-
-.navef {
-  flex-wrap: wrap;
-  gap: 12px 20px;
-}
-
-.ultimof {
-  line-height: 1.5;
-}
-}
-
-/* Tablets */
-@media (min-width: 641px) and (max-width: 860px) {
-
-.sobreconteudo {
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-.equipeindex .wrap {
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-.chapter-card {
-  padding: 25px 20px;
-}
-}
-
-/* Desktop */
-@media (min-width: 861px) {
-
-#mainNav {
-  position: static;
-  max-height: none;
-  overflow: visible;
-  background: transparent;
-  border: none;
-}
-
-#mainNav ul {
-  flex-direction: row;
-  gap: 28px;
-  padding: 0;
-}
-
-#mainNav a {
-  display: inline-block;
-  padding: 6px 10px;
-}
-
-.nav-toggle {
-  display: none;
-}
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extração | PetroSync</title>
+    <meta name="description"
+        content="Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo e derivados.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy-900: #0B1826;
+            --navy-800: #102132;
+            --navy-700: #16283D;
+            --steel-500: #5B7C97;
+            --steel-300: #A8BECF;
+            --amber-500: #C97C2A;
+            --amber-400: #DE9A4C;
+            --teal-500: #2E7D6B;
+            --teal-400: #3C9A85;
+            --teal-050: rgba(46, 125, 107, 0.08);
+            --paper-100: #EDEEEA;
+            --paper-050: #F6F6F3;
+            --ink-900: #1B2129;
+            --ink-600: #4A525C;
+            --danger-600: #AE3B2C;
+            --line: rgba(27, 33, 41, 0.12);
+            --line-dark: rgba(237, 238, 234, 0.14);
+            --radius-s: 2px;
+            --maxw: 1180px;
+            --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            --font-display: 'Barlow Condensed', 'Oswald', 'Arial Narrow', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper-050);
+            color: var(--ink-900);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.08;
+            margin: 0;
+            color: var(--navy-900);
+            letter-spacing: 0.2px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .container a {
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            height: 70px;
+            width: auto;
+        }
+
+        .petrosync {
+            margin-left: 10px;
+            margin-right: 0;
+            color: #ffffff;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .petrosync span {
+            color: #EBA152;
+        }
+
+        .img-extracao {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+        }
+
+        .img-extracao img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .img-extracao::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(5, 16, 26, 0.50);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .texto-img {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            z-index: 2;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+        }
+
+        .texto-img h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        .texto-img span {
+            color: #EBA152;
+            font-size: 30px;
+        }
+
+        .img-extracao:hover::after {
+            opacity: 1;
+        }
+
+        .img-extracao:hover .texto-img {
+            opacity: 1;
+        }
+
+        img,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        @media(max-width:640px) {
+            .wrap {
+                padding: 0 20px;
+            }
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--amber-500);
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 24, 38, 0.96);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid var(--line-dark);
+        }
+
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--steel-300);
+            font-size: 14.5px;
+            font-weight: 500;
+            position: relative;
+            padding: 6px 10px;
+            margin: 0 -10px;
+            border-radius: 2px;
+            transition: color .2s ease, background .25s ease, border-radius .3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: var(--paper-050);
+            background: rgba(60, 154, 133, 0.16);
+            border-radius: 14px;
+        }
+
+        nav a.active {
+            color: var(--paper-050);
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: var(--amber-500);
+            transition: width .25s ease;
+        }
+
+        nav a.active::after {
+            width: calc(100% - 20px);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--paper-050);
+            margin: 5px 0;
+            transition: .25s;
+        }
+
+        @media(max-width:860px) {
+            nav {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+
+                /* MENU COM FUNDO TRANSPARENTE */
+                background: rgba(11, 24, 38, 0.35);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .3s ease;
+                border-bottom: 1px solid var(--line-dark);
+            }
+
+            nav.open {
+                max-height: 380px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 8px 32px 20px;
+            }
+
+            nav ul li {
+                border-bottom: 1px solid var(--line-dark);
+            }
+
+            nav a {
+                display: block;
+                padding: 14px 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+
+        .page-hero {
+            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: var(--paper-050);
+            padding: 64px 0 56px;
+            overflow: hidden;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(50px, 5.8vw, 50px);
+            color: var(--paper-050);
+            max-width: 15ch;
+        }
+
+        .page-hero p.lead {
+            margin-top: 18px;
+            max-width: 52ch;
+            color: var(--steel-300);
+            font-size: 16.5px;
+            display: grid;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+            margin-bottom: 44px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 22px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(26px, 3.2vw, 38px);
+            max-width: 18ch;
+        }
+
+        .section-head .idx {
+            font-family: var(--font-display);
+            font-size: 14px;
+            color: var(--steel-500);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .section-sub {
+            max-width: 62ch;
+            color: var(--ink-600);
+            font-size: 15.5px;
+            margin-top: 12px;
+        }
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        @media(max-width:760px) {
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chapter-card {
+            background: var(--paper-050);
+            padding: 36px 32px;
+            text-decoration: none;
+            color: inherit;
+            flex-direction: column;
+            min-height: 150px;
+            transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
+            cursor: pointer;
+            border: 1px solid #b2b9c1;
+            text-align: left;
+            width: 100%;
+            font-family: inherit;
+            position: relative;
+            z-index: 0;
+        }
+
+        .chapter-card:hover {
+            background: var(--paper-050);
+            transform: translateY(-5px);
+            border-radius: 18px;
+            box-shadow: 0 14px 34px rgba(11, 24, 38, 0.14);
+            z-index: 1;
+        }
+
+        .chapter-card:hover .cnum {
+            color: var(--teal-500);
+        }
+
+        .chapter-card:hover h3 {
+            color: var(--teal-500);
+        }
+
+        .chapter-card .cnum {
+            font-family: var(--font-display);
+            color: var(--steel-500);
+            font-size: 15px;
+            font-weight: 600;
+            transition: color .25s ease;
+        }
+
+        .chapter-card h3 {
+            font-size: 24px;
+            margin: 14px 0 10px;
+            transition: color .25s ease;
+        }
+
+        .h3chap img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .chapter-card p {
+            color: var(--ink-600);
+            font-size: 14.5px;
+            margin: 0;
+            flex: 1;
+        }
+
+        .chapter-card .go {
+            margin-top: 16px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--amber-500);
+        }
+
+        .nozzle-wrap {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            align-items: flex-start;
+        }
+
+        @media(max-width:900px) {
+            .nozzle-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .nozzle-diagram {
+            position: sticky;
+            top: 100px;
+        }
+
+        @media(max-width:900px) {
+            .nozzle-diagram {
+                position: static;
+            }
+        }
+
+        .nozzle-svg {
+            background: var(--paper-100);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 18px;
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 16px;
+            padding: 20px 18px;
+            margin: 0 -18px;
+            border-top: 1px solid var(--line);
+            cursor: pointer;
+            border-radius: 2px;
+            transition: background .25s ease, border-radius .3s ease;
+        }
+
+        .step:hover {
+            background: var(--teal-050);
+            border-radius: 14px;
+        }
+
+        .step:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .step .num {
+            font-family: var(--font-display);
+            font-size: 21px;
+            font-weight: 600;
+            color: var(--steel-500);
+            transition: color .2s ease;
+        }
+
+        .step h4 {
+            font-size: 17px;
+            margin-bottom: 6px;
+            transition: color .2s ease;
+        }
+
+        .step p {
+            margin: 0;
+            color: var(--ink-600);
+            font-size: 14px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+        }
+
+        .step:hover .num,
+        .step:hover h4 {
+            color: var(--teal-500);
+        }
+
+        .step.active .num {
+            color: var(--amber-500);
+        }
+
+        .step.active h4 {
+            color: var(--amber-500);
+        }
+
+        .step.active p {
+            max-height: 120px;
+            margin-top: 2px;
+        }
+
+        .step.active:hover .num,
+        .step.active:hover h4 {
+            color: var(--amber-500);
+        }
+
+        footer {
+            background: #05101A;
+            border-top: 1px solid var(--line-dark);
+            padding: 25px 0 12px;
+            color: #ffffff;
+            font-size: 13.5px;
+        }
+
+        .conteudo-footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .logo-footer {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            flex-shrink: 0;
+            margin: 0;
+        }
+
+        .logo-footer img {
+            width: auto;
+            height: 65px;
+        }
+
+        .logo-footer a {
+            text-decoration: none;
+        }
+
+        .logo-footer h3 {
+            color: #ffffff;
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .logo-footer h3 span {
+            color: #EBA152;
+        }
+
+        .colunas-footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            margin: 0;
+        }
+
+        .coluna-footer h2 {
+            color: #EBA152;
+            font-family: var(--font-body);
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 13px;
+        }
+
+        .coluna-footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .coluna-footer li {
+            margin-bottom: 7px;
+            color: #ffffff;
+            font-size: 17px;
+        }
+
+        .coluna-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .coluna-footer a:hover {
+            color: #EBA152
+        }
+
+        .emcima-footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .embaixo-footer {
+            display: flex;
+            gap: 560px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 14px;
+            color: #d1d5d8;
+            font-size: 12px;
+        }
+
+        .embaixo-footer span {
+            margin-left: 30px;
+        }
+
+        .embaixo-footer a {
+            text-decoration: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .plataformas {
+            padding: 80px 0;
+            background: #EDEEEA
+        }
+
+        .opcoes-plataforma {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 35px;
+        }
+
+        .card-plataforma {
+            padding: 0;
+            border: 2px solid rgba(27, 33, 41, 0.12);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #F6F6F3;
+            cursor: pointer;
+            text-align: left;
+            transition: .25s ease;
+            color: #1B2129;
+        }
+
+        .card-plataforma:hover,
+        .card-plataforma.active {
+            border-color: #C97C2A;
+            transform: translateY(-5px);
+        }
+
+        .card-plataforma img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-plataforma h3 {
+            margin: 16px 18px 6px;
+            font-size: 22px;
+        }
+
+        .card-plataforma span {
+            display: block;
+            margin: 0 18px 18px;
+            color: #4A525C;
+            font-size: 14px;
+        }
+
+        .descricao-plataforma {
+            margin-top: 25px;
+            padding: 30px;
+            border-left: 4px solid #C97C2A;
+            background: #f6f6f3;
+            border-radius: 6px;
+        }
+
+        .descricao-plataforma h3 {
+            margin-bottom: 10px;
+            color: #102132;
+        }
+
+        .descricao-plataforma p {
+            color: #4a525c;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 2211ab2fd9b69e6fc9bddf314d6ca0ec6b76a55a
+        @media(max-width: 600px) {
+            .opcoes-plataforma {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap nav-row">
-      <div class="container">
-        <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
-        <a href="./index (2).html">
-          <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-        </a>
-      </div>
-
-      <button class="nav-toggle" id="navToggle" type="button"
-        aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="mainNav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="index (2).html">Início</a></li>
-          <li><a href="extracao.html">Extração</a></li>
-          <li><a href="armazenamento.html">Armazenamento</a></li>
-          <li><a href="transporte.html">Transporte</a></li>
-          <li><a href="sobre.html">Equipe</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="page-hero">
-      <div class="img-extracao">
-        <img src="./imgs/plataforma.jpg" alt="plataforma_petroleo">
-
-        <div class="texto-img">
-          <h1>SEGURANÇA E</h1>
-          <h1>TECNOLOGIA</h1> <span>Centro de operações</span>
-        </div>
-      </div>
-    </section>
-
-    <section style="background:var(--navy-900);">
-      <div class="wrap">
-
-        <div class="section-head reveal" style="border-bottom-color:var(--line-dark);">
-          <h2 style="color:var(--paper-050);">Sobre nós</h2>
-        </div>
-
-        <div class="sobreconteudo">
-
-          <div class="sobreimg">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10"
-              alt="Extração de petróleo">
-          </div>
-
-          <div class="sobretextos">
-
-            <p class="sobrein">
-              A PetroSync desenvolve soluções para monitoramento
-              e segurança de operações de petróleo e gás.
-              Nossa plataforma centraliza informações de sensores,
-              alertas e ocorrências, permitindo que as equipes
-              acompanhem a operação e identifiquem possíveis
-              riscos com mais rapidez.
-            </p>
-
-            <div class="sobreitem">
-              <img src="./imgs/segurança.png" alt="segurança">
-              <div>
-                <h3>Segurança operacional</h3>
-                <p>Prevenção e identificação de possíveis riscos durante as operações.</p>
-              </div>
+    <header>
+        <div class="wrap nav-row">
+            <div class="container">
+                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+                <a href="./index (2).html">
+                    <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+                </a>
             </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav id="mainNav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index (2).html">Início</a></li>
+                    <li><a href="extracao.html">Extração</a></li>
+                    <li><a href="armazenamento.html">Armazenamento</a></li>
+                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="sobre.html">Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            <div class="sobreitem">
-              <img src="./imgs/armazenamento.png" alt="armazenamento">
-              <div>
-                <h3>Armazenamento</h3>
-                <p>Etapa responsável por armazenar o petróleo e seus derivados.</p>
-              </div>
+    <main>
+
+        <section class="page-hero">
+            <div class="img-extracao">
+                <img src="./imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
+
+                <div class="texto-img">
+                    <h1>EXTRAÇÃO</h1>
+                    <span>Como funciona?</span>
+                </div>
             </div>
+        </section>
 
-            <div class="sobreitem">
-              <img src="./imgs/transporte.png" alt="transporte">
-              <div>
-                <h3>Transporte</h3>
-                <p>Processo de deslocamento do petróleo até os centros de distribuição.</p>
-              </div>
+        <section>
+            <div class="wrap">
+                <div class="nozzle-wrap">
+                    <div class="nozzle-diagram">
+                        <svg class="nozzle-svg" fill="none" viewBox="0 0 320 260">
+
+                            <rect x="0" y="0" width="320" height="260" rx="4" fill="#EDEEEA" />
+                            <path d="M0 88 Q40 84 80 88 T160 88 T240 88 T320 88" stroke="#5B7C97" stroke-width="2" />
+
+                            <g id="etapa-1" opacity="1">
+                                <!-- Camadas-->
+                                <path d="M0 115 Q80 105 160 118 T320 112 L320 165 Q240 175 160 160 T0 165 Z"
+                                    fill="#D5DAD5" />
+                                <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z"
+                                    fill="#BFC9C5" />
+
+                                <!--Ondas de Análise-->
+                                <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128"
+                                    stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4" />
+
+                                <!--Reservatório-->
+                                <ellipse cx="190" cy="194" rx="65" ry="17" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <path d="M145 194 Q190 180 235 194" stroke="#DE9A4C" stroke-width="3" />
+
+                                <text x="190" y="226" text-anchor="middle" fill="#4A525C" font-size="9"
+                                    font-family="Public Sans">
+                                    RESERVATÓRIO
+                                </text>
+                            </g>
+
+                            <g id="etapa-2" opacity="0.28">
+                                <!--Torre-->
+                                <!-- Torre de perfuração -->
+                                <path d="M160 10 L125 30 L145 75 H175 L195 30 Z" fill="#A8BECF" stroke="#16283D"
+                                    stroke-width="3" stroke-linejoin="round" />
+                                <path d="M140 43 H180 M145 58 H175 M133 30 L167 75 M187 30 L153 75" stroke="#16283D"
+                                    stroke-width="2.5" stroke-linecap="round" />
+
+                                <!--Plataforma-->
+                                <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D" />
+                                <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3" />
+
+                                <!-- Broca e coluna de perfuração -->
+                                <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4" />
+                                <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A" />
+                            </g>
+
+                            <g id="etapa-3" opacity="0.28">
+
+                                <!-- Caminho do petróleo -->
+                                <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4" />
+
+                                <!-- Fluxo na superfície -->
+                                <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3" />
+                                <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+
+                                <!-- Reservatório -->
+                                <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2"
+                                    stroke-dasharray="4 3" />
+                            </g>
+
+                            <g id="etapa-4" opacity="0.28">
+
+                                <!-- Equipamentos de tratamento -->
+                                <rect x="225" y="43" width="30" height="42" rx="5" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <rect x="264" y="52" width="30" height="33" rx="5" fill="#16283D" stroke="#5B7C97"
+                                    stroke-width="2" />
+                                <path d="M240 43 V34 H279 V52" stroke="#C97C2A" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2" />
+                                <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2" />
+
+                                <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8"
+                                    font-family="Public Sans">
+                                    TRATAMENTO
+                                </text>
+                            </g>
+
+                        </svg>
+                    </div>
+
+                    <div class="step-list">
+                        <div class="step active" data-part="etapa-1"><span class="num">01</span>
+                            <div>
+                                <h4>Exploração e Identificação</h4>
+                                <p>Antes da extração, são realizados estudos geológicos e geofísicos para identificar
+                                    regiões com potencial de conter petróleo e gás natural.
+                                    Equipamentos e tecnologias de análise ajudam a localizar possíveis
+                                    reservatórios no subsolo ou no fundo do mar.</p>
+                            </div>
+                        </div>
+
+                        <div class="step" data-part="etapa-2"><span class="num">02</span>
+                            <div>
+                                <h4>Perfuração do poço</h4>
+                                <p>Após a identificação de uma área adequada, é realizada a perfuração
+                                    de um poço até alcançar o reservatório. Em operações offshore, esse
+                                    processo ocorre a partir de uma plataforma instalada no mar.</p>
+                            </div>
+                        </div>
+
+                        <div class="step" data-part="etapa-3"><span class="num">03</span>
+                            <div>
+                                <h4>Extração do poço</h4>
+                                <p>Com o poço preparado, o petróleo é conduzido do reservatório
+                                    até a superfície. Dependendo das condições do reservatório,
+                                    a pressão natural pode ajudar na extração ou podem ser utilizados
+                                    equipamentos para auxiliar na elevação do petróleo.</p>
+                            </div>
+                        </div>
+
+                        <div class="step" data-part="etapa-4"><span class="num">04</span>
+                            <div>
+                                <h4>Separação e tratamento</h4>
+                                <p>Ao chegar à superfície, o petróleo normalmente vem acompanhado de água,
+                                    gás natural e outras substâncias. Esses componentes são separados e tratados
+                                    para que cada produto possa seguir para a próxima etapa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-          </div>
+        <section style="background:var(--paper-100);">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Por que cada etapa importa?</h2><span class="idx">Sequência de segurança</span>
+                </div>
+                <p class="section-sub">
+                    Cada etapa da extração possui uma função essencial para garantir
+                    que o petróleo seja localizado, retirado e preparado corretamente.
+                    Desde os estudos geológicos até a separação dos componentes,
+                    todos os processos contribuem para a eficiência e a segurança da operação.</p>
+            </div>
+        </section>
+
+        <section class="plataformas">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Tipos de Plataformas</h2>
+                    <span class="idx">Onshore e Offshore</span>
+                </div>
+
+                <p class="section-sub reveal">
+                    A Extração do Petróleo pode acontecer em ambientes terrestres
+                    ou marítimos. Clique nas imagens e descubra a diferença entre eles.
+                </p>
+
+                <div class="opcoes-plataforma reveal">
+                    <button class="card-plataforma" data-platform="onshore" aria-pressed="false">
+                        <img src="./imgs/plataforma_onshore.jfif" alt="plataforma terrestre">
+                        <h3>Onshore</h3>
+                        <span>Extração em terra</span>
+                    </button>
+
+                    <button class="card-plataforma" data-platform="offshore" aria-pressed="false">
+                        <img src="./imgs/plataforma_offshore.png" alt="plataforma marítima">
+                        <h3>Offshore</h3>
+                        <span>Extração no mar</span>
+                    </button>
+                </div>
+
+                <div class="descricao-plataforma" id="platformDescription" hidden>
+                    <h3 id="platformTitle"></h3>
+                    <p id="platformText"></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Quatro capítulos, uma etapa</h2>
+                </div>
+
+                <div class="chapters">
+<<<<<<< HEAD
+                    <a class="chapter-card" href="extracao.html">
+                        <span class="cnum">Capítulo 01</span>
+                        <div class="h3chap">
+                            <h3>Extração</h3>
+                        </div>
+                        <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
+                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/ext.jpg" alt="Operação de extração">
+                        </div>
+                    </a>
+
+=======
+>>>>>>> 2211ab2fd9b69e6fc9bddf314d6ca0ec6b76a55a
+                    <a class="chapter-card" href="armazenamento.html">
+                        <span class="cnum">Capítulo 02</span>
+                        <h3>Armazenamento</h3>
+                        <p>Descubra como o petróleo é armazenado com segurança para evitar riscos.</p>
+                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/tanque.jpg" alt="Operação de extração">
+                        </div>
+                    </a>
+
+                    <a class="chapter-card" href="transporte.html">
+                        <span class="cnum">Capítulo 03</span>
+                        <h3>Transporte</h3>
+                        <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
+                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/maritimo.jpg" alt="Operação de extração">
+                        </div>
+                    </a>
+                    <a class="chapter-card" href="sobre.html">
+                        <span class="cnum">Capítulo 04</span>
+                        <div class="h3chap">
+                            <h3>Equipe</h3>
+                        </div>
+                        <p>Conheça a equipe por trás de cada procedimento.</p>
+                        <span class="go">Explorar capítulo →</span>
+                        <div class="card-imagem">
+                            <img src="./imgs/ext.jpg" alt="Operação de extração">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="conteudo-footer">
+            <div class="emcima-footer">
+
+                <div class="logo-footer">
+                    <a href="./index (2).html">
+                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
+                    </a>
+                    <a href="./index (2).html">
+                        <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+                    </a>
+                </div>
+
+                <div class="colunas-footer">
+
+                    <div class="coluna-footer">
+                        <h2>Contatos:</h2>
+                        <ul>
+                            <li>
+                                <a href="#">petrosync@gmail.com</a>
+                            </li>
+                            <li>(11) 00000-0000</li>
+                            <li>São Paulo - SP</li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="index (2).html">Início</a></li>
+                            <li><a href="extracao.html">Extração</a></li>
+                            <li><a href="armazenamento.html">Armazenamento</a></li>
+                            <li><a href="transporte.html">Transporte</a></li>
+                            <li><a href="sobre.html">Equipe</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="coluna-footer">
+                        <h2>Petrosync:</h2>
+                        <ul>
+                            <li><a href="sobre.html">Nossa Equipe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>Quatro capítulos, uma etapa</h2>
+        <div class="embaixo-footer">
+            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
         </div>
-        <div class="chapters">
-          <a class="chapter-card" href="extracao.html">
-            <span class="cnum">Capítulo 01</span>
-            <div class="h3chap">
-              <h3>Extração</h3>
-            </div>
-            <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
-            <span class="go">Explorar capítulo →</span>
-            <div class="card-imagem">
-              <img src="./imgs/ext.jpg" alt="Operação de extração">
-            </div>
-          </a>
-          <a class="chapter-card" href="armazenamento.html">
-            <span class="cnum">Capítulo 02</span>
-            <h3>Armazenamento</h3>
-            <p>Descubra como o petróleo é armazenado com segurança para evitar riscos.</p>
-            <span class="go">Explorar capítulo →</span>
-            <div class="card-imagem">
-              <img src="./imgs/tanque.jpg" alt="Operação de extração">
-            </div>
-          </a>
-          <a class="chapter-card" href="transporte.html">
-            <span class="cnum">Capítulo 03</span>
-            <h3>Transporte</h3>
-            <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
-            <span class="go">Explorar capítulo →</span>
-            <div class="card-imagem">
-              <img src="./imgs/maritimo.jpg" alt="Operação de extração">
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="equipeindex">
-      <div class="wrap">
-        <div class="equipeinfos">
-          <div class="section-head reveal" style="border-bottom-color:var(--line-dark);">
-            <h2>Equipe</h2>
-          </div>
-          <p>
-            Por trás de cada operação, existe uma equipe preparada. Na PetroSync, profissionais de tecnologia,
-            monitoramento e segurança trabalham juntos para acompanhar as operações, identificar riscos e garantir
-            respostas rápidas a possíveis ocorrências.
-          </p>
-          <a href="./sobre.html" class="botaoequipe">Conheça nossa equipe→</a>
+    </footer>
 
-        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const mainNav = document.getElementById('mainNav');
 
-        <div class="sobreimg">
-          <img src="./imgs/ext.jpg" alt="Extração de petróleo">
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="f">
-    <div class="logof">
-      <img src="./imgs/logo.png" alt="petrosync">
-      <h3>PETRO<span>SYNC</span></h3>
-    </div>
-    <nav class="navef">
-      <a href="index (2).html">Início</a>
-      <a href="extracao.html">Extração</a>
-      <a href="armazenamento.html">Armazenamento</a>
-      <a href="transporte.html">Transporte</a>
-      <a href="sobre.html">Equipe</a>
-        </nav>
-    <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
-  </footer>
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.getElementById('navToggle');
-      const mainNav = document.getElementById('mainNav');
-
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', () => {
-          const open = mainNav.classList.toggle('open');
-          navToggle.setAttribute('aria-expanded', String(open));
-        });
-        mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-          mainNav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }));
-      }
-
-      const current = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('#mainNav a').forEach(link => {
-        if (link.getAttribute('href') === current) link.classList.add('active');
-      });
-
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        document.querySelectorAll('.risk-meter').forEach(meter => {
-          const segments = meter.querySelectorAll('i');
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                segments.forEach((segment, index) => {
-                  setTimeout(() => segment.style.width = '100%', index * 120);
+            if (navToggle && mainNav) {
+                navToggle.addEventListener('click', () => {
+                    const open = mainNav.classList.toggle('open');
+                    navToggle.setAttribute('aria-expanded', String(open));
                 });
-                observer.disconnect();
-              }
+
+                mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                    mainNav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }));
+            }
+
+            const current = location.pathname.split('/').pop() || 'index.html';
+
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                if (link.getAttribute('href') === current) link.classList.add('active');
             });
-          }, { threshold: 0.5 });
-          observer.observe(meter);
-        });
-      } else {
-        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-        document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
-      }
 
-      // Etapas interativas do bico de abastecimento
-      const steps = document.querySelectorAll('.step[data-part]');
-      const partIds = ['pt-lever', 'pt-sensor', 'pt-breakaway', 'pt-ground', 'pt-groundpoint', 'pt-vapor'];
-      function highlightPart(id) {
-        partIds.forEach(partId => {
-          const element = document.getElementById(partId);
-          if (!element) return;
-          element.style.opacity = (partId === id || (id === 'pt-ground' && partId === 'pt-groundpoint')) ? '1' : '0.28';
-          element.style.filter = partId === id ? 'drop-shadow(0 0 4px rgba(201,124,42,0.9))' : 'none';
-        });
-      }
-      steps.forEach(step => step.addEventListener('click', () => {
-        steps.forEach(item => item.classList.remove('active'));
-        step.classList.add('active');
-        highlightPart(step.dataset.part);
-      }));
-      if (steps.length) highlightPart(steps[0].dataset.part);
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in');
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
 
-      // Hotspots da vista explodida na página inicial
-      const explodedViewer = document.getElementById('explodedViewer');
-      if (explodedViewer) {
-        const hotspots = explodedViewer.querySelectorAll('.hotspot');
-        const items = document.querySelectorAll('.exploded-item');
-        function setExplodedActive(part) {
-          hotspots.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-          items.forEach(item => item.classList.toggle('active', item.dataset.part === part));
-        }
-        hotspots.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
-        items.forEach(item => item.addEventListener('click', () => setExplodedActive(item.dataset.part)));
+                document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        if ('IntersectionObserver' in window) {
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                explodedViewer.classList.add('in-view');
-                observer.unobserve(explodedViewer);
-              }
+            } else {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+                document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
+            }
+
+            // Etapas interativas da extração do petróleo
+
+            const steps = document.querySelectorAll('.step[data-part]');
+            const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
+
+            function highlightPart(id) {
+                parts.forEach(part => {
+                    const selected = part.id === id;
+
+                    part.style.opacity = selected ? '1' : '0.20';
+
+                    part.style.filter = selected
+                        ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
+                        : 'none';
+                });
+            }
+
+            steps.forEach(step => {
+                step.addEventListener('click', () => {
+                    steps.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    step.classList.add('active');
+
+                    highlightPart(step.dataset.part);
+                });
             });
-          }, { threshold: 0.3 });
-          observer.observe(explodedViewer);
-        } else {
-          explodedViewer.classList.add('in-view');
-        }
 
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const finePointer = window.matchMedia('(pointer: fine)').matches;
-        if (finePointer && !reduceMotion) {
-          let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
-          explodedViewer.addEventListener('mousemove', event => {
-            const rect = explodedViewer.getBoundingClientRect();
-            targetY = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-            targetX = -((event.clientY - rect.top) / rect.height - 0.5) * 8;
-          });
-          explodedViewer.addEventListener('mouseleave', () => { targetX = 0; targetY = 0; });
-          function tickTilt() {
-            currentX += (targetX - currentX) * 0.08;
-            currentY += (targetY - currentY) * 0.08;
-            explodedViewer.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg)`;
-            requestAnimationFrame(tickTilt);
-          }
-          tickTilt();
-        }
-      }
-    });
-  </script>
+            // Inicia destacando a primeira etapa
+
+            if (steps.length) {
+                highlightPart(steps[0].dataset.part);
+            }
+
+            // Parte das plataforma
+
+            const platformCards = document.querySelectorAll('.card-plataforma');
+            const platformDescription = document.getElementById('platformDescription');
+            const platformTitle = document.getElementById('platformTitle');
+            const platformText = document.getElementById('platformText');
+
+            const platformInfo = {
+                onshore: {
+                    title: 'Extração Onshore',
+                    text: 'A extração Onshore ocorre em terra firme, por meio de poços perfurados no solo. Geralmente, suas ações tem acessos mais simples à infraestrutura terrestre, facilitando o transporte de materiais e equipamentos.'
+                },
+
+                offshore: {
+                    title: 'Extração OffShore',
+                    text: 'A extração offshore ocorre pelo mar, com o uso de plataformas marítimas. Essas operações exigem estruturas específicas para enfrentar as condições do ambiente do mar, além de sistemas de segurança e transporte adequados.'
+                }
+            };
+
+            platformCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const type = card.dataset.platform;
+                    const info = platformInfo[type];
+
+                    platformTitle.textContent = info.title;
+                    platformText.textContent = info.text;
+
+                    platformDescription.hidden = false;
+
+                    platformCards.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    card.classList.add('active');
+                });
+            });
+
+        });
+    </script>
 
 </body>
 
