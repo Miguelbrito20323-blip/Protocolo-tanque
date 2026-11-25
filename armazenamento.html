@@ -592,9 +592,7 @@
     .tank-types {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
+      gap: 25px;
     }
 
     @media(max-width:860px) {
@@ -609,6 +607,7 @@
       transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
       position: relative;
       z-index: 0;
+      border: 1px solid #b2b9c1;
     }
 
     .tank-card:hover {
