@@ -517,9 +517,7 @@
     .chapters {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: var(--line);
-      border: 1px solid var(--line);
+      gap: 15px;
     }
 
     @media(max-width:760px) {
@@ -537,7 +535,7 @@
       min-height: 150px;
       transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
       cursor: pointer;
-      border: none;
+      border: 1px solid #b2b9c1;
       text-align: left;
       width: 100%;
       font-family: inherit;
@@ -564,6 +562,14 @@
     .chapter-card h3 {
       font-size: 24px;
       margin: 14px 0 10px;
+      transition: color .25s ease;
+    }
+
+    .chapter-card .cnum {
+      font-family: var(--font-display);
+      color: var(--steel-500);
+      font-size: 15px;
+      font-weight: 600;
       transition: color .25s ease;
     }
 
@@ -1005,7 +1011,7 @@ section {
           <a class="chapter-card" href="armazenamento.html">
             <span class="cnum">Capítulo 02</span>
             <h3>Armazenamento</h3>
-            <p>Descubra como o petróleo é armazenado com segurança e monitorado para evitar riscos.</p>
+            <p>Descubra como o petróleo é armazenado com segurança para evitar riscos.</p>
             <span class="go">Explorar capítulo →</span>
             <div class="card-imagem">
               <img src="./imgs/tanque.jpg" alt="Operação de extração">
