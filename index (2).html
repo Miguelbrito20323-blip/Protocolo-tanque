@@ -43,7 +43,9 @@
 
         html {
             scroll-behavior: smooth;
-        }
+          background-color: var(--navy-900);
+      overscroll-behavior-y: none;
+    }
 
         body {
             margin: 0;
@@ -265,54 +267,183 @@
             transition: .25s;
         }
 
-        @media(max-width:860px) {
-            nav {
-                position: fixed;
-                top: 72px;
-                left: 0;
-                right: 0;
+    @media (max-width: 860px) {
+      #mainNav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--navy-900);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+        border-bottom: 1px solid var(--line-dark);
+      }
 
-                /* MENU COM FUNDO TRANSPARENTE */
-                background: rgba(11, 24, 38, 0.35);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
+      #mainNav.open {
+        max-height: 380px;
+      }
 
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height .3s ease;
-                border-bottom: 1px solid var(--line-dark);
-            }
+      #mainNav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 32px 20px;
+      }
 
-            nav.open {
-                max-height: 380px;
-            }
+      #mainNav ul li {
+        border-bottom: 1px solid var(--line-dark);
+      }
 
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 8px 32px 20px;
-            }
+      #mainNav a {
+        display: block;
+        padding: 14px 0;
+      }
 
-            nav ul li {
-                border-bottom: 1px solid var(--line-dark);
-            }
+      .nav-toggle {
+        display: block;
+      }
+    }
 
-            nav a {
-                display: block;
-                padding: 14px 0;
-            }
+    .page-hero {
+      background: var(--navy-900);
+      color: var(--paper-050);
 
-            .nav-toggle {
-                display: block;
-            }
-        }
+      overflow: hidden;
+    }
 
-        .page-hero {
-            background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
-            color: var(--paper-050);
-            padding: 64px 0 56px;
-            overflow: hidden;
-        }
+    .home-hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg,
+          rgba(11, 24, 38, 0.98) 0%,
+          rgba(11, 24, 38, 0.94) 38%,
+          rgba(11, 24, 38, 0.68) 62%,
+          rgba(11, 24, 38, 0.28) 100%),
+        url("SUA-IMAGEM-AQUI.jpg") center / cover no-repeat;
+    }
+
+    .home-hero .wrap {
+      width: 100%;
+    }
+
+    .home-hero-content {
+      width: min(58%, 680px);
+    }
+
+    @media(max-width:900px) {
+      .home-hero-content {
+        width: min(78%, 680px);
+      }
+    }
+
+    @media(max-width:640px) {
+      .home-hero {
+        min-height: auto;
+      }
+
+      .home-hero-content {
+        width: 100%;
+      }
+    }
+
+    .sobreconteudo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .sobreimg img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .sobretextos {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .sobrein {
+      color: var(--steel-300);
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 5px;
+    }
+
+    .sobreitem {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .sobreitem img {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .sobreitem h3 {
+      color: var(--paper-050);
+      font-size: 17px;
+      margin-bottom: 4px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .sobreitem p {
+      color: var(--steel-300);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .saibaequipe {
+      align-items: center;
+      display: block;
+      margin-top: 29px;
+      width: 50%;
+      color: white;
+      background-color: #0B1826;
+      border-radius: 13px;
+      border: 2px solid #EBA152;
+      padding: 19px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .saibaequipe a {
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .saibaequipe span {
+      color: #EBA152;
+    }
+
+    .saibaequipe:hover {
+      background-color: #05101A;
+      transform: scale(1.02);
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 760px) {
+      .sobreconteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .sobreimg img {
+        height: 260px;
+      }
+    }
 
         .page-hero h1 {
             font-size: clamp(50px, 5.8vw, 50px);
@@ -440,423 +571,384 @@
             color: var(--amber-500);
         }
 
-        .nozzle-wrap {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 56px;
-            align-items: flex-start;
-        }
+    .card-imagem {
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+    }
 
-        @media(max-width:900px) {
-            .nozzle-wrap {
-                grid-template-columns: 1fr;
-            }
-        }
+    .card-imagem img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      display: block;
 
-        .nozzle-diagram {
-            position: sticky;
-            top: 100px;
-        }
+      object-fit: cover;
+    }
 
-        @media(max-width:900px) {
-            .nozzle-diagram {
-                position: static;
-            }
-        }
+    .equipeindex {
+      background-color: var(--navy-900);
+      color: var(--steel-300);
+      padding: 80px 0;
+    }
 
-        .nozzle-svg {
-            background: var(--paper-100);
-            border: 1px solid var(--line);
-            border-radius: 4px;
-            padding: 18px;
-        }
+    .equipeindex .wrap {
+      background-color: var(--navy-900);
+      align-items: center;
+      color: var(--steel-300);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+    }
 
-        .step-list {
-            display: flex;
-            flex-direction: column;
-        }
+    .equipeinfos {
+      margin-bottom: 0px;
+      max-width: 400px;
+    }
 
-        .step {
-            display: grid;
-            grid-template-columns: 40px 1fr;
-            gap: 16px;
-            padding: 20px 18px;
-            margin: 0 -18px;
-            border-top: 1px solid var(--line);
-            cursor: pointer;
-            border-radius: 2px;
-            transition: background .25s ease, border-radius .3s ease;
-        }
+    .equipeinfos h2 {
+      color: white;
+      font-size: clamp(26px, 3.2vw, 38px);
+      max-width: 18ch;
+    }
 
-        .step:hover {
-            background: var(--teal-050);
-            border-radius: 14px;
-        }
+    .equipeinfos p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
-        .step:last-child {
-            border-bottom: 1px solid var(--line);
-        }
+    .botaoequipe {
+      display: inline-block;
+      color: #EBA152;
+      border: 2px solid #EBA152;
+      padding: 10px 22px;
+      border-radius: 25px;
+      transition: .3s;
+      text-decoration: none;
+      margin-top: 5px;
+    }
 
-        .step .num {
-            font-family: var(--font-display);
-            font-size: 21px;
-            font-weight: 600;
-            color: var(--steel-500);
-            transition: color .2s ease;
-        }
+    .botaoequipe:hover {
+      background: #EBA152;
+      color: #0B1826;
+    }
 
-        .step h4 {
-            font-size: 17px;
-            margin-bottom: 6px;
-            transition: color .2s ease;
-        }
+    .equipeindex .sobreimg {
+      width: 100%;
+      height: 210px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-        .step p {
-            margin: 0;
-            color: var(--ink-600);
-            font-size: 14px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .3s ease;
-        }
+    .equipeindex .sobreimg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .step:hover .num,
-        .step:hover h4 {
-            color: var(--teal-500);
-        }
+    .f {
+      background: var(--navy-900);
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 35px;
+      border-top: 1px solid #38536B;
+    }
 
-        .step.active .num {
-            color: var(--amber-500);
-        }
+    .logof {
+      display: flex;
+      align-items: center;
+    }
 
-        .step.active h4 {
-            color: var(--amber-500);
-        }
+    .logof img {
+      width: 70px;
+    }
 
-        .step.active p {
-            max-height: 120px;
-            margin-top: 2px;
-        }
+    .logof h3 {
+      color: white;
+      font-size: 17px;
+    }
 
-        .step.active:hover .num,
-        .step.active:hover h4 {
-            color: var(--amber-500);
-        }
+    .logof span {
+      color: #EBA152;
+    }
 
-        footer {
-            background: #05101A;
-            border-top: 1px solid var(--line-dark);
-            padding: 25px 0 12px;
-            color: #ffffff;
-            font-size: 13.5px;
-        }
+    .navef {
+      display: flex;
+      gap: 25px;
+    }
 
-        .conteudo-footer {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
+    .navef a {
+      color: var(--steel-300);
+      font-size: 15px;
+      text-decoration: none;
+    }
 
-        .logo-footer {
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            flex-shrink: 0;
-            margin: 0;
-        }
+    .ultimof {
+      color: var(--steel-300);
+      font-size: 12px;
+    }
 
-        .logo-footer img {
-            width: auto;
-            height: 65px;
-        }
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
 
-        .logo-footer a {
-            text-decoration: none;
-        }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        .logo-footer h3 {
-            color: #ffffff;
-            font-family: var(--font-body);
-            font-size: 15px;
-            font-weight: 700;
-        }
+    /* RESPONSIVIDADE DA PÁGINA INICIAL */
 
-        .logo-footer h3 span {
-            color: #EBA152;
-        }
+    /* Celulares */
+    @media (max-width: 640px) {
 
-        .colunas-footer {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
-            margin: 0;
-        }
+      .wrap {
+        padding: 0 20px;
+      }
 
-        .coluna-footer h2 {
-            color: #EBA152;
-            font-family: var(--font-body);
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 13px;
-        }
+      /* Cabeçalho */
+      .nav-row {
+        height: 65px;
+      }
 
-        .coluna-footer ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+      .nav-logo {
+        height: 50px;
+      }
 
-        .coluna-footer li {
-            margin-bottom: 7px;
-            color: #ffffff;
-            font-size: 17px;
-        }
+      /* Banner */
+      .img-extracao {
+        height: 350px;
+      }
 
-        .coluna-footer a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
+      .img-extracao::after {
+        opacity: 1;
+      }
 
-        .coluna-footer a:hover {
-            color: #EBA152
-        }
+      .texto-img {
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        transform: translateY(-50%);
+        opacity: 1;
+      }
 
-        .emcima-footer {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 40px;
-        }
+      .texto-img h1 {
+        font-size: clamp(30px, 8vw, 38px);
+      }
 
-        .embaixo-footer {
-            display: flex;
-            gap: 560px;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding-top: 14px;
-            color: #d1d5d8;
-            font-size: 12px;
-        }
+      .texto-img span {
+        font-size: clamp(20px, 5vw, 25px);
+      }
 
-        .embaixo-footer span {
-            margin-left: 30px;
-        }
+      /* Seções */
+      section {
+        padding: 45px 0;
+      }
 
-        .embaixo-footer a {
-            text-decoration: none;
-        }
+      .section-head {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+      }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(14px);
-            transition: opacity .6s ease, transform .6s ease;
-        }
+      .section-head h2 {
+        font-size: 30px;
+      }
 
-        .reveal.in {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      /* Sobre nós */
+      .sobreimg img {
+        height: 230px;
+      }
 
-        .plataformas {
-            padding: 80px 0;
-            background: #EDEEEA
-        }
+      .sobretextos {
+        gap: 18px;
+      }
 
-        .opcoes-plataforma {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 35px;
-        }
+      .sobrein {
+        font-size: 13px;
+      }
 
-        .card-plataforma {
-            padding: 0;
-            border: 2px solid rgba(27, 33, 41, 0.12);
-            border-radius: 10px;
-            overflow: hidden;
-            background: #F6F6F3;
-            cursor: pointer;
-            text-align: left;
-            transition: .25s ease;
-            color: #1B2129;
-        }
+      .sobreitem {
+        align-items: flex-start;
+      }
 
-        .card-plataforma:hover,
-        .card-plataforma.active {
-            border-color: #C97C2A;
-            transform: translateY(-5px);
-        }
+      /* Cards */
+      .chapters {
+        grid-template-columns: 1fr;
+      }
 
-        .card-plataforma img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
+      .chapter-card {
+        padding: 25px 20px;
+      }
 
-        .card-plataforma h3 {
-            margin: 16px 18px 6px;
-            font-size: 22px;
-        }
+      .card-imagem {
+        height: 180px;
+      }
 
-        .card-plataforma span {
-            display: block;
-            margin: 0 18px 18px;
-            color: #4A525C;
-            font-size: 14px;
-        }
+      .card-imagem img {
+        height: 100%;
+      }
 
-        .descricao-plataforma {
-            margin-top: 25px;
-            padding: 30px;
-            border-left: 4px solid #C97C2A;
-            background: #f6f6f3;
-            border-radius: 6px;
-        }
+      /* Equipe */
+      .equipeindex {
+        padding: 45px 0;
+      }
 
-        .descricao-plataforma h3 {
-            margin-bottom: 10px;
-            color: #102132;
-        }
+      .equipeindex .wrap {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
 
-        .descricao-plataforma p {
-            color: #4a525c;
-            line-height: 1.7;
-            margin: 0;
-        }
-    </style>
+      .equipeinfos {
+        max-width: 100%;
+      }
+
+      .equipeindex .sobreimg {
+        height: 230px;
+      }
+
+      /* Rodapé */
+      .f {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 20px;
+      }
+
+      .navef {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+
+      .ultimof {
+        line-height: 1.5;
+      }
+    }
+
+    /* Tablets */
+    @media (min-width: 641px) and (max-width: 860px) {
+
+      .sobreconteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .equipeindex .wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .chapter-card {
+        padding: 25px 20px;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 861px) {
+
+      #mainNav {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        background: transparent;
+        border: none;
+      }
+
+      #mainNav ul {
+        flex-direction: row;
+        gap: 28px;
+        padding: 0;
+      }
+
+      #mainNav a {
+        display: inline-block;
+        padding: 6px 10px;
+      }
+
+      .nav-toggle {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="wrap nav-row">
-            <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
-                <a href="./index (2).html">
-                    <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-                </a>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"
-                aria-expanded="false"><span></span><span></span><span></span></button>
-            <nav id="mainNav" aria-label="Navegação principal">
-                <ul>
-                    <li><a href="index (2).html">Início</a></li>
-                    <li><a href="extracao.html">Extração</a></li>
-                    <li><a href="armazenamento.html">Armazenamento</a></li>
-                    <li><a href="transporte.html">Transporte</a></li>
-                    <li><a href="sobre.html">Equipe</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="wrap nav-row">
+      <div class="container">
+        <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+        <a href="./index (2).html">
+          <H3 class="petrosync">PETRO<span>SYNC</span></H3>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-controls="mainNav"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index (2).html">Início</a></li>
+          <li><a href="extracao.html">Extração</a></li>
+          <li><a href="armazenamento.html">Armazenamento</a></li>
+          <li><a href="transporte.html">Transporte</a></li>
+          <li><a href="sobre.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="img-extracao">
+        <img src="./imgs/plataforma.jpg" alt="plataforma_petroleo">
+
+        <div class="texto-img">
+          <h1>SEGURANÇA E</h1>
+          <h1>TECNOLOGIA</h1> <span>Centro de operações</span>
+          <div><a href="#capitulos" class="botaoequipe">Conheça nossos processos →</a></div>
+
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
+    <section style="background:var(--navy-900);">
+      <div class="wrap">
 
-        <section class="page-hero">
-            <div class="img-extracao">
-                <img src="./imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
+        <div class="section-head reveal" style="border-bottom-color:var(--line-dark);">
+          <h2 style="color:var(--paper-050);">Sobre nós</h2>
+        </div>
 
-                <div class="texto-img">
-                    <h1>EXTRAÇÃO</h1>
-                    <span>Como funciona?</span>
-                </div>
+        <div class="sobreconteudo">
+
+          <div class="sobreimg">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFMyXoIkm6YIHtQrmD37Tf1dSwi6DcEb5N3BpfDe3WXwkiadUuhqCvhlE&s=10"
+              alt="Extração de petróleo">
+          </div>
+
+          <div class="sobretextos">
+
+            <p class="sobrein">
+              A PetroSync desenvolve soluções para monitoramento
+              e segurança de operações de petróleo e gás.
+              Nossa plataforma centraliza informações de sensores,
+              alertas e ocorrências, permitindo que as equipes
+              acompanhem a operação e identifiquem possíveis
+              riscos com mais rapidez.
+            </p>
+
+            <div class="sobreitem" id="capitulos">
+              <img src="./imgs/segurança.png" alt="segurança">
+              <div>
+                <h3>Segurança operacional</h3>
+                <p>Prevenção e identificação de possíveis riscos durante as operações.</p>
+              </div>
             </div>
-        </section>
-
-        <section>
-            <div class="wrap">
-                <div class="nozzle-wrap">
-                    <div class="nozzle-diagram">
-                        <svg class="nozzle-svg" fill="none" viewBox="0 0 320 260">
-
-                            <rect x="0" y="0" width="320" height="260" rx="4" fill="#EDEEEA" />
-                            <path d="M0 88 Q40 84 80 88 T160 88 T240 88 T320 88" stroke="#5B7C97" stroke-width="2" />
-
-                            <g id="etapa-1" opacity="1">
-                                <!-- Camadas-->
-                                <path d="M0 115 Q80 105 160 118 T320 112 L320 165 Q240 175 160 160 T0 165 Z"
-                                    fill="#D5DAD5" />
-                                <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z"
-                                    fill="#BFC9C5" />
-
-                                <!--Ondas de Análise-->
-                                <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128"
-                                    stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4" />
-
-                                <!--Reservatório-->
-                                <ellipse cx="190" cy="194" rx="65" ry="17" fill="#16283D" stroke="#5B7C97"
-                                    stroke-width="2" />
-                                <path d="M145 194 Q190 180 235 194" stroke="#DE9A4C" stroke-width="3" />
-
-                                <text x="190" y="226" text-anchor="middle" fill="#4A525C" font-size="9"
-                                    font-family="Public Sans">
-                                    RESERVATÓRIO
-                                </text>
-                            </g>
-
-                            <g id="etapa-2" opacity="0.28">
-                                <!--Torre-->
-                                <!-- Torre de perfuração -->
-                                <path d="M160 10 L125 30 L145 75 H175 L195 30 Z" fill="#A8BECF" stroke="#16283D"
-                                    stroke-width="3" stroke-linejoin="round" />
-                                <path d="M140 43 H180 M145 58 H175 M133 30 L167 75 M187 30 L153 75" stroke="#16283D"
-                                    stroke-width="2.5" stroke-linecap="round" />
-
-                                <!--Plataforma-->
-                                <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D" />
-                                <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3" />
-
-                                <!-- Broca e coluna de perfuração -->
-                                <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4" />
-                                <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A" />
-                            </g>
-
-                            <g id="etapa-3" opacity="0.28">
-
-                                <!-- Caminho do petróleo -->
-                                <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4" />
-
-                                <!-- Fluxo na superfície -->
-                                <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3" />
-                                <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-
-                                <!-- Reservatório -->
-                                <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2"
-                                    stroke-dasharray="4 3" />
-                            </g>
-
-                            <g id="etapa-4" opacity="0.28">
-
-                                <!-- Equipamentos de tratamento -->
-                                <rect x="225" y="43" width="30" height="42" rx="5" fill="#16283D" stroke="#5B7C97"
-                                    stroke-width="2" />
-                                <rect x="264" y="52" width="30" height="33" rx="5" fill="#16283D" stroke="#5B7C97"
-                                    stroke-width="2" />
-                                <path d="M240 43 V34 H279 V52" stroke="#C97C2A" stroke-width="2"
-                                    stroke-linecap="round" />
-                                <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2" />
-                                <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2" />
-
-                                <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8"
-                                    font-family="Public Sans">
-                                    TRATAMENTO
-                                </text>
-                            </g>
-
-                        </svg>
-                    </div>
-
-                    <div class="step-list">
-                        <div class="step active" data-part="etapa-1"><span class="num">01</span>
-                            <div>
-                                <h4>Exploração e Identificação</h4>
-                                <p>Antes da extração, são realizados estudos geológicos e geofísicos para identificar
-                                    regiões com potencial de conter petróleo e gás natural.
-                                    Equipamentos e tecnologias de análise ajudam a localizar possíveis
-                                    reservatórios no subsolo ou no fundo do mar.</p>
-                            </div>
-                        </div>
 
                         <div class="step" data-part="etapa-2"><span class="num">02</span>
                             <div>
@@ -1042,10 +1134,21 @@
             </div>
         </div>
 
-        <div class="embaixo-footer">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-        </div>
-    </footer>
+  <footer class="f">
+    <div class="logof">
+      <img src="./imgs/logo.png" alt="petrosync">
+      <h3>PETRO<span>SYNC</span></h3>
+    </div>
+    <nav class="navef">
+      <a href="index (2).html">Início</a>
+      <a href="extracao.html">Extração</a>
+      <a href="armazenamento.html">Armazenamento</a>
+      <a href="transporte.html">Transporte</a>
+      <a href="sobre.html">Equipe</a>
+    </nav>
+    <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
+  </footer>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

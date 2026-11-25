@@ -43,6 +43,8 @@
 
         html {
             scroll-behavior: smooth;
+            background-color: var(--navy-900);
+            overscroll-behavior-y: none;
         }
 
         body {
@@ -131,22 +133,18 @@
             color: white;
             opacity: 0;
             transition: opacity 0.3s;
+            z-index: 2;
         }
 
         .texto-img h1 {
             margin: 0;
-            font-size: 38px;
-            color: #ffffff;
-            letter-spacing: 0.5px;
+            font-size: 50px;
+            color: white;
         }
 
         .texto-img span {
-            display: inline-block;
-            margin-top: 6px;
             color: #EBA152;
-            font-size: 26px;
-            font-family: var(--font-display);
-            letter-spacing: 1px;
+            font-size: 30px;
         }
 
         .img-extracao:hover::after {
@@ -1033,7 +1031,7 @@
                     alt="Infraestrutura industrial de transporte e escoamento de petróleo bruto">
                 <div class="texto-img">
                     <h1>TRANSPORTE</h1>
-                    <span>Escoamento de Petróleo Bruto</span>
+                    <span>Todos os meios</span>
                 </div>
             </div>
         </section>
@@ -1041,10 +1039,10 @@
         <!-- 1. Introdução -->
         <section>
             <div class="wrap">
-                <div class="eyebrow-line"><span class="rule"></span>Capítulo 03 · Etapa Midstream</div>
+                <div class="eyebrow-line"></div>
                 <div class="section-head reveal">
                     <h2>O papel estratégico do transporte no setor petrolífero</h2>
-                    <span class="idx">01 · Introdução</span>
+                    <span class="idx">Introdução</span>
                 </div>
 
                 <p class="lead-text reveal">
@@ -1061,7 +1059,7 @@
             <div class="wrap">
                 <div class="section-head reveal">
                     <h2>Os quatro meios de transporte do óleo cru</h2>
-                    <span class="idx">02 · Modais logísticos</span>
+                    <span class="idx">Modais logísticos</span>
                 </div>
 
                 <div class="modais-grid reveal">
@@ -1103,7 +1101,8 @@
                     <article class="modal-card">
                         <div class="modal-img-wrap">
                             <img src="https://images.pexels.com/photos/30858911/pexels-photo-30858911.jpeg"
-                                alt="Composição ferroviária com vagões-tanque para transporte de óleo cru" loading="lazy">
+                                alt="Composição ferroviária com vagões-tanque para transporte de óleo cru"
+                                loading="lazy">
                         </div>
                         <div class="modal-body">
                             <div class="modal-capacity">Alta capacidade terrestre</div>
@@ -1182,7 +1181,8 @@
         </div>
 
         <div class="embaixo-footer">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo bruto.</span>
+            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo
+                bruto.</span>
         </div>
     </footer>
 

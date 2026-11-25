@@ -43,6 +43,8 @@
 
     html {
       scroll-behavior: smooth;
+      background-color: var(--navy-900);
+      overscroll-behavior-y: none;
     }
 
     body {
@@ -590,9 +592,7 @@
     .tank-types {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
+      gap: 25px;
     }
 
     @media(max-width:860px) {
@@ -607,6 +607,7 @@
       transition: transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
       position: relative;
       z-index: 0;
+      border: 1px solid #b2b9c1;
     }
 
     .tank-card:hover {
@@ -756,7 +757,7 @@
 
     .safety-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 2px;
       background: var(--line);
       border: 1px solid var(--line);
@@ -1005,108 +1006,47 @@
       align-items: flex-end;
     }
 
-    footer {
-      background: #05101A;
-      border-top: 1px solid var(--line-dark);
-      padding: 25px 0 12px;
-      color: #ffffff;
-      font-size: 13.5px;
+    .f {
+      background: var(--navy-900);
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 35px;
+      border-top: 1px solid #38536B;
     }
 
-    .conteudo-footer {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    .logo-footer {
+    .logof {
       display: flex;
       align-items: center;
-      gap: 3px;
-      flex-shrink: 0;
-      margin: 0;
     }
 
-
-    .logo-footer img {
-      width: auto;
-      height: 65px;
+    .logof img {
+      width: 70px;
     }
 
-    .logo-footer a {
-      text-decoration: none;
-    }
-
-    .logo-footer h3 {
-      color: #ffffff;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .logo-footer h3 span {
-      color: #EBA152;
-    }
-
-    .colunas-footer {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 60px;
-      margin: 0;
-    }
-
-    .coluna-footer h2 {
-      color: #EBA152;
-      font-family: var(--font-body);
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 13px;
-    }
-
-    .coluna-footer ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .coluna-footer li {
-      margin-bottom: 7px;
-      color: #ffffff;
+    .logof h3 {
+      color: white;
       font-size: 17px;
     }
 
-    .coluna-footer a {
-      color: #ffffff;
+    .logof span {
+      color: #EBA152;
+    }
+
+    .navef {
+      display: flex;
+      gap: 25px;
+    }
+
+    .navef a {
+      color: var(--steel-300);
+      font-size: 15px;
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
-    .coluna-footer a:hover {
-      color: #EBA152
-    }
-
-    .emcima-footer {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 40px;
-    }
-
-    .embaixo-footer {
-      display: flex;
-      gap: 560px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding-top: 14px;
-      color: #d1d5d8;
+    .ultimof {
+      color: var(--steel-300);
       font-size: 12px;
-    }
-
-    .embaixo-footer span {
-      margin-left: 30px;
-    }
-
-    .embaixo-footer a {
-      text-decoration: none;
     }
 
     .reveal {
@@ -1431,6 +1371,48 @@
     <section>
       <div class="wrap">
         <div class="section-head reveal">
+          <h2>Etapas do armazenamento</h2>
+        </div>
+        <div class="safety-grid">
+          <div class="safety-card"><svg class="icn" fill="none" viewbox="0 0 30 30">
+              <rect height="22" rx="2" stroke="currentColor" stroke-width="1.5" width="22" x="4" y="4"></rect>
+              <path d="M9 15 L13 19 L21 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.6"></path>
+            </svg>
+            <h3>Contenção secundária</h3>
+            <p>Bacias e diques ao redor dos tanques retêm o volume em caso de ruptura, impedindo que o produto alcance o
+              solo, drenagens ou cursos d'água.</p>
+          </div>
+          <div class="safety-card"><svg class="icn" fill="none" viewbox="0 0 30 30">
+              <path d="M15 3 L15 15 M15 15 L21 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.6">
+              </path>
+              <circle cx="15" cy="15" r="11" stroke="currentColor" stroke-width="1.5"></circle>
+            </svg>
+            <h3>Detecção contínua de vazamento</h3>
+            <p>Sensores de nível intersticial e monitoramento de pressão identificam pequenas variações que indicam
+              falhas antes que se tornem visíveis.</p>
+          </div>
+          <div class="safety-card"><svg class="icn" fill="none" viewbox="0 0 30 30">
+              <path d="M15 4 L26 10 V18 C26 23 21 27 15 28 C9 27 4 23 4 18 V10 Z" stroke="currentColor"
+                stroke-width="1.5"></path>
+            </svg>
+            <h3>Aterramento e bonding</h3>
+            <p>Todo ponto de transferência é eletricamente ligado entre si e à terra, eliminando a diferença de
+              potencial que poderia gerar centelha.</p>
+          </div>
+          <div class="safety-card"><svg class="icn" fill="none" viewbox="0 0 30 30">
+              <path d="M15 4 C 10 10, 8 14, 8 18 A7 7 0 0 0 22 18 C 22 14, 20 10, 15 4 Z" stroke="currentColor"
+                stroke-width="1.5"></path>
+            </svg>
+            <h3>Combate a incêndio dedicado</h3>
+            <p>Sistemas de espuma e resfriamento por água cobrem a área de tanques, dimensionados para o pior cenário de
+              vazamento e ignição.</p>
+          </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal">
           <h2>Três estruturas</h2><span class="idx">Tipos de tanque</span>
         </div>
         <div class="tank-types">
@@ -1519,57 +1501,19 @@
 
   </main>
 
-  <footer>
-
-    <div class="conteudo-footer">
-      <div class="emcima-footer">
-
-        <div class="logo-footer">
-          <a href="./index (2).html">
-            <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
-          </a>
-          <a href="./index (2).html">
-            <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-          </a>
-        </div>
-
-        <div class="colunas-footer">
-
-          <div class="coluna-footer">
-            <h2>Contatos:</h2>
-            <ul>
-              <li>
-                <a href="#">petrosync@gmail.com</a>
-              </li>
-              <li>(11) 00000-0000</li>
-              <li>São Paulo - SP</li>
-            </ul>
-          </div>
-
-          <div class="coluna-footer">
-            <h2>Petrosync:</h2>
-            <ul>
-              <li><a href="index (2).html">Início</a></li>
-              <li><a href="extracao.html">Extração</a></li>
-              <li><a href="armazenamento.html">Armazenamento</a></li>
-              <li><a href="transporte.html">Transporte</a></li>
-              <li><a href="sobre.html">Equipe</a></li>
-            </ul>
-          </div>
-
-          <div class="coluna-footer">
-            <h2>Petrosync:</h2>
-            <ul>
-              <li><a href="sobre.html">Nossa Equipe</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <footer class="f">
+    <div class="logof">
+      <img src="./imgs/logo.png" alt="petrosync">
+      <h3>PETRO<span>SYNC</span></h3>
     </div>
-
-    <div class="embaixo-footer">
-      <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-    </div>
+    <nav class="navef">
+      <a href="index (2).html">Início</a>
+      <a href="extracao.html">Extração</a>
+      <a href="armazenamento.html">Armazenamento</a>
+      <a href="transporte.html">Transporte</a>
+      <a href="sobre.html">Equipe</a>
+    </nav>
+    <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
   </footer>
 
 

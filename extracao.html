@@ -43,6 +43,8 @@
 
         html {
             scroll-behavior: smooth;
+            background-color: var(--navy-900);
+            overscroll-behavior-y: none;
         }
 
         body {
@@ -546,107 +548,47 @@
             color: var(--amber-500);
         }
 
-        footer {
-            background: #05101A;
-            border-top: 1px solid var(--line-dark);
-            padding: 25px 0 12px;
-            color: #ffffff;
-            font-size: 13.5px;
+        .f {
+            background: var(--navy-900);
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 35px;
+            border-top: 1px solid #38536B;
         }
 
-        .conteudo-footer {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        .logo-footer {
+        .logof {
             display: flex;
             align-items: center;
-            gap: 3px;
-            flex-shrink: 0;
-            margin: 0;
         }
 
-        .logo-footer img {
-            width: auto;
-            height: 65px;
+        .logof img {
+            width: 70px;
         }
 
-        .logo-footer a {
-            text-decoration: none;
-        }
-
-        .logo-footer h3 {
-            color: #ffffff;
-            font-family: var(--font-body);
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .logo-footer h3 span {
-            color: #EBA152;
-        }
-
-        .colunas-footer {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
-            margin: 0;
-        }
-
-        .coluna-footer h2 {
-            color: #EBA152;
-            font-family: var(--font-body);
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 13px;
-        }
-
-        .coluna-footer ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .coluna-footer li {
-            margin-bottom: 7px;
-            color: #ffffff;
+        .logof h3 {
+            color: white;
             font-size: 17px;
         }
 
-        .coluna-footer a {
-            color: #ffffff;
+        .logof span {
+            color: #EBA152;
+        }
+
+        .navef {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navef a {
+            color: var(--steel-300);
+            font-size: 15px;
             text-decoration: none;
-            transition: color 0.2s ease;
         }
 
-        .coluna-footer a:hover {
-            color: #EBA152
-        }
-
-        .emcima-footer {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .embaixo-footer {
-            display: flex;
-            gap: 560px;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding-top: 14px;
-            color: #d1d5d8;
+        .ultimof {
+            color: var(--steel-300);
             font-size: 12px;
-        }
-
-        .embaixo-footer span {
-            margin-left: 30px;
-        }
-
-        .embaixo-footer a {
-            text-decoration: none;
         }
 
         .reveal {
@@ -659,6 +601,7 @@
             opacity: 1;
             transform: translateY(0);
         }
+
 
         .plataformas {
             padding: 80px 0;
@@ -773,6 +716,9 @@
 
         <section>
             <div class="wrap">
+                <div class="section-head reveal">
+                    <h2>Processo de extração</h2><span class="idx">Cada etapa</span>
+                </div>
                 <div class="nozzle-wrap">
                     <div class="nozzle-diagram">
                         <svg class="nozzle-svg" fill="none" viewBox="0 0 320 260">
@@ -988,57 +934,19 @@
 
     </main>
 
-    <footer>
-
-        <div class="conteudo-footer">
-            <div class="emcima-footer">
-
-                <div class="logo-footer">
-                    <a href="./index (2).html">
-                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk">
-                    </a>
-                    <a href="./index (2).html">
-                        <H3 class="petrosync">PETRO<span>SYNC</span></H3>
-                    </a>
-                </div>
-
-                <div class="colunas-footer">
-
-                    <div class="coluna-footer">
-                        <h2>Contatos:</h2>
-                        <ul>
-                            <li>
-                                <a href="#">petrosync@gmail.com</a>
-                            </li>
-                            <li>(11) 00000-0000</li>
-                            <li>São Paulo - SP</li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="index (2).html">Início</a></li>
-                            <li><a href="extracao.html">Extração</a></li>
-                            <li><a href="armazenamento.html">Armazenamento</a></li>
-                            <li><a href="transporte.html">Transporte</a></li>
-                            <li><a href="sobre.html">Equipe</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="sobre.html">Nossa Equipe</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <footer class="f">
+        <div class="logof">
+            <img src="./imgs/logo.png" alt="petrosync">
+            <h3>PETRO<span>SYNC</span></h3>
         </div>
-
-        <div class="embaixo-footer">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-        </div>
+        <nav class="navef">
+            <a href="index (2).html">Início</a>
+            <a href="extracao.html">Extração</a>
+            <a href="armazenamento.html">Armazenamento</a>
+            <a href="transporte.html">Transporte</a>
+            <a href="sobre.html">Equipe</a>
+        </nav>
+        <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
     </footer>
 
     <script>
