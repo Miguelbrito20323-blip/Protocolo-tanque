@@ -271,7 +271,12 @@
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: var(--navy-900);
+
+                /* MENU COM FUNDO TRANSPARENTE */
+                background: rgba(11, 24, 38, 0.35);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height .3s ease;
@@ -563,7 +568,6 @@
             margin: 0;
         }
 
-
         .logo-footer img {
             width: auto;
             height: 65px;
@@ -685,7 +689,7 @@
             transform: translateY(-5px);
         }
 
-        .card-plataforma img{
+        .card-plataforma img {
             width: 100%;
             height: 240px;
             object-fit: cover;
@@ -723,9 +727,6 @@
             margin: 0;
         }
 
-        
-
-
         @media(max-width: 600px) {
             .opcoes-plataforma {
                 grid-template-columns: 1fr;
@@ -756,6 +757,7 @@
             </nav>
         </div>
     </header>
+
     <main>
 
         <section class="page-hero">
@@ -768,6 +770,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div class="wrap">
                 <div class="nozzle-wrap">
@@ -783,6 +786,7 @@
                                     fill="#D5DAD5" />
                                 <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z"
                                     fill="#BFC9C5" />
+
                                 <!--Ondas de Análise-->
                                 <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128"
                                     stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4" />
@@ -809,6 +813,7 @@
                                 <!--Plataforma-->
                                 <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D" />
                                 <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3" />
+
                                 <!-- Broca e coluna de perfuração -->
                                 <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4" />
                                 <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A" />
@@ -818,15 +823,16 @@
 
                                 <!-- Caminho do petróleo -->
                                 <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4" />
+
                                 <!-- Fluxo na superfície -->
                                 <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3" />
                                 <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
+
                                 <!-- Reservatório -->
                                 <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2"
                                     stroke-dasharray="4 3" />
                             </g>
-
 
                             <g id="etapa-4" opacity="0.28">
 
@@ -839,6 +845,7 @@
                                     stroke-linecap="round" />
                                 <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2" />
                                 <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2" />
+
                                 <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8"
                                     font-family="Public Sans">
                                     TRATAMENTO
@@ -858,6 +865,7 @@
                                     reservatórios no subsolo ou no fundo do mar.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-2"><span class="num">02</span>
                             <div>
                                 <h4>Perfuração do poço</h4>
@@ -866,6 +874,7 @@
                                     processo ocorre a partir de uma plataforma instalada no mar.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-3"><span class="num">03</span>
                             <div>
                                 <h4>Extração do poço</h4>
@@ -875,6 +884,7 @@
                                     equipamentos para auxiliar na elevação do petróleo.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-4"><span class="num">04</span>
                             <div>
                                 <h4>Separação e tratamento</h4>
@@ -887,6 +897,7 @@
                 </div>
             </div>
         </section>
+
         <section style="background:var(--paper-100);">
             <div class="wrap">
                 <div class="section-head reveal">
@@ -938,6 +949,7 @@
                 <div class="section-head reveal">
                     <h2>Quatro capítulos, uma etapa</h2>
                 </div>
+
                 <div class="chapters">
                     <a class="chapter-card" href="extracao.html">
                         <span class="cnum">Capítulo 01</span>
@@ -950,6 +962,7 @@
                             <img src="./imgs/ext.jpg" alt="Operação de extração">
                         </div>
                     </a>
+
                     <a class="chapter-card" href="armazenamento.html">
                         <span class="cnum">Capítulo 02</span>
                         <h3>Armazenamento</h3>
@@ -959,6 +972,7 @@
                             <img src="./imgs/tanque.jpg" alt="Operação de extração">
                         </div>
                     </a>
+
                     <a class="chapter-card" href="transporte.html">
                         <span class="cnum">Capítulo 03</span>
                         <h3>Transporte</h3>
@@ -971,7 +985,6 @@
                 </div>
             </div>
         </section>
-
 
     </main>
 
@@ -1022,12 +1035,11 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="embaixo-footer">
             <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
         </div>
     </footer>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1039,6 +1051,7 @@
                     const open = mainNav.classList.toggle('open');
                     navToggle.setAttribute('aria-expanded', String(open));
                 });
+
                 mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
                     mainNav.classList.remove('open');
                     navToggle.setAttribute('aria-expanded', 'false');
@@ -1046,6 +1059,7 @@
             }
 
             const current = location.pathname.split('/').pop() || 'index.html';
+
             document.querySelectorAll('#mainNav a').forEach(link => {
                 if (link.getAttribute('href') === current) link.classList.add('active');
             });
@@ -1059,22 +1073,25 @@
                         }
                     });
                 }, { threshold: 0.15 });
+
                 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
             } else {
                 document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
                 document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
             }
 
-
             // Etapas interativas da extração do petróleo
-            const steps = document.querySelectorAll('.step[data-part]');
 
+            const steps = document.querySelectorAll('.step[data-part]');
             const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
 
             function highlightPart(id) {
                 parts.forEach(part => {
                     const selected = part.id === id;
+
                     part.style.opacity = selected ? '1' : '0.20';
+
                     part.style.filter = selected
                         ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
                         : 'none';
@@ -1094,6 +1111,7 @@
             });
 
             // Inicia destacando a primeira etapa
+
             if (steps.length) {
                 highlightPart(steps[0].dataset.part);
             }
@@ -1110,13 +1128,14 @@
                     title: 'Extração Onshore',
                     text: 'A extração Onshore ocorre em terra firme, por meio de poços perfurados no solo. Geralmente, suas ações tem acessos mais simples à infraestrutura terrestre, facilitando o transporte de materiais e equipamentos.'
                 },
+
                 offshore: {
                     title: 'Extração OffShore',
                     text: 'A extração offshore ocorre pelo mar, com o uso de plataformas marítimas. Essas operações exigem estruturas específicas para enfrentar as condições do ambiente do mar, além de sistemas de segurança e transporte adequados.'
                 }
             };
 
-            platformCards.forEach(card=> {
+            platformCards.forEach(card => {
                 card.addEventListener('click', () => {
                     const type = card.dataset.platform;
                     const info = platformInfo[type];
