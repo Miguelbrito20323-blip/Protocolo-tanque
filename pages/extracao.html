@@ -14,7 +14,7 @@
         rel="stylesheet">
     <style>
         :root {
-            --navy-900: #0B1826;
+            --navy-900: rgb(14, 38, 70);
             --navy-800: #102132;
             --navy-700: #16283D;
             --steel-500: #5B7C97;
@@ -191,7 +191,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 24, 38, 0.96);
+            background: rgba(18, 41, 66, 0.96);
             backdrop-filter: blur(6px);
             border-bottom: 1px solid var(--line-dark);
         }
@@ -312,7 +312,7 @@
         .page-hero {
             background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
             color: var(--paper-050);
-            padding: 64px 0 56px;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -627,7 +627,8 @@
             color: #1B2129;
         }
 
-        .card-plataforma:hover, .card-plataforma.active {
+        .card-plataforma:hover,
+        .card-plataforma.active {
             border-color: #C97C2A;
             transform: translateY(-5px);
         }
@@ -682,7 +683,7 @@
     <header>
         <div class="wrap nav-row">
             <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+                <a href="./index (2).html"><img class="nav-logo" src="../imgs/logo.png" alt="PETROTANk"></a>
                 <a href="./index (2).html">
                     <H3 class="petrosync">PETRO<span>SYNC</span></H3>
                 </a>
@@ -691,11 +692,11 @@
                 aria-expanded="false"><span></span><span></span><span></span></button>
             <nav id="mainNav" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index (2).html">Início</a></li>
-                    <li><a href="extracao.html">Extração</a></li>
-                    <li><a href="armazenamento.html">Armazenamento</a></li>
-                    <li><a href="transporte.html">Transporte</a></li>
-                    <li><a href="sobre.html">Equipe</a></li>
+                    <li><a href="../index (2).html">Início</a></li>
+                    <li><a href="../pages/extracao.html">Extração</a></li>
+                    <li><a href="../pages/armazenamento.html">Armazenamento</a></li>
+                    <li><a href="../pages/transporte.html">Transporte</a></li>
+                    <li><a href="../pages/sobre.html">Equipe</a></li>
                 </ul>
             </nav>
         </div>
@@ -705,7 +706,7 @@
 
         <section class="page-hero">
             <div class="img-extracao">
-                <img src="./imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
+                <img src="../imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
 
                 <div class="texto-img">
                     <h1>EXTRAÇÃO</h1>
@@ -844,19 +845,6 @@
             </div>
         </section>
 
-        <section style="background:var(--paper-100);">
-            <div class="wrap">
-                <div class="section-head reveal">
-                    <h2>Por que cada etapa importa?</h2><span class="idx">Sequência de segurança</span>
-                </div>
-                <p class="section-sub">
-                    Cada etapa da extração possui uma função essencial para garantir
-                    que o petróleo seja localizado, retirado e preparado corretamente.
-                    Desde os estudos geológicos até a separação dos componentes,
-                    todos os processos contribuem para a eficiência e a segurança da operação.</p>
-            </div>
-        </section>
-
         <section class="plataformas">
             <div class="wrap">
                 <div class="section-head reveal">
@@ -871,13 +859,13 @@
 
                 <div class="opcoes-plataforma reveal">
                     <button class="card-plataforma" data-platform="onshore" aria-pressed="false">
-                        <img src="./imgs/plataforma_onshore.jfif" alt="plataforma terrestre">
+                        <img src="../imgs/plataforma_onshore.jfif" alt="plataforma terrestre">
                         <h3>Onshore</h3>
                         <span>Extração em terra</span>
                     </button>
 
                     <button class="card-plataforma" data-platform="offshore" aria-pressed="false">
-                        <img src="./imgs/plataforma_offshore.png" alt="plataforma marítima">
+                        <img src="../imgs/plataforma_offshore.png" alt="plataforma marítima">
                         <h3>Offshore</h3>
                         <span>Extração no mar</span>
                     </button>
@@ -890,61 +878,19 @@
             </div>
         </section>
 
-        <section>
-            <div class="wrap">
-                <div class="section-head reveal">
-                    <h2>Quatro capítulos, uma etapa</h2>
-                </div>
-
-                <div class="chapters">
-                    <a class="chapter-card" href="extracao.html">
-                        <span class="cnum">Capítulo 01</span>
-                        <div class="h3chap">
-                            <h3>Extração</h3>
-                        </div>
-                        <p>Conheça as etapas da extração do petróleo, desde a exploração até a retirada do óleo</p>
-                        <span class="go">Explorar capítulo →</span>
-                        <div class="card-imagem">
-                            <img src="./imgs/ext.jpg" alt="Operação de extração">
-                        </div>
-                    </a>
-
-                    <a class="chapter-card" href="armazenamento.html">
-                        <span class="cnum">Capítulo 02</span>
-                        <h3>Armazenamento</h3>
-                        <p>Descubra como o petróleo é armazenado com segurança e monitorado para evitar riscos.</p>
-                        <span class="go">Explorar capítulo →</span>
-                        <div class="card-imagem">
-                            <img src="./imgs/tanque.jpg" alt="Operação de extração">
-                        </div>
-                    </a>
-
-                    <a class="chapter-card" href="transporte.html">
-                        <span class="cnum">Capítulo 03</span>
-                        <h3>Transporte</h3>
-                        <p>Saiba como o petróleo é transportado de forma segura e eficiente até seu destino.</p>
-                        <span class="go">Explorar capítulo →</span>
-                        <div class="card-imagem">
-                            <img src="./imgs/maritimo.jpg" alt="Operação de extração">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer class="f">
         <div class="logof">
-            <img src="./imgs/logo.png" alt="petrosync">
+            <img src="../imgs/logo.png" alt="petrosync">
             <h3>PETRO<span>SYNC</span></h3>
         </div>
         <nav class="navef">
-            <a href="index (2).html">Início</a>
-            <a href="extracao.html">Extração</a>
-            <a href="armazenamento.html">Armazenamento</a>
-            <a href="transporte.html">Transporte</a>
-            <a href="sobre.html">Equipe</a>
+            <a href="../index (2).html">Início</a>
+            <a href="../pages/extracao.html">Extração</a>
+            <a href="../pages/armazenamento.html">Armazenamento</a>
+            <a href="../pages/transporte.html">Transporte</a>
+            <a href="../pages/sobre.html">Equipe</a>
         </nav>
         <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
     </footer>
