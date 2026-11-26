@@ -14,7 +14,7 @@
         rel="stylesheet">
     <style>
         :root {
-            --navy-900: #0B1826;
+            --navy-900: rgb(14, 38, 70);
             --navy-800: #102132;
             --navy-700: #16283D;
             --steel-500: #5B7C97;
@@ -192,7 +192,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 24, 38, 0.96);
+            background: rgba(18, 41, 66, 0.96);
             backdrop-filter: blur(6px);
             border-bottom: 1px solid var(--line-dark);
         }
@@ -308,7 +308,7 @@
         .page-hero {
             background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
             color: var(--paper-050);
-            padding: 64px 0 56px;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -822,108 +822,47 @@
             align-items: flex-end;
         }
 
-        /* Footer padronizado do projeto */
-        footer {
-            background: #05101A;
-            border-top: 1px solid var(--line-dark);
-            padding: 25px 0 12px;
-            color: #ffffff;
-            font-size: 13.5px;
+        .f {
+            background: var(--navy-900);
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 35px;
+            border-top: 1px solid #38536B;
         }
 
-        .conteudo-footer {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        .logo-footer {
+        .logof {
             display: flex;
             align-items: center;
-            gap: 3px;
-            flex-shrink: 0;
-            margin: 0;
         }
 
-        .logo-footer img {
-            width: auto;
-            height: 65px;
+        .logof img {
+            width: 70px;
         }
 
-        .logo-footer a {
-            text-decoration: none;
-        }
-
-        .logo-footer h3 {
-            color: #ffffff;
-            font-family: var(--font-body);
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .logo-footer h3 span {
-            color: #EBA152;
-        }
-
-        .colunas-footer {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
-            margin: 0;
-        }
-
-        .coluna-footer h2 {
-            color: #EBA152;
-            font-family: var(--font-body);
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 13px;
-        }
-
-        .coluna-footer ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .coluna-footer li {
-            margin-bottom: 7px;
-            color: #ffffff;
+        .logof h3 {
+            color: white;
             font-size: 17px;
         }
 
-        .coluna-footer a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .coluna-footer a:hover {
+        .logof span {
             color: #EBA152;
         }
 
-        .emcima-footer {
+        .navef {
             display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 40px;
+            gap: 25px;
         }
 
-        .embaixo-footer {
-            display: flex;
-            gap: 560px;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding-top: 14px;
-            color: #d1d5d8;
-            font-size: 12px;
-        }
-
-        .embaixo-footer span {
-            margin-left: 30px;
-        }
-
-        .embaixo-footer a {
+        .navef a {
+            color: var(--steel-300);
+            font-size: 15px;
             text-decoration: none;
+        }
+
+        .ultimof {
+            color: var(--steel-300);
+            font-size: 12px;
         }
 
         /* Animação reveal */
@@ -1003,8 +942,8 @@
     <header>
         <div class="wrap nav-row">
             <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROSYNC"></a>
-                <a href="./index (2).html">
+                <a href="../index (2).html"><img class="nav-logo" src="../imgs/logo.png" alt="PETROSYNC"></a>
+                <a href="../index (2).html">
                     <h3 class="petrosync">PETRO<span>SYNC</span></h3>
                 </a>
             </div>
@@ -1024,7 +963,6 @@
     </header>
 
     <main>
-        <!-- Hero com Imagem Principal Obrigatória -->
         <section class="page-hero">
             <div class="img-extracao">
                 <img src="https://images.pexels.com/photos/14389332/pexels-photo-14389332.jpeg"
@@ -1035,8 +973,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- 1. Introdução -->
         <section>
             <div class="wrap">
                 <div class="eyebrow-line"></div>
@@ -1137,53 +1073,19 @@
         </section>
     </main>
 
-    <footer>
-        <div class="conteudo-footer">
-            <div class="emcima-footer">
-                <div class="logo-footer">
-                    <a href="./index (2).html">
-                        <img class="nav-logo" src="./imgs/logo.png" alt="PETROSYNC">
-                    </a>
-                    <a href="./index (2).html">
-                        <h3 class="petrosync">PETRO<span>SYNC</span></h3>
-                    </a>
-                </div>
-
-                <div class="colunas-footer">
-                    <div class="coluna-footer">
-                        <h2>Contatos:</h2>
-                        <ul>
-                            <li><a href="#">petrosync@gmail.com</a></li>
-                            <li>(11) 00000-0000</li>
-                            <li>São Paulo - SP</li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="index (2).html">Início</a></li>
-                            <li><a href="extracao.html">Extração</a></li>
-                            <li><a href="armazenamento.html">Armazenamento</a></li>
-                            <li><a href="transporte.html">Transporte</a></li>
-                            <li><a href="sobre.html">Equipe</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="coluna-footer">
-                        <h2>Petrosync:</h2>
-                        <ul>
-                            <li><a href="sobre.html">Nossa Equipe</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <footer class="f">
+        <div class="logof">
+            <img src="../imgs/logo.png" alt="petrosync">
+            <h3>PETRO<span>SYNC</span></h3>
         </div>
-
-        <div class="embaixo-footer">
-            <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e escoamento seguro de petróleo
-                bruto.</span>
-        </div>
+        <nav class="navef">
+            <a href="../index (2).html">Início</a>
+            <a href="../pages/extracao.html">Extração</a>
+            <a href="../pages/armazenamento.html">Armazenamento</a>
+            <a href="../pages/transporte.html">Transporte</a>
+            <a href="../pages/sobre.html">Equipe</a>
+        </nav>
+        <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
     </footer>
 
     <script>
