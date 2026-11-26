@@ -14,7 +14,7 @@
         rel="stylesheet">
     <style>
         :root {
-            --navy-900: #0B1826;
+            --navy-900: rgb(14, 38, 70);
             --navy-800: #102132;
             --navy-700: #16283D;
             --steel-500: #5B7C97;
@@ -191,7 +191,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 24, 38, 0.96);
+            background: rgba(18, 41, 66, 0.96);
             backdrop-filter: blur(6px);
             border-bottom: 1px solid var(--line-dark);
         }
@@ -273,7 +273,12 @@
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: var(--navy-900);
+
+                /* MENU COM FUNDO TRANSPARENTE */
+                background: rgba(11, 24, 38, 0.35);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height .3s ease;
@@ -307,7 +312,7 @@
         .page-hero {
             background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
             color: var(--paper-050);
-            padding: 64px 0 56px;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -362,7 +367,9 @@
         .chapters {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 2px;
+            background: var(--line);
+            border: 1px solid var(--line);
         }
 
         @media(max-width:760px) {
@@ -376,11 +383,12 @@
             padding: 36px 32px;
             text-decoration: none;
             color: inherit;
+            display: flex;
             flex-direction: column;
-            min-height: 150px;
+            min-height: 200px;
             transition: background .25s ease, transform .3s ease, border-radius .35s ease, box-shadow .35s ease;
             cursor: pointer;
-            border: 1px solid #b2b9c1;
+            border: none;
             text-align: left;
             width: 100%;
             font-family: inherit;
@@ -663,9 +671,6 @@
             margin: 0;
         }
 
-
-
-
         @media(max-width: 600px) {
             .opcoes-plataforma {
                 grid-template-columns: 1fr;
@@ -678,7 +683,7 @@
     <header>
         <div class="wrap nav-row">
             <div class="container">
-                <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
+                <a href="./index (2).html"><img class="nav-logo" src="../imgs/logo.png" alt="PETROTANk"></a>
                 <a href="./index (2).html">
                     <H3 class="petrosync">PETRO<span>SYNC</span></H3>
                 </a>
@@ -687,20 +692,21 @@
                 aria-expanded="false"><span></span><span></span><span></span></button>
             <nav id="mainNav" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index (2).html">Início</a></li>
-                    <li><a href="extracao.html">Extração</a></li>
-                    <li><a href="armazenamento.html">Armazenamento</a></li>
-                    <li><a href="transporte.html">Transporte</a></li>
-                    <li><a href="sobre.html">Equipe</a></li>
+                    <li><a href="../index (2).html">Início</a></li>
+                    <li><a href="../pages/extracao.html">Extração</a></li>
+                    <li><a href="../pages/armazenamento.html">Armazenamento</a></li>
+                    <li><a href="../pages/transporte.html">Transporte</a></li>
+                    <li><a href="../pages/sobre.html">Equipe</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
 
         <section class="page-hero">
             <div class="img-extracao">
-                <img src="./imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
+                <img src="../imgs/plataformas-de-Petroleo.jpeg" alt="plataforma_petroleo">
 
                 <div class="texto-img">
                     <h1>EXTRAÇÃO</h1>
@@ -708,6 +714,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div class="wrap">
                 <div class="section-head reveal">
@@ -726,6 +733,7 @@
                                     fill="#D5DAD5" />
                                 <path d="M0 165 Q80 155 160 168 T320 160 L320 205 Q240 215 160 200 T0 205 Z"
                                     fill="#BFC9C5" />
+
                                 <!--Ondas de Análise-->
                                 <path d="M45 112 Q65 130 85 112 M35 120 Q65 150 95 120 M25 128 Q65 170 105 128"
                                     stroke="#C97C2A" stroke-width="2" stroke-dasharray="4 4" />
@@ -752,6 +760,7 @@
                                 <!--Plataforma-->
                                 <rect x="105" y="75" width="104" height="8" rx="2" fill="#16283D" />
                                 <path d="M115 84 L115 94 M205 84 L205 94" stroke="#16283D" stroke-width="3" />
+
                                 <!-- Broca e coluna de perfuração -->
                                 <path d="M160 84 L160 190" stroke="#5B7C97" stroke-width="4" />
                                 <path d="M153 190 L167 190 L160 202 Z" fill="#C97C2A" />
@@ -761,15 +770,16 @@
 
                                 <!-- Caminho do petróleo -->
                                 <path d="M160 190 L160 84" stroke="#C97C2A" stroke-width="3" stroke-dasharray="5 4" />
+
                                 <!-- Fluxo na superfície -->
                                 <path d="M160 76 L160 59" stroke="#C97C2A" stroke-width="3" />
                                 <path d="M153 65 L160 55 L167 65" stroke="#C97C2A" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
+
                                 <!-- Reservatório -->
                                 <ellipse cx="190" cy="194" rx="65" ry="17" stroke="#C97C2A" stroke-width="2"
                                     stroke-dasharray="4 3" />
                             </g>
-
 
                             <g id="etapa-4" opacity="0.28">
 
@@ -782,6 +792,7 @@
                                     stroke-linecap="round" />
                                 <path d="M255 65 H264" stroke="#C97C2A" stroke-width="2" />
                                 <path d="M225 85 H294" stroke="#5B7C97" stroke-width="2" />
+
                                 <text x="260" y="101" text-anchor="middle" fill="#4A525C" font-size="8"
                                     font-family="Public Sans">
                                     TRATAMENTO
@@ -801,6 +812,7 @@
                                     reservatórios no subsolo ou no fundo do mar.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-2"><span class="num">02</span>
                             <div>
                                 <h4>Perfuração do poço</h4>
@@ -809,6 +821,7 @@
                                     processo ocorre a partir de uma plataforma instalada no mar.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-3"><span class="num">03</span>
                             <div>
                                 <h4>Extração do poço</h4>
@@ -818,6 +831,7 @@
                                     equipamentos para auxiliar na elevação do petróleo.</p>
                             </div>
                         </div>
+
                         <div class="step" data-part="etapa-4"><span class="num">04</span>
                             <div>
                                 <h4>Separação e tratamento</h4>
@@ -845,13 +859,13 @@
 
                 <div class="opcoes-plataforma reveal">
                     <button class="card-plataforma" data-platform="onshore" aria-pressed="false">
-                        <img src="./imgs/plataforma_onshore.jfif" alt="plataforma terrestre">
+                        <img src="../imgs/plataforma_onshore.jfif" alt="plataforma terrestre">
                         <h3>Onshore</h3>
                         <span>Extração em terra</span>
                     </button>
 
                     <button class="card-plataforma" data-platform="offshore" aria-pressed="false">
-                        <img src="./imgs/plataforma_offshore.png" alt="plataforma marítima">
+                        <img src="../imgs/plataforma_offshore.png" alt="plataforma marítima">
                         <h3>Offshore</h3>
                         <span>Extração no mar</span>
                     </button>
@@ -863,23 +877,23 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="f">
         <div class="logof">
-            <img src="./imgs/logo.png" alt="petrosync">
+            <img src="../imgs/logo.png" alt="petrosync">
             <h3>PETRO<span>SYNC</span></h3>
         </div>
         <nav class="navef">
-            <a href="index (2).html">Início</a>
-            <a href="extracao.html">Extração</a>
-            <a href="armazenamento.html">Armazenamento</a>
-            <a href="transporte.html">Transporte</a>
-            <a href="sobre.html">Equipe</a>
+            <a href="../index (2).html">Início</a>
+            <a href="../pages/extracao.html">Extração</a>
+            <a href="../pages/armazenamento.html">Armazenamento</a>
+            <a href="../pages/transporte.html">Transporte</a>
+            <a href="../pages/sobre.html">Equipe</a>
         </nav>
         <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
     </footer>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -891,6 +905,7 @@
                     const open = mainNav.classList.toggle('open');
                     navToggle.setAttribute('aria-expanded', String(open));
                 });
+
                 mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
                     mainNav.classList.remove('open');
                     navToggle.setAttribute('aria-expanded', 'false');
@@ -898,6 +913,7 @@
             }
 
             const current = location.pathname.split('/').pop() || 'index.html';
+
             document.querySelectorAll('#mainNav a').forEach(link => {
                 if (link.getAttribute('href') === current) link.classList.add('active');
             });
@@ -911,22 +927,25 @@
                         }
                     });
                 }, { threshold: 0.15 });
+
                 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
             } else {
                 document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
                 document.querySelectorAll('.risk-meter i').forEach(el => el.style.width = '100%');
             }
 
-
             // Etapas interativas da extração do petróleo
-            const steps = document.querySelectorAll('.step[data-part]');
 
+            const steps = document.querySelectorAll('.step[data-part]');
             const parts = document.querySelectorAll('.nozzle-svg [id^="etapa-"]');
 
             function highlightPart(id) {
                 parts.forEach(part => {
                     const selected = part.id === id;
+
                     part.style.opacity = selected ? '1' : '0.20';
+
                     part.style.filter = selected
                         ? 'drop-shadow(0 0 3px rgba(201,124,42,0.5))'
                         : 'none';
@@ -946,6 +965,7 @@
             });
 
             // Inicia destacando a primeira etapa
+
             if (steps.length) {
                 highlightPart(steps[0].dataset.part);
             }
@@ -962,6 +982,7 @@
                     title: 'Extração Onshore',
                     text: 'A extração Onshore ocorre em terra firme, por meio de poços perfurados no solo. Geralmente, suas ações tem acessos mais simples à infraestrutura terrestre, facilitando o transporte de materiais e equipamentos.'
                 },
+
                 offshore: {
                     title: 'Extração OffShore',
                     text: 'A extração offshore ocorre pelo mar, com o uso de plataformas marítimas. Essas operações exigem estruturas específicas para enfrentar as condições do ambiente do mar, além de sistemas de segurança e transporte adequados.'

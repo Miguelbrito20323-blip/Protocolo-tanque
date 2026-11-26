@@ -14,7 +14,7 @@
     rel="stylesheet">
   <style>
     :root {
-      --navy-900: #0B1826;
+      --navy-900: rgb(14, 38, 70);
       --navy-800: #102132;
       --navy-700: #16283D;
       --steel-500: #5B7C97;
@@ -191,7 +191,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11, 24, 38, 0.96);
+      background: rgba(18, 41, 66, 0.96);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--line-dark);
     }
@@ -290,7 +290,7 @@
     .page-hero {
       background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
       color: var(--paper-050);
-      padding: 64px 0 56px;
+      padding: 0;
       overflow: hidden;
     }
 
@@ -424,7 +424,7 @@
     }
 
     .team-card .role {
-      align-self: end ;
+      align-self: end;
       font-size: 12px;
       color: var(--amber-500);
       font-weight: 600;
@@ -436,30 +436,47 @@
       font-size: 17px;
     }
 
-    footer {
+    .f {
       background: var(--navy-900);
-      border-top: 1px solid var(--line-dark);
-      padding: 32px 0;
-      color: var(--steel-300);
-      font-size: 13.5px;
-    }
-
-    .foot-row {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
+      padding: 25px 35px;
+      border-top: 1px solid #38536B;
     }
 
-    .foot-row button {
-      background: none;
-      border: none;
-      color: inherit;
+    .logof {
+      display: flex;
+      align-items: center;
+    }
+
+    .logof img {
+      width: 70px;
+    }
+
+    .logof h3 {
+      color: white;
+      font-size: 17px;
+    }
+
+    .logof span {
+      color: #EBA152;
+    }
+
+    .navef {
+      display: flex;
+      gap: 25px;
+    }
+
+    .navef a {
+      color: var(--steel-300);
+      font-size: 15px;
       text-decoration: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: inherit;
-      padding: 0;
+    }
+
+    .ultimof {
+      color: var(--steel-300);
+      font-size: 12px;
     }
 
     .reveal {
@@ -479,18 +496,18 @@
   <header>
     <div class="wrap nav-row">
       <div class="container">
-        <a href="./index (2).html"><img class="nav-logo" src="./imgs/logo.png" alt="PETROTANk"></a>
-        <a href="./index (2).html">
+        <a href="../index (2).html"><img class="nav-logo" src="../imgs/logo.png" alt="PETROTANk"></a>
+        <a href="../index (2).html">
           <H3 class="petrosync">PETRO<span>SYNC</span></H3>
         </a>
       </div>
       <nav id="mainNav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index (2).html">Início</a></li>
-          <li><a href="extracao.html">Extração</a></li>
-          <li><a href="armazenamento.html">Armazenamento</a></li>
-          <li><a href="transporte.html">Transporte</a></li>
-          <li><a href="sobre.html">Equipe</a></li>
+          <li><a href="../index (2).html">Início</a></li>
+          <li><a href="../pages/extracao.html">Extração</a></li>
+          <li><a href="../pages/armazenamento.html">Armazenamento</a></li>
+          <li><a href="../pages/transporte.html">Transporte</a></li>
+          <li><a href="../pages/sobre.html">Equipe</a></li>
         </ul>
       </nav>
     </div>
@@ -500,7 +517,7 @@
     <section class="page-hero">
       <div class="img-extracao">
         <img
-          src="https://img.magnific.com/fotos-gratis/a-equipe-de-engenharia-fica-ao-lado-de-trabalhar-as-bombas-de-oleo-com-um-ceu_1150-19223.jpg?semt=ais_hybrid&w=740&q=80"
+          src="../imgs/equipe.jpeg"
           alt="equipe">
 
         <div class="texto-img">
@@ -516,7 +533,7 @@
         </div>
         <div class="team-grid">
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/miguelalequipe.jpeg" alt="miguel alves">
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/miguelalequipe.jpeg" alt="miguel alves">
             </div>
             <div class="role">Desenvolvedor</div>
             <h3>Miguel Alves</h3>
@@ -529,7 +546,7 @@
             <h3>Nicolas Eduardo</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/gabrielequipe.jpeg" alt="Gabriel Vieira">
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/gabrielequipe.jpeg" alt="Gabriel Vieira">
             </div>
             <div class="role">Desenvolvedor</div>
             <h3>Gabriel Vieira</h3>
@@ -540,47 +557,47 @@
             <h3>Miguel Ahías</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo"><img src="./imgs/alyceequipe.jpeg" alt="alyce">
+            <div class="team-photo"><img src="../imgs/alyceequipe.jpeg" alt="alyce">
 
             </div>
             <div class="role">Desenvolvedora</div>
             <h3>Alyce Barreto</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/otavioequipe.jpeg" alt="otavio">
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/otavioequipe.jpeg" alt="otavio">
             </div>
             <div class="role">Desenvolvedor</div>
             <h3>Otávio Henrique</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/dudaequipe.jpeg" alt="duda">
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/dudaequipe.jpeg" alt="duda">
 
             </div>
             <div class="role">Desenvolvedora</div>
             <h3>Maria Eduarda</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/caioequipe.jpeg" alt="Caio"></div>
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/caioequipe.jpeg" alt="Caio"></div>
             <div class="role">Desenvolvedor</div>
             <h3>Caio Kobori</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/isaequipe.jpeg" alt="Isa"></div>
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/isaequipe.jpeg" alt="Isa"></div>
             <div class="role">Desenvolvedora</div>
             <h3>Isabelle Souza</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/giovaneequipe.jpeg" alt="Giovane"></div>
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/giovaneequipe.jpeg" alt="Giovane"></div>
             <div class="role">Desenvolvedor</div>
             <h3>Giovane Sousa</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/gabiequipe.jpeg" alt="Gabriela"></div>
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/gabiequipe.jpeg" alt="Gabriela"></div>
             <div class="role">Desenvolvedora</div>
             <h3>Gabriela Vieira</h3>
           </div>
           <div class="team-card">
-            <div class="team-photo team-photo-placeholder"><img src="./imgs/guilhermeequipe.jpg" alt="Guilherme"></div>
+            <div class="team-photo team-photo-placeholder"><img src="../imgs/guilhermeequipe.jpg" alt="Guilherme"></div>
             <div class="role">Desenvolvedor</div>
             <h3>Guilherme Fleming</h3>
           </div>
@@ -602,11 +619,19 @@
 
   </main>
 
-  <footer>
-    <div class="wrap foot-row">
-      <span>© 2026 — Trabalho de Conclusão de Curso sobre armazenamento e abastecimento seguro de petróleo.</span>
-      <a href="sobre.html">Sobre o projeto e a equipe →</a>
+  <footer class="f">
+    <div class="logof">
+      <img src="../imgs/logo.png" alt="petrosync">
+      <h3>PETRO<span>SYNC</span></h3>
     </div>
+    <nav class="navef">
+      <a href="../index (2).html">Início</a>
+      <a href="../pages/extracao.html">Extração</a>
+      <a href="../pages/armazenamento.html">Armazenamento</a>
+      <a href="../pages/transporte.html">Transporte</a>
+      <a href="../pages/sobre.html">Equipe</a>
+    </nav>
+    <div class="ultimof">© 2026 – Trabalhando pela eficiência no setor de petróleo.</div>
   </footer>
 
 
