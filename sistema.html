@@ -112,29 +112,288 @@
                         <label>Profundidade</label>
                         <strong id="produndidade">
                             1.248 <small>m</small>
-                            <small>Sensor de profundidade SUB-04</small>
                         </strong>
+                            <small>Sensor de profundidade SUB-04</small>
                     </article>
 
                     <article>
                         <label>Deslocamento estrutural</label>
                         <strong id="deslocamento">
                             2,4 <small>mm</small>
-                            <small>Leitura relativa dos sensores</small>
                         </strong>
+                            <small>Leitura relativa dos sensores</small>
                     </article>
 
                     <article>
                         <label>Falhas identificadas</label>
                         <strong id="falhas">
                             03 <small>ocorrências</small>
-                            <small>Oorrências simuladas no período</small>
                         </strong>
+                            <small>Oorrências simuladas no período</small>
                     </article>
 
                 </div>
 
 
+                <div class="grade">
+
+                    <article class="painel-grafico">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Telemetria Submarina</h3>
+
+                                <p>Pressão e deslocamento estrutural ao longo do tempo</p>
+                            </div>
+
+                            <span>HISTÓRICO • MIN</span>
+                        </div>
+
+
+                        <div class="area-grafico">
+                            <canvas id="subseaChart"></canvas>
+                        </div>
+
+                        <div class="legenda">
+                            <i class="azul"></i>
+                            Pressão (bar)
+
+                            <i class="laranja"></i>
+                            Deslocamento (mm)
+                        </div>
+                    </article>
+
+                    <article class="painel">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Integridade do sistema</h3>
+                                <p>Resumo dos pontos monitorados</p>
+                            </div>
+
+                            <span class="rotulo-aovivo">
+                                ● AO VIVO
+                            </span>
+                        </div>
+
+                        <div class="integridade">
+                            <div class="circuito">
+                                <b id="score">
+                                    96<small>%</small>
+                                </b>
+                            </div>
+
+                            <div>
+
+                                <b>Índice de integridade</b>
+
+                                <small>indicador demonstrativo</small>
+
+                                <em>Condição Geral estável</em>
+                            </div>
+                        </div>
+
+                        <h4>EVENTOS POR CATEGORIA</h4>
+
+                        <div class="linha-falha">
+                            <span>Falhas de sensor</span>
+                            <b>01</b>
+                            <i><u style="width: 28%;"></u></i>
+                        </div>
+
+                        <div class="linha-falha">
+                            <span>Variação estrutural</span>
+                            <b>00</b>
+                            <i><u class="ciano" style="width: 8%;"></u></i>
+                        </div>
+
+                        <div class="linha-falha">
+                            <span>Comunicação</span>
+                            <b>01</b>
+                            <i><u class="laranja" tyle="width: 24%;"></u></i>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="grade-inferior">
+                    <article class="painel">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Diagnóstico de Comunicação</h3>
+
+                                <p>Qualidade dos canais de transmissão</p>
+                            </div>
+
+                            <span>TELEMETRIA</span>
+                        </div>
+
+                        <div class="sinais">
+                            <div class="sinal">
+                                <b>⌖</b>
+
+                                <div>
+                                    <strong>GPS</strong>
+                                    <small>Posicionamento e referência geográfica</small>
+                                </div>
+
+                                <strong id="gps">98%</strong>
+                                <i>
+                                    <u id="gps-barra" style="width:98%;"></u>
+                                </i>
+                            </div>
+
+                            <div class="sinal">
+                                <b>⌁</b>
+
+                                <div>
+                                    <strong>Rádio</strong>
+                                    <small>Canal de Comunicação operacional</small>
+                                </div>
+
+                                <strong id="radio">94%</strong>
+
+                                <i>
+                                    <u id="radio-barra" style="width:94%;"></u>
+                                </i>
+                            </div>
+
+                            <div class="sinal">
+                                <b>◔</b>
+
+                                <div>
+                                    <strong>Wi-Fi</strong>
+                                    <small>Rede local de transmissão</small>
+                                </div>
+
+                                <strong id="wifi">91%</strong>
+
+                                <i>
+                                    <u id="wifi-barra" style="width:91%;"></u>
+                                </i>
+                            </div>
+
+                            <div class="sinal">
+                                <b>≋</b>
+
+                                <div>
+                                    <strong>Sinal Acústico</strong>
+                                    <small>Comunicação Submarina</small>
+                                </div>
+
+                                <strong id="acustic">95%</strong>
+
+                                <i>
+                                    <u id="acustico-barra" style="width:96%;"></u>
+                                </i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="painel">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Movimento Submarino</h3>
+
+                                <p>Deslocamento relativo dos pontos de referência</p>
+                            </div>
+
+                            <span>SENSORES SUB</span>
+                        </div>
+
+                        <div class="ambiente-submarino">
+                            <div class="grade-submarina"></div>
+
+                            <div class="plataforma">
+                                ESTRUTURA <b></b>
+                            </div>
+
+                            <i class="sensor01">SUB-01</i>
+                            <i class="sensor02">SUB-02</i>
+                            <i class="sensor03">SUB-03</i>
+
+                            <div class="leitura">
+                                <small>DESLOCAMENTO RELATIVO</small>
+                                <strong id="movimento">2,4 mm</strong>
+                                <small>Leitura simulada</small>
+                            </div>
+
+                            <div class="fundo-marinho"></div>
+                        </div>
+
+                        <div class="informacao-inferior">
+                            3 sensores de referência ativos
+                            <b>● MONITORAMENTO</b>
+                        </div>
+                    </article>
+                </div>
+
+                    <div class="aviso">
+                        ⓘ Dados, limites e leituras são fictícios para demonstração.
+                    Não representam parâmetros operacionais reais nem controlam equipamentos.
+                    </div>
+            </section>
+
+            <section id="transporte" class="sistema-transporte">
+
+                <div class="cabecalho-secao">
+                    <div>
+                        <small>02 / LOGÍSTICA TERRESTRE</small>
+
+                        <h2>Monitoramento de transporte</h2>
+
+                        <p>
+                            Localização simulada da frota, acompanhamento de rotas e gestão de ocorrências.
+                        </p>
+                    </div>
+
+                    <span class="status-operacional" id="status-fleet">
+                        ● FROTA OPERACIONAL
+                    </span>
+                </div>
+
+                <div class="metricas">
+                    <article>
+                        <label>Veículos em rota</label>
+
+                        <strong id="caminhões-ativos">
+                            08 <small>/ 10</small>
+                        </strong>
+
+                        <small>Frota monitorada</small>
+                    </article>
+
+                    <article>
+                        <label>Rotas Monitoradas</label>
+
+                        <strong>
+                            05 <small>rotas</small>
+                        </strong>
+
+                        <small>Trajetos ativos na simulação</small>
+                    </article>
+
+                    <article>
+                        <label>Entregas concluídas</label>
+
+                        <strong>
+                            06 <small>hoje</small>
+                        </strong>
+
+                        <small>Registro demonstrativo</small>
+                    </article>
+
+                    <article>
+                        <label>Ocorrências ativas</label>
+
+                        <strong id="incidentes">
+                            00 <small>alertas</small>
+                        </strong>
+
+                        <small id="captar-indicentes">
+                            Nenhuma emergência simulada
+                        </small>
+                    </article>
+                </div>
+
+                
             </section>
         </main>
 
