@@ -394,6 +394,157 @@
                 </div>
 
                 
+                <div class="grade-transporte">
+                    <article class="painel-mapa">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Mapa de rotas da frota</h3>
+
+                                <p>Posição e deslocamento ilustrativos dos caminhões.</p>
+                            </div>
+
+                            <span>GPS SIMULADO</span>
+                        </div>
+
+                        <div class="mapa" id="map">
+
+                            <svg 
+                                viewBox="0 0 900 430"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                                focusable="false">
+                            
+                                <defs>
+                                    <pattern
+                                        id="grid"
+                                        width="36"
+                                        heigth="36"
+                                        patternUnits="userSpaceOnUse">
+
+                                        <path
+                                            d="M36 0H0V36"
+                                            fill="none"
+                                            stroke="#254359"
+                                            stroke-width="1"
+                                        />
+                                    </pattern>
+                                </defs>
+
+                                <rect
+                                    width="900"
+                                    heigth="430"
+                                    fill="url(#grid)"
+                                />
+
+                                <path
+                                    class="estrada"
+                                    d="M-20 330C120 290 150 360 260 300S430 260 510 300 700 360 930 250M40
+                                    -20C100 90 190 100 240 170S360 220 420 130 620 70 690 -20M280 450C310
+                                    350 390 340 440 270S550 190 640 210 790 170 930 100"
+                                />
+
+                                <path
+                                    class="rota-1"
+                                    d="M80 320C180 285 220 310 300 245S470 180 550 220 700 280 820 130"
+                                />
+
+                                <path
+                                    class="rota-2"
+                                    d="M100 80C210 120 260 170 350 150S500 70 620 100 740 160 830 330"
+                                />
+
+                                <path
+                                    class="rota-3"
+                                    d="M160 390C250 350 310 365 400 300S560 230 650 260 760 340 850 370"
+                                />
+
+                                <g class="localizacao"
+
+                                    <circle cx="80" cy="320" r="8"/>
+                                    <text x="95" y="313">BASE LOGÍSTICA</text>
+
+                                    <circle cx="820" cy="130" r="7"/>
+                                    <text x="700" y="112">UNIDADE NORTE</text>
+
+                                    <circle cx="100" cy="80" r="7"/>
+                                    <text x="115" y="72">TERMINAL</text>
+
+                                    <circle cx="830" cy="330" r="7"/>
+                                    <text x="730" y="355">TERMINAL B</text>
+
+                                    <circle cx="850" cy="370" r="7"/>
+                                    <text x="720" y="400">DISTRIBUIÇÃO</text>
+                                </g>
+                            </svg>
+
+                            <div class="caminhao-1" data-truck="TRK-204">
+                                ▰
+                                <small>204</small>
+                            </div>
+
+                            <div class="caminhao-2" data-truck="TRK-318">
+                                ▰
+                                <small>318</small>
+                            </div>
+
+                            <div class="caminhao-3" data-truck="TRK-427">
+                                ▰
+                                <small>427</small>
+                            </div>
+
+                            <div class="caminhao-4" data-truck="TRK-509">
+                                ▰
+                                <small>509</small>
+                            </div>
+
+                            <span class="rotulo-mapa">
+                                MAPA ESQUEMÁTICO • POSIÇÕES FICTÍCIAS
+                            </span>
+                        </div>
+
+                        <div class="rodape-mapa">
+                            <span>
+                                <i class="indicador"></i>
+                                GPS simulado ativo
+                            </span>
+
+                            <span>
+                                Atualizado:
+                                <b id="tempo-mapa">agora</b>
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="painel-frota">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Frota monitorada</h3>
+
+                                <p>Estado individual dos veículos</p>
+                            </div>
+
+                            <span>10 VEÍCULOS</span>
+                        </div>
+
+                        <div id="lista-frota" data-id="TRK-204">
+                            <b class="icone-caminhao">▰</b>
+                        </div>
+
+                        <div>
+                            <strong>TRK-204</strong>
+                            <small>Base → Unidade Norte</small>
+                        </div>
+
+                        <em class="estado-veiculo">Em rota</em>
+
+                        <button
+                            type="button"
+                            data-locate="TRK-204"
+                            aria-label="Localizar veículo TRK-204">
+                            ⌖
+                        </button>
+                    </article>
+                </div>
             </section>
         </main>
 
