@@ -458,7 +458,7 @@
                                     d="M160 390C250 350 310 365 400 300S560 230 650 260 760 340 850 370"
                                 />
 
-                                <g class="localizacao"
+                                <g class="localizacao">
 
                                     <circle cx="80" cy="320" r="8"/>
                                     <text x="95" y="313">BASE LOGÍSTICA</text>
@@ -526,31 +526,180 @@
                             <span>10 VEÍCULOS</span>
                         </div>
 
-                        <div id="lista-frota" data-id="TRK-204">
-                            <b class="icone-caminhao">▰</b>
+                        <div class="lista-frota">
+                            <div id="linha-frota" data-id="TRK-204">
+                                <b class="icone-caminhao">▰</b>
+                            
+
+                                <div>
+                                    <strong>TRK-204</strong>
+                                    <small>Base → Unidade Norte</small>
+                                </div>
+
+                                <em class="estado-veiculo">Em rota</em>
+
+                                <button
+                                    type="button"
+                                    data-locate="TRK-204"
+                                    aria-label="Localizar veículo TRK-204">
+                                    ⌖
+                                </button>
+                            </div>
+
+                            <div id="linha-frota" data-id="TRK-318">
+                                <b class="icone-caminhao">▰</b>
+                            
+
+                                <div>
+                                    <strong>TRK-318</strong>
+                                    <small>Terminal A → Base</small>
+                                </div>
+
+                                <em class="estado-veiculo">Em rota</em>
+
+                                <button
+                                    type="button"
+                                    data-locate="TRK-318"
+                                    aria-label="Localizar veículo TRK-318">
+                                    ⌖
+                                </button>
+                            </div>
+                            
+
+                            <div id="linha-frota" data-id="TRK-427">
+                                <b class="icone-caminhao">▰</b>
+                            
+
+                                <div>
+                                    <strong>TRK-427</strong>
+                                    <small>Base → Terminal B</small>
+                                </div>
+
+                                <em class="estado-veiculo">Em rota</em>
+
+                                <button
+                                    type="button"
+                                    data-locate="TRK-427"
+                                    aria-label="Localizar veículo TRK-427">
+                                    ⌖
+                                </button>
+                            </div>
+                            
+
+                            <div id="linha-frota" data-id="TRK-509">
+                                <b class="icone-caminhao">▰</b>
+                            
+                                <div>
+                                    <strong>TRK-509</strong>
+                                    <small>Centro → Terminal B</small>
+                                </div>
+
+                                <em class="estado-veiculo">Em rota</em>
+
+                                <button
+                                    type="button"
+                                    data-locate="TRK-509"
+                                    aria-label="Localizar veículo TRK-509">
+                                    ⌖
+                                </button>
+                            </div>
                         </div>
 
-                        <div>
-                            <strong>TRK-204</strong>
-                            <small>Base → Unidade Norte</small>
+                        
+                        <div class="rodape-rota">
+                            Exibindo 4 dos 10 veículos
+                            <b>● 8 conectados</b>
                         </div>
-
-                        <em class="estado-veiculo">Em rota</em>
-
-                        <button
-                            type="button"
-                            data-locate="TRK-204"
-                            aria-label="Localizar veículo TRK-204">
-                            ⌖
-                        </button>
                     </article>
                 </div>
+
+                <div class="grade-inferior">
+                    <article class="painel">
+                        <div class="titulo-painel">
+                            <div>
+                                <h3>Desempenho das rotas</h3>
+
+                                <p>Progresso estimado das viagens em andamento</p>
+                            </div>
+
+                            <span>PROGRESSO(%)</span>
+                        </div>
+
+                        <div class="area-grafico">
+                            <canvas
+                                id="mapa_rotas"
+                                role="img"
+                                aria-label="Gráfico de progresso estimado das rotas">
+                            </canvas>
+                        </div>
+                    </article>
+
+                    <article class="painel-emergencia">
+                        <div class="titulo-emergencia">
+                            <b>!</b>
+
+                            <div>
+                                <h3>Simulador de Emergência</h3>
+                            
+
+                                <p>Gera uma ocorrência fictícia em um caminhão da frota</p>
+                            </div>
+                        </div>
+
+                        <label for="selecionar-caminhao">Selecíonar veículo</label>
+                        <select id="selecionar-caminhao">
+
+                            <option value="TRK-204">TRK-204</option>
+                            <option value="TRK-318">TRK-318</option>
+                            <option value="TRK-427">TRK-427</option>
+                            <option value="TRK-509">TRK-509</option>
+                        </select>
+
+                        <button type="button" id="botao-emergencia">
+                            ⚠ &nbsp; SIMULAR EMERGÊNCIA
+                        </button>
+
+                        <button type="button" id="botao-encerrar" disabled>
+                            Encerrar simulação
+                        </button>
+
+                        <small>
+                            Acão demonstrativa: altera somente esta interface.
+                            Não contata serviços, motoristas ou equipamentos.
+                        </small>
+                    </article>
+                </div>
+
+                <div class="aviso">
+                    ⓘ Rotas, veículos e localizações e ocorrências são fictícios.
+                    O mapa foi criado apenas para apresentação, não deve ser usado para decisões de logística reais.
+                </div>
             </section>
+
+            <footer>
+            © 2026 PetroSync • Centro de monitoramento
+
+            <span>
+                Interface demostrativa • Dados não operacionais
+            </span>
+        </footer>
         </main>
 
-        <footer>
+        <div class="notificacao" id="notificacao">
+            <b>!</b>
 
-        </footer>
+            <div>
+                <strong id="not-titulo">Aviso</strong>
+                <small id="not-texto"></small>
+            </div>
+
+            <button
+                type="button"
+                id="fechar-not"
+                aria-label="Chfear notificação">
+                ×
+            </button>
+        </div>
 
         <script>
 
