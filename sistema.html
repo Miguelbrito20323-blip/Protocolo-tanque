@@ -9,8 +9,104 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
 
+        :root {
+            --fundo: #081421;
+            --lateral: #0b1b2b;
+            --painel: #102337;
+            --painel-claro: #142b40;
+            --borda: #203b52;
 
+            --texto: #edf4fa;
+            --texto-suave: #8fa6f9;
 
+            --azul: #4b9bd3;
+            --ciano: #47c5b2;
+            --laranja: #e99a42;
+            --verde: #42bd91;
+            --vermelho: #e36e70;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 25px;
+        }
+
+        body {
+            min-height: 100%;
+            background: var(--fundo);
+            color: var(--texto);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        button, select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .app {
+            display: flex;
+            min-height: 100%;
+        }
+
+        .barra-lateral {
+            width: 247px;
+            min-width: 247px;
+            height: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 28px 20px;
+            background: var(--lateral);
+            border-right: 1px solid var(--borda);
+        }
+
+        .empresa {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 55px;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--laranja);
+            color: #081421;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        .empresa strong {
+            display: block;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+
+        .empresa strong span {
+            color: var(--laranja);
+        }
+
+        .empresa small {
+            display: block;
+            margin-top: 5px;
+            color: var(--texto-suave);
+            font-size: 9px;
+            letter-spacing: 1.2px;
+        }
     </style>
 </head>
 <body>
